@@ -1,0 +1,1349 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<link rel="stylesheet" href="doc_files/css/style.css">
+<link rel="stylesheet" href="doc_files/css/builder.css">
+
+	
+
+
+</head>
+<body>
+
+	<div class="builderTab">
+		<div class="headerVert">
+			<div class="plugTitle"><strong>iGuider Builder</strong></div>
+			<div class="doc">
+				<a title="Open Documentation in new Tab" href="documentation.html" target="_blank">Documentation</a>
+				<a title="Open Demos in new Tab" href="demos.html" target="_blank">Demos</a>
+				<a class="startTour" title="View Help Tour for Builder" href="#">Help</a>
+			</div>
+		</div>
+		<div class="groupWrap">
+			
+			<div class="builderHead">
+				<h3>Options Groups</h3>
+			</div>
+			<div class="builderTabMenu">
+				<a data-href="1">General Options</a>
+				<a data-href="5">Intro Options</a>
+				<a data-href="6">Continue Options</a>
+				<a data-href="7">Tour Map Options</a>
+				<a data-href="3">Steps Options</a>
+				<a data-href="2">Lang Options</a>
+				<a data-href="8">Themes</a>
+				<a data-href="4">Import Options</a>
+			</div>
+			
+		</div>
+		
+		<div class="paramWrap">
+			
+			<div class="builderTabItem" id="1">
+				<div class="builder builderMain form-horizontal" data-parname="general">
+					<div class="builderHead">
+						<div class="text-right builderActions"><a class="setDef" href="javascript:void(0);">Set default values</a></div>
+						<h3>General options</h3>
+					</div>
+					<div class="builderPar">
+						<label data-help="This string allows you to save data with a unique name about tour progress. It can be used to save information on the progress of the tour for several users. Or save the progress of each tour separately." class="  paramLabel">tourID</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="anyTourID" value="anyTourID">
+						</div>
+					</div>
+					<div class="builderPar">
+						<label data-help="Title of the tour." class="paramLabel">tourTitle</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Tour Title Default" value="Tour Title Default" data-uniq="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Step from which the tour begins." class="  paramLabel">startStep</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="100" data-min="1" data-step="1" data-default="1" value="1">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="This parameter enables or disables the click event for overlying layer." class="  paramLabel">overlayClickable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class="builderPar">
+						<label data-help="Global color value of overlay layer.  Any color format: '#000', 'rgb(0,0,0)' or 'black'." class="paramLabel">overlayColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="#000" value="#000">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global opacity value of overlay layer." class="  paramLabel">overlayOpacity</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="1" data-min="0" data-step="0.1" data-default="0.5" value="0.5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Shows the total number of steps and the current step number." class="  paramLabel">pagination</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Shows an absent element in tour map and find this element in DOM." class="  paramLabel">registerMissingElements</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The direction property specifies the text direction/writing direction." class="  paramLabel">textDirection</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="ltr,rtl" data-default="ltr" value="ltr">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Global Indent highlighting around the element, px" class="  paramLabel">spacing</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="100" data-min="0" data-step="1" data-default="10" value="10">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global Shape of highlighting: 0 - rectangle, 1 - circle, 2 - rounded rectangle." class="  paramLabel">shape</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="0,1,2" data-default="0" value="0">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global corner radius of rounded rectangle shape. Only when 'shape' paramenter has value '2'" class="  paramLabel">shapeBorderRadius</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="100" data-min="0" data-step="1" data-default="5" value="5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global time after which an automatic switching to the next step, ms" class="  paramLabel">timer</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="10000" data-min="0" data-step="1000" data-default="0" value="0">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global timer shape type: 'line' or 'circle'" class="  paramLabel">timerType</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="line,circle" data-default="line" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global path to the page on which the step should work." class="  paramLabel">loc</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Width of the message intro block, px,%" class="  paramLabel">width</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="320" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Tour control by keyboard buttons. Left - the previous step, right - the next step, Esc - close tour." class="  paramLabel">keyboard</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="This parameter sets the permission to trigger custom events." class="  paramLabel">keyboardEvent</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+					
+					
+					<div class=" builderPar">
+						<label data-help="Global background color of the message block" class="  paramLabel">bgColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global title color of the message block" class="  paramLabel">titleColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global content color of the message block" class="  paramLabel">modalContentColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global modal type color of the message block" class="  paramLabel">modalTypeColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global pagination color of the message block" class="  paramLabel">paginationColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global timer color of the message block" class="  paramLabel">timerColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global buttons color" class="  paramLabel">btnColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Global buttons hover color" class="  paramLabel">btnHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered when the iGuider is created" class="  paramLabel">create</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered before first showing the step" class="  paramLabel">start</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered when the tour ended, or was interrupted" class="  paramLabel">end</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered when the tour aborted" class="  paramLabel">abort</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered when step sequence is over" class="  paramLabel">finish</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Triggered when the timer state switches to \"play\"" class="  paramLabel">play</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Triggered when the timer state switches to \"pause\"" class="  paramLabel">pause</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="5">
+				<div class="builder form-horizontal" data-parname="intro">
+					<div class="builderHead">
+						<div class="text-right builderActions"><a class="setDef" href="javascript:void(0);">Set default values</a></div>
+						<h3>Intro options</h3>
+					</div>
+
+					<div class=" builderPar">
+						<label data-help="If set to true, before the tour you will see the introductory slide, which will offer to see a tour." class="  paramLabel">enable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Path to the cover of intro." class="  paramLabel">cover</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="" value="">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Title of introduction dialog." class="  paramLabel">title</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Welcome to the interactive tour" value="Welcome to the interactive tour">
+						</div>
+					</div>
+					<div class=" builderPar builderParBig">
+						<label data-help="Content of introduction dialog." class="  paramLabel">content</label>
+						<div class="paramControlWrap">
+							<textarea class="paramControl " data-type="string" data-default="This tour will tell you about the main site functionalities" value="This tour will tell you about the main site functionalities"></textarea>
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Color value of overlay layer for intro. Any color format: '#000', 'rgb(0,0,0)' or 'black'." class="  paramLabel">overlayColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="#000" value="#000">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Opacity value of overlay layer for intro." class="  paramLabel">overlayOpacity</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="1" data-min="0" data-step="0.1" data-default="0.5" value="0.5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Width of the message intro block, px,%" class="  paramLabel">width</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					
+					
+					<div class=" builderPar">
+						<label data-help="Background color of the intro message block" class="  paramLabel">bgColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title color of the intro message block" class="  paramLabel">titleColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Content color of the intro message block" class="  paramLabel">modalContentColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Modal type color of the intro message block" class="  paramLabel">modalTypeColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons color of the intro message block" class="  paramLabel">btnColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons Hover color of the intro message block" class="  paramLabel">btnHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="6">
+				<div class="builder form-horizontal" data-parname="continue">
+					<div class="builderHead">
+						<div class="text-right builderActions"><a class="setDef" href="javascript:void(0);">Set default values</a></div>
+						<h3>Continue options</h3>
+					</div>
+
+					<div class=" builderPar">
+						<label data-help="This parameter add the ability to continue the unfinished tour." class="  paramLabel">enable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Path to the cover of continue message." class="  paramLabel">cover</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="" value="">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Title of continue dialog." class="  paramLabel">title</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Continue the unfinished tour?" value="Continue the unfinished tour?">
+						</div>
+					</div>
+					<div class=" builderPar builderParBig">
+						<label data-help="Content of continue dialog." class="  paramLabel">content</label>
+						<div class="paramControlWrap">
+							<textarea class="paramControl " data-type="string" data-default="Click Continue to start with step on which finished last time." value="Click Continue to start with step on which finished last time."></textarea>
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Color value of overlay layer for continue message. Any color format: '#000', 'rgb(0,0,0)' or 'black'." class="  paramLabel">overlayColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="#000" value="#000">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Opacity value of overlay layer for continue message." class="  paramLabel">overlayOpacity</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="1" data-min="0" data-step="0.1" data-default="0.5" value="0.5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Width of the message continue block, px,%" class="  paramLabel">width</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					
+					
+					<div class=" builderPar">
+						<label data-help="Background color of the continue message block" class="  paramLabel">bgColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title color of the continue message block" class="  paramLabel">titleColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Content color of the continue message block" class="  paramLabel">modalContentColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Modal type color of the continue message block" class="  paramLabel">modalTypeColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons color of the continue message block" class="  paramLabel">btnColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons Hover color of the continue message block" class="  paramLabel">btnHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="7">
+				<div class="builder form-horizontal" data-parname="tourMap">
+					<div class="builderHead">
+						<div class="text-right builderActions"><a class="setDef" href="javascript:void(0);">Set default values</a></div>
+						<h3>Tour Map options</h3>
+					</div>
+
+					<div class=" builderPar">
+						<label data-help="This parameter add the ability view list of steps." class="  paramLabel">enable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Position of Tour Map block." class="  paramLabel">position</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="right, left" data-default="right" value="right">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="If set to false, then links of steps on the tour map will not be clickable." class="  paramLabel">clickable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="true, false, ready" data-default="true" value="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Specifies to show or hide the map of the tour at the start of the tour." class="  paramLabel">open</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+					
+					
+					<div class=" builderPar">
+						<label data-help="Background color of the Checklist" class="  paramLabel">bgColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title color of the Checklist" class="  paramLabel">titleColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons color of the checklist block" class="  paramLabel">btnColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons hover color of the checklist block" class="  paramLabel">btnHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Item color of the Checklist" class="  paramLabel">itemColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Item hover color of the Checklist" class="  paramLabel">itemHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Item Active color of the Checklist" class="  paramLabel">itemActiveColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Item Active BG color of the Checklist" class="  paramLabel">itemActiveBg</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Item Number color of the Checklist" class="  paramLabel">itemNumColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Check color of the Checklist" class="  paramLabel">checkColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Check Ready color of the Checklist" class="  paramLabel">checkReadyColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+				</div>
+			</div>
+							
+			<div class="builderTabItem" id="2">
+				<div class="builder builderLang form-horizontal" data-parname="lang">
+					<div class="builderHead">
+						<div class="text-right builderActions"><a class="setDef" href="javascript:void(0);">Set default values</a></div>
+						<h3>Lang options</h3>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The ttitle in the cancel tour button." class="  paramLabel">cancelTitle</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Cancel Tour" value="Cancel Tour">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the cancel tour button." class="  paramLabel">cancelText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="×" value="×">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the hidden tour map button." class="  paramLabel">hideText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Hide Tour Map" value="Hide Tour Map">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the show tour button." class="  paramLabel">tourMapText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="≡" value="≡">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title of Tour map button." class="  paramLabel">tourMapTitle</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Tour Map" value="Tour Map">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the Next Button." class="  paramLabel">nextTextDefault</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Next" value="Next">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the Prev Button." class="  paramLabel">prevTextDefault</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Prev" value="Prev">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Sets the text for the close button in the last step of the tour." class="  paramLabel">endText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="End Tour" value="End Tour">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Text in the start button of continue dialog." class="  paramLabel">contDialogBtnBegin</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Start from beginning" value="Start from beginning">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Text in the continue button of continue dialog." class="  paramLabel">contDialogBtnContinue</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Continue" value="Continue">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Text in the start button of introduction dialog." class="  paramLabel">introDialogBtnStart</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Start" value="Start">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Text in the cancel button of introduction dialog." class="  paramLabel">introDialogBtnCancel</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Cancel" value="Cancel">
+						</div>
+					</div>
+					
+					<div class=" builderPar">
+						<label data-help="Type Name of intro dialog" class="  paramLabel">modalIntroType</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Tour Intro" value="Tour Intro">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Type Name of continue dialog" class="  paramLabel">modalContinueType</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Unfinished Tour" value="Unfinished Tour">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="3">
+				<div class="builder builderStep form-horizontal builderStep--tpl" data-parname="steps">
+					<div class="builderHead">
+						<div class="text-right builderActions">
+							<a class="stepDown" title="Move Step Down" href="javascript:void(0);">[ &dArr; ]</a>
+							
+							<a class="stepUp" title="Move Step Up" href="javascript:void(0);">[ &uArr; ]</a>
+							
+							<a class="setDef" href="javascript:void(0);">Set default values</a>
+							 
+							<a class="deleteStep" href="javascript:void(0);">Delete Step</a>
+						</div>
+						<h3>Step options</h3>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Path to image file." class="  paramLabel">cover</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="" value="">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title of step." class="  paramLabel">title</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="New Step Title" value="New Step Title" data-uniq="true">
+						</div>
+					</div>
+					<div class=" builderPar builderParBig">
+						<label data-help="Description of step." class="  paramLabel">content</label>
+						<div class="paramControlWrap">
+							<textarea class="paramControl " data-type="string" data-default="New Step Description" value="New Step Description" data-uniq="true"></textarea>
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Position of message block. Recommended:'auto' - The plugin can automatically choose the best position out of 36 available to display a tour's message. 'center' - The message is displayed in the center of screen and no element is highlighted. The parameter 'target' in this case is not required! 'xxx' - Code which indicates the position of the window with the message" class="  paramLabel">position</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="auto, center, tll, tlc, tlr, tcl, tcc, tcr, trl, trc, trr, rtt, rtc, rtb, rct, rcc, rcb, rbt, rbc, rbb, brr, brc, brl, bcr, bcc, bcl, blr, blc, bll, lbb, lbc, lbt, lcb, lcc, lct, ltb, ltc, ltt" data-default="auto" value="auto">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Here you specify the object you want to highlight. It may take the values: 'uniqueName', selectors: '.className', '.parent .child', '.item-1, .item-2', or html code of any tag: '<tagName>' " class="  paramLabel">target</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="" value="uniqueName" data-uniq="true">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Cancels access to element." class="  paramLabel">disable</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Opacity value of overlay layer." class="  paramLabel">overlayOpacity</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="1" data-min="0" data-step="0.1" data-default="0.5" value="0.5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Clor value of overlay layer. Any color format: '#000', 'rgb(0,0,0)' or 'black'." class="  paramLabel">overlayColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="#000" value="#000">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Indent highlighting around the element, px" class="  paramLabel">spacing</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="100" data-min="0" data-step="1" data-default="10" value="10">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Shape of highlighting: 0 - rectangle, 1 - circle, 2 - rounded rectangle." class="  paramLabel">shape</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="select" data-options="0,1,2" data-default="0" value="0">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The corner radius of rounded rectangle shape. Only when 'shape' paramenter has value '2'" class="  paramLabel">shapeBorderRadius</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="100" data-min="0" data-step="1" data-default="5" value="5">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The speed of movement of highlighting, ms" class="  paramLabel">duration</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="2000" data-min="0" data-step="50" data-default="300" value="300">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The time after which an automatic switching to the next step, ms" class="  paramLabel">timer</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="10000" data-min="0" data-step="1000" data-default="4000" value="4000">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="An event that you need to do to go to the next step. It may take the values: 'next' (default), 'click', 'mousedown', 'mouseup' and other jQuery events. If you want to listen for the event in another element, then use the array construction. The first array element is an 'event', the second element is a jQuery object: ['eventName','yourSelector']" class="paramLabel">event</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="next" value="next">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="This parameter sets message hint for steps with custom events" class="  paramLabel">eventMessage</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Follow the required conditions to continue." value="Follow the required conditions to continue.">
+						</div>
+					</div>
+					
+					
+					<div class=" builderPar">
+						<label data-help="Step can be skipped if you set parameter 'skip' to true." class="  paramLabel">skip</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The text in the Next Button." class="  paramLabel">nextText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Next" value="Next">
+						</div>
+					</div>	
+					<div class=" builderPar">
+						<label data-help="The text in the Prev Button." class="  paramLabel">prevText</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="Prev" value="Prev">
+						</div>
+					</div>	
+					<div class=" builderPar">
+						<label data-help="An event (jQuery event) which is generated on the selected element, in the transition from step to step. It may take the values: Name of Event or false." class="  paramLabel">trigger</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>	
+					<div class=" builderPar">
+						<label data-help="Unique ID Name. This name is assigned to the 'html' tag as 'data-step' attribute (If not specified, the plugin generates it automatically in the form: 'step-N')." class="  paramLabel">stepID</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="" value="">
+						</div>
+					</div>	
+					<div class=" builderPar">
+						<label data-help="The parameter sets the time (ms) to wait for an item to appear" class="  paramLabel">waitElementTime</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="60000" data-min="0" data-step="1000" data-default="0" value="0">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="For multi-page tours. The path to the page on which the step should work." class="  paramLabel">loc</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>	
+					<div class=" builderPar">
+						<label data-help="This parameter indicates whether the step was completed or not." class="  paramLabel">ready</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The width of the message block." class="  paramLabel">widht</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="2000" data-min="320" data-step="50" data-default="320" value="320">
+						</div>
+					</div>	
+					
+					<div class=" builderPar">
+						<label data-help="This parameter sets the permission to trigger custom events." class="  paramLabel">keyboardEvent</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="boolean" data-default="false" value="false">
+						</div>
+					</div>
+
+						
+					<div class=" builderPar">
+						<label data-help="Background color of the message block" class="  paramLabel">bgColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Title color of the message block" class="  paramLabel">titleColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Content color of the message block" class="  paramLabel">modalContentColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Pagination color of the message block" class="  paramLabel">paginationColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Timer color of the message block" class="  paramLabel">timerColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons color" class="  paramLabel">btnColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Buttons hover color" class="  paramLabel">btnHoverColor</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="false" value="false">
+						</div>
+					</div>
+
+
+
+					
+					<div class=" builderPar">
+						<label data-help="The delay before the element search, ms" class=" paramLabel">delayBefore</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="10000" data-min="0" data-step="50" data-default="0" value="0">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="The delay before the transition to the next step, ms " class=" paramLabel">delayAfter</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="number" data-max="10000" data-min="0" data-step="50" data-default="0" value="0">
+						</div>
+					</div>	
+					
+					<div class=" builderPar">
+						<label data-help="Triggered before the start of step" class="  paramLabel">before</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Triggered after the onset of step" class="  paramLabel">during</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>
+					<div class=" builderPar">
+						<label data-help="Triggered After completion of the step, but before proceeding to the next" class="  paramLabel">after</label>
+						<div class="paramControlWrap">
+							<input class="paramControl " type="text" data-type="string" data-default="function(){}" value="function(){}">
+						</div>
+					</div>	
+
+					
+				</div>
+				<div class="row addWrap">
+					<div class="addStepPos"><a class="addStep" title="Add a new step" href="javascript:void(0);">+</a></div>
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="8">
+				<div class="builder form-horizontal" data-parname="theme">
+					<div class="builderHead">
+						<div class="text-right builderActions"></div>
+						<h3>Themes</h3>
+					</div>
+					<div style="overflow:hidden;">
+						<div class="theme-item">
+							<img src="doc_files/images/material.png" class="theme-item-pic">
+							<div class="theme-item-title">
+								<div class="theme-title-text"></div>
+								<div class="theme-check-wrap">
+									<label class="switch">
+										<input checked name="theme-check" type="radio">
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="theme-item">
+							<img src="doc_files/images/relate.png" class="theme-item-pic">
+							<div class="theme-item-title">
+								<div class="theme-title-text"></div>
+								<div class="theme-check-wrap">
+									<label class="switch">
+										<input name="theme-check" type="radio">
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="theme-item">
+							<img src="doc_files/images/neon.png" class="theme-item-pic">
+							<div class="theme-item-title">
+								<div class="theme-title-text"></div>
+								<div class="theme-check-wrap">
+									<label class="switch">
+										<input name="theme-check" type="radio">
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="builderTabItem" id="4">
+				<div class="builder builderImport form-horizontal">
+					<div class="builderHead">
+						<div class="text-right builderActions">
+							<a href="javascript:void(0);" class="stepImport">Start Import</a>
+						</div>
+						<h3>Import options</h3>
+					</div>
+					<div class="builderPar builderParXL">
+						<label data-help="Insert only the json object, with no extra code. Value should be wrapped in quotes. Inside the value, only double quotes are allowed." class="paramLabel">Insert an object with options here</label>
+						<div class="paramControlWrap">
+							<textarea class="paramControl stepImportCode" style="max-height:none;" placeholder='For example: {"introShow": true}'></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="previewWrap">
+			<iframe id="myIframe" name="myIframe" src="doc_files/source/prv.html" style="width:100%; height:100%; border:0; position:absolute; top:0; left:0;"></iframe>
+		</div>
+		<div class="resultWrap">
+			<div class="builder builder-result">
+				<div class="builderHead">
+					<div class="text-right builderActions">
+					<label class="checkLabel"><input name="opt-result" class="opt-item opt-all" type="radio">All Options</label>
+					<label class="checkLabel"><input name="opt-result" checked class="opt-item opt-new" type="radio">Only New</label>
+					<a data-clipboard-target="#result" class="copyCode" href="javascript:void(0);">Copy to clipboard</a></div>
+					<h3>RESULT CODE</h3>
+				</div>
+				<div class="builderResult">
+					<textarea id="result" spellcheck="false" class="resultField" style="width:100%; padding:10px;"></textarea>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+				
+
+
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="doc_files/js/builder.js"></script>
+<script src="doc_files/js/clipboard.min.js"></script>
+<script>
+$(function(){
+	var copyCode = $('.copyCode');
+    var clipboard = new Clipboard('.copyCode');
+    clipboard.on('success', function(e) {
+        copyCode.attr('data-tip','Copied');
+		setTimeout(function(){
+			copyCode.removeAttr('data-tip','Copied');
+		},1000)
+		e.clearSelection();
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+});
+  
+</script>
+
+<link rel="stylesheet" href="css/iGuider.css">
+<script src="js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="themes/material/iGuider-theme-material.css">
+<script src="themes/material/iGuider-theme-material.js"></script>
+
+<script>
+var optBuilder =  {
+    'tourTitle': 'Builder Help Tour',
+	'lang':{
+		'introTitle':'Welcome to the Help Tour of iGuider Builder',
+		'introContent':'This tour will tell you about the builder functionalities'
+	},
+	'create':function(){
+		$.elementView = function(target){
+			if(target.offset().top < 0 || target.offset().top > $(window).height()){
+				$('.paramWrap').animate({scrollTop:target.position().top},function(){
+					iGuider('update');
+				})
+			}
+		};
+	},
+    'steps': [
+		
+		/*step 1*/
+        {
+            'title': 'Basic Navigation',
+            'content': 'This is the basic navigation for the Builder. Here you must select the necessary group of parameters to configure.',
+            'target': '.groupWrap',
+			'spacing':0,
+			timer:5000
+        },	
+		
+		/*step 2*/
+        {
+            'title': 'Plugin Settings',
+            'content': 'In this part of the Builder, the parameters of the selected group will be displayed. The plugin parameters are set here.',
+            'target': '.paramWrap',
+			'spacing':0,
+			timer:5000
+        },
+		
+		/*step 3*/
+        {
+            'title': 'Generated Code',
+            'content': 'In this part displays the generated code for connecting the plugin with the selected parameters.',
+            'target': '.resultWrap',
+			'before':function(){iGuider('map','left');},				
+			'after':function(){iGuider('map','right')},
+			'spacing':0,
+			timer:5000
+        },
+		
+		/*step 4*/
+        {
+            'title': 'General Tab',
+            'content': 'To configure the basic behavior of the plugin, click on the "General Options" tab',
+            'target': '[data-href="1"]',
+			'trigger': 'click',
+			timer:5000
+        },
+		
+		/*step 5*/
+        {
+            'title': 'General Options',
+            'content': 'The main behavior of the plugin is configured in the "General Options" group',
+            'target': '#1',
+			'before':function(){$('[data-href="1"]').trigger('click')},
+			'spacing':0,
+			timer:5000
+        },
+		
+		/*step 6*/
+        {
+            'title': 'Parameter Types',
+            'content': 'To modify the settings, there are several types of controllers',
+			'before':function(){$('[data-href="1"]').trigger('click')},
+			timer:5000
+        },
+		
+		/*step 7*/
+        {
+            'title': 'Text Field',
+            'content': 'For enter text',
+            'target': '#1 [type="text"]:first',
+			'before':function(target){
+				$('[data-href="1"]').trigger('click');
+				$.elementView(target);
+			},
+			timer:5000
+        },
+		
+		/*step 8*/
+        {
+            'title': 'Range Field',
+            'content': 'To select a numerical value',
+            'target': '#1 .builderPar:eq(2)',
+			'before':function(target){
+				$('[data-href="1"]').trigger('click');
+				$.elementView(target);
+			},
+			timer:5000
+        },
+		
+		/*step 9*/
+        {
+            'title': 'Checkbox Field',
+            'content': 'To turn the parameter on and off',
+            'target': '#1 .builderPar:eq(3)',
+			'before':function(target){
+				$('[data-href="1"]').trigger('click');
+				$.elementView(target);
+			},
+			timer:5000
+        },
+		
+		/*step 10*/
+        {
+            'title': 'Select Field',
+            'content': 'To select one of the possible values',
+            'target': '#1 select:first',
+			'before':function(target){
+				$('[data-href="1"]').trigger('click');
+				$.elementView(target);
+			},
+			timer:5000
+        },
+		
+		/*step 11*/
+        {
+            'title': 'Default Value',
+            'content': 'To reset the settings, click button "Set Default Value"',
+            'target': '#1 .setDef',
+			'before':function(target){
+				$('[data-href="1"]').trigger('click');
+				$.elementView(target);
+			},
+			timer:5000
+        },
+		
+		/*step 12*/
+        {
+            'title': 'Intro Tab',
+            'content': 'To configure the Welcome Settings, click on the "Intro Options" tab',
+            'target': '[data-href="5"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 13*/
+        {
+            'title': 'Intro Options',
+            'content': 'These are the parameters for the welcome settings',
+            'target': '#5',
+			'before':function(){$('[data-href="5"]').trigger('click')},
+			timer:5000
+        },
+		
+		/*step 14*/
+        {
+            'title': 'Continue Tab',
+            'content': 'To adjust the possibility of continuing unfinished tour, click on the "Continue Options" tab',
+            'target': '[data-href="6"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 15*/
+        {
+            'title': 'Continue Options',
+            'content': 'These are the parameters for the continue settings',
+            'target': '#6',
+			'before':function(){$('[data-href="6"]').trigger('click')},
+			timer:5000
+        },
+		
+		/*step 16*/
+        {
+            'title': 'Tour Map Tab',
+            'content': 'To configure the window of optional tour navigation, click on the "Tour Map Options" tab ',
+            'target': '[data-href="7"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 17*/
+        {
+            'title': 'Tour Map Options',
+			'content': 'These are the parameters for the Tour Map settings',
+            'target': '#7',
+			'before':function(){$('[data-href="7"]').trigger('click')},
+			'spacing':0,
+			timer:5000
+        },
+		
+		/*step 18*/
+        {
+            'title': 'Steps Tab',
+			'content': 'To configure each step of the tour, click on the "Steps Options" tab',
+            'target': '[data-href="3"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 19*/
+        {
+            'title': 'Step Options',
+            'content': 'For each step there are additional control buttons',
+            'target': '[id="3"] .builderActions:visible:first',
+			'disable':true,
+			'before':function(target){
+				$('[data-href="3"]').trigger('click');
+				$.elementView(target);
+			},
+			'during':function(){
+				iGuider('update');
+			},
+			timer:5000
+        },
+		
+		/*step 20*/
+        {
+            'title': 'Sequence of steps',
+            'content': 'For change the order of steps',
+            'target': '[id="3"] .stepDown:visible:first, [id="3"] .stepUp:visible:first',
+			'before':function(target){
+				$('[data-href="3"]').trigger('click')
+				$.elementView(target);
+			},
+			'disable':true,
+			timer:5000
+        },
+		
+		/*step 21*/
+        {
+            'title': 'Delete Step',
+            'content': 'For delete the step',
+            'target': '[id="3"] .deleteStep:visible:first',
+			'before':function(target){
+				$('[data-href="3"]').trigger('click')
+				$.elementView(target);
+			},
+			'disable':true,
+			timer:5000
+        },
+		
+		/*step 22*/
+        {
+            'title': 'Add New Step',
+            'content': 'And "Add New Step" button for add new steps',
+            'target': '.addStep',
+			'before':function(target){
+				$.elementView(target);
+				$('[data-href="3"]').trigger('click')
+			},
+			'disable':true,
+			timer:5000
+        },
+		
+		/*step 23*/
+        {
+            'title': 'Lang Tab',
+            'content': 'To change all standard text messages, click on the "Lang Options" tab',
+            'target': '[data-href="2"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 24*/
+        {
+            'title': 'Lang Options',
+            'content': 'These are the parameters for the Lang Options',
+            'target': '#2',
+			'before':function(){$('[data-href="2"]').trigger('click')},
+			'spacing':0,
+			timer:5000
+        },
+		
+		/*step 25*/
+        {
+            'title': 'Import Tab',
+            'content': 'To import ready-made settings into the builder, click on the "Import Options" tab',
+            'target': '[data-href="4"]',
+			'trigger':'click',
+			timer:5000
+        },
+		
+		/*step 26*/
+        {
+            'title': 'Import Options',
+            'content': 'You can insert your settings code in this field in order to change them with the help of the builder',
+            'target': '#4',
+			'before':function(){$('[data-href="4"]').trigger('click')},	
+			'disable':true	,
+			timer:5000
+        },
+		
+		/*step 27*/
+        {
+            'title': 'Start Import',
+            'content': 'After the code has been inserted click on the "Start Import" button',
+            'target': '#4 .stepImport',
+			'before':function(){$('[data-href="4"]').trigger('click')},	
+			'disable':true	,
+			timer:5000
+        },
+		
+		/*step 28*/
+        {
+            'title': 'Code View Type',
+            'content': 'The generated code can have two kinds of display: "All Parameters" and "Only New Parameters"',
+            'target': '.resultWrap .builderActions .checkLabel',
+			'before':function(){iGuider('map','left');},				
+			'after':function(){iGuider('map','right')},
+			timer:5000
+        },
+		
+		/*step 29*/
+        {
+            'title': 'Thank you for attention',
+            'content': 'I hope your work with the Builder will bring only pleasure',				
+			'after':function(){$('[data-href="1"]').trigger('click')},
+			timer:5000
+        }
+    ]
+};
+
+$(window).on('load',function(){
+	$('.startTour').on('click',function(){
+		iGuider(optBuilder);
+		return false;
+	});
+});
+</script>
+
+
+
+</body>
+</html>

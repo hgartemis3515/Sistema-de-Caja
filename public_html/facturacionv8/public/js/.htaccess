@@ -1,0 +1,19 @@
+# Deshabilitar el listado de directorios
+Options -Indexes
+
+# Asegurarnos que los archivos necesarios sean accesibles
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Permitir acceso a todos los archivos estáticos necesarios
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule \.(js|css|png|jpg|jpeg|gif|svg|pdf|ico)$ - [L]
+</IfModule>
+
+# Redirigir a index.html si se intenta acceder al directorio
+DirectoryIndex index.html
+
+# Medidas básicas de seguridad
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>

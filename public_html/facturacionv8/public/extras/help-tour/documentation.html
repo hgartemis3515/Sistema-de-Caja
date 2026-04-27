@@ -1,0 +1,2984 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+<title>iGuider documentation</title>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="doc_files/css/style.css">
+
+<script src="doc_files/js/main.js"></script>
+
+</head>
+<body>
+
+	<div class="navWrap" data-target="about_4">
+		<div id="Demos" class="demoWrap">
+			<div class="navTitle"><img class="logo" src="doc_files/images/80x80.png"> iGuider&nbsp;Doc</div>
+			<h3>Tools</h3>
+			<div class="subNav">
+				<a target="_blank" href="builder.html">Builder</a>
+			</div>
+			<div class="subNav">
+				<a target="_blank" href="demos.html">Demos</a>
+			</div>
+			<div class="subNav">
+				<a target="_blank" href="#SelectorGetter">Selector Getter (Chrome Extension)</a>
+			</div>
+			<h3>Introducing</h3>
+			<div class="subNav">
+				<a href="#Description">Description</a>
+				<a href="#Features">Features</a>
+				<a href="#License">License</a>
+				<a href="#Purchased_Archive_Structure">Purchased Archive Structure</a>
+				<a href="#Files_Connection">Files Connection</a>
+				<a href="#Plugin_Initialization">Plugin Initialization</a>
+				<a href="#CSS_Structure">CSS Structure</a>
+				<a href="#JavaScript">JavaScript</a>
+				<a href="#themes">Themes Structure</a>
+				<a href="#Localization_Files">Localization Files</a>
+				<a href="#Quick_Start">Quick Start</a>	
+				<a href="#WordPress">WordPress Version</a>	
+			</div>
+			<h3>API</h3>
+			<div class="subNav">
+				<a href="#Options">Options</a>
+				<a href="#Methods">Methods</a>
+				<a href="#Events">Events</a>
+				<a href="#Additional_Functionality">Additional Functionality</a>
+			</div>
+			
+			<h3>Info</h3>
+			<div class="subNav">
+				<a href="#Update_History">Update History</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="contWrapSize">	
+		<div class="contWrap">
+			
+			<div class="menuBtn"></div>
+			
+			
+			<!-- Documentation-->
+			<div class="container">
+				
+				<h1 style="font-size:60px;">iGuider documentation</h1>
+			</div>
+			<hr>
+			<div class="container">
+				
+				<div class="panel panel-default" style="max-width:1000px;">
+					<div class="row">
+						<div class="col-md-8" style="width:50%">
+							<div class="panel-body">
+								<strong>
+								Created: 27/11/2017<br>
+								Updated: 16/12/2018<br>
+								Version: 4.3<br>
+								By: MASSCODE<br>
+								URL: <a target="_blank" href="https://codecanyon.net/item/iguider-jquery-webpage-help-tour/21073716">https://codecanyon.net/item/iguider-jquery-webpage-help-tour/21073716</a><br>
+								Email: <a href="mailto:limasscode@gmail.com">limasscode@gmail.com</a>
+								</strong>
+							</div>
+						</div>	
+				
+						<div class="col-md-4" style="width:50%">
+							<div class="panel-body">
+								Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/yurik417">here</a>. Thanks so much!
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+			<hr>
+			
+			<!-- Introducing-->
+			<div class="container">
+				<h1>Introducing</h1>
+			</div>
+			
+			<hr>
+			
+			<!-- Description-->
+			<div id="Description" class="container">	
+				<h2>Description</h2>
+				<p>The jQuery plugin «iGuider» gives you the opportunity to tell you about the functionality of any interface. In addition, the plugin «iGuider» can perform the function of teaching, display the task, prompt you what to do and follow up on implementation of tasks. This is the most flexible and functional plugin among all his analogs.</p>
+				<p>This is the most flexible and multifunctional help-tour plugin in the world.</p>
+			</div>
+			
+			<hr>
+			
+			<!-- Features-->
+			<div id="Features" class="container">	
+				<h2>Features</h2>
+				<ul data-target="about_3">
+					<li>Continue the tour after move to other page</li>
+					<li>Saving the progress of the tour after updating the page</li>
+					<li>Check conditions</li>
+					<li>Control the tour using the keyboard</li>
+					<li>Waiting for an item to appear</li>
+					<li>Control of message width.</li>
+					<li>Automatic generation of the start button of the tour.</li>
+					<li>Automatic generation of the list of tours</li>
+					<li>Tour Builder (Enables Generate your tour code in a user-friendly interface)</li>
+					<li>Chrome Extension (Gets an unique selector code for any element on the page)</li>
+					<li>Additionally present WordPress version of plugin</li>
+					<li>Multiple targets same time</li>
+					<li>Three shapes of highlighting: rectangle, circle and rounded rectangle </li>
+					<li>Templating </li>
+					<li>Styling</li>
+					<li>Processing code color in any format</li>
+					<li>Autopilot</li>
+					<li>Tracking position of the dragged element</li>
+					<li>Multiple pages</li>
+					<li>Ability to continue the unfinished tour</lI>
+					<li>Smooth change of color and opacity for each step individually</li>
+					<li>Management from outside</li>
+					<li>The intro slide in center of screen</li>
+					<li>Displays the tour covers</li>
+					<li>Works with dynamic content</li>
+					<li>Works with hidden content (select, tabs etc.)</li>
+					<li>Localization (60 languages)</li>
+					<li>Different way of searching elements. <a target="_blank" href="http://api.jquery.com/category/selectors/">Supports most CSS3 selectors</a>, as well as some non-standard selectors. </li>
+					<li>Supports operating system "windows (7,8,10)", MacOS, iOS, Android  </li>
+					<li>Supports brousers IE 11+, Firefox, Chrome, Safari</li>
+					<li>Detailed documentation and <a href="http://demo.masscode.ru/iGuider/documentation.html#Tour_About_The_Tour">tour about the tour</a></li>
+					<li>37 Positions' Variants</li>
+					<li>Auto Positioning of Message</li>
+					<li>Detect Events</li>
+					<li>Trigger Events</li>
+					<li>Callback Functions</li>
+					<li>Map of All Steps</li>
+					<li>Control of Buttons Text </li>
+					<li>Scroll to Element</li>
+					<li>Highlighting of passed steps</li>
+					<li>Responsive</li>
+					<li>Compatibility with the "Select2" plugin</li>
+					<li>Compatibility with the "jQuery UI Tabs"</li>
+					<li>Compatibility with the "Bootstrap Collapse"</li>
+				</ul>
+			</div>
+			
+			<hr>
+			
+			<!-- License-->
+			<div id="License" class="container">	
+				<h2>License</h2>
+				<p>All parts of this plugin: CSS and javascript codes are licensed according to the license purchased from Envato.</p>
+				<p>Read more about licensing here: <a target="_blank" href="http://codecanyon.net/licenses">http://codecanyon.net/licenses</a></p>
+			</div>
+			
+			<hr>
+			
+			<!-- Purchased_Archive_Structure-->
+			<div id="Purchased_Archive_Structure" class="container">	
+				<h2>Purchased Archive Structure</h2>
+				<p>Once you have downloaded and extracted the iGuider.zip file, you should find the following directory structure:</p>
+				
+				<table class="table table-bordered" width="100%" border="0">
+					<tr>
+						<td colspan="2">
+							<p>/ iGuider /</p>
+							<p>— css /</p>
+							<p>— js /</p>
+							<p>— themes /</p>
+							<p>— localization /</p>
+							<p>— demos /</p>
+							<p>— doc_files /</p>
+							<p>— chrome_extension /</p>
+							<p>— wordpress_plugin /</p>
+							<p>— documentation.html</p>
+							<p>— demos.html</p>
+							<p>— builder.html</p>
+							<p>— quick-start-tpl.html</p>
+							
+						</td>
+					</tr>
+					<tr>
+						<td style="width:0">css/</td>
+						<td>This folder contains the "iGuider.css" file which contain all the basic styles.</td>
+					</tr>
+					<tr>
+						<td>js/</td>
+						<td>This folder contains the "jquery.iGuider.js" file which contain the global architecture. And "jquery.min.js" library.</td>
+					</tr>
+					<tr>
+						<td>themes/</td>
+						<td>This folder contains templates and themes of the plugin.</td>
+					</tr>
+					<tr>
+						<td>localization/</td>
+						<td>This folder contains localization files for the plugin interface.</td>
+					</tr>
+					<tr>
+						<td>demos/</td>
+						<td>This folder contains demonstration pages for all parameters.</td>
+					</tr>
+					<tr>
+						<td>doc_files/</td>
+						<td>This folder contains the files needed to describe the iGuider plugin.</td>
+					</tr>
+					<tr>
+						<td>chrome_extension/</td>
+						<td>This folder contains chrome extension, which gets an unique selector code for any element on the page.</td>
+					</tr>
+					<tr>
+						<td>wordpress_plugin/</td>
+						<td>This folder contains WordPress version of plugin.</td>
+					</tr>
+					<tr>
+						<td>documentation.html</td>
+						<td>This file contains a description of the plugin and examples of use.</td>
+					</tr>
+					<tr>
+						<td>demos.html</td>
+						<td>This file contains a list of demos.</td>
+					</tr>
+					<tr>
+						<td>builder.html</td>
+						<td>This file contains a Tour Builder, which enables Generate your tour code in a user-friendly interface. </td>
+					</tr>
+					<tr>
+						<td>quick-start-tpl.html</td>
+						<td>This file contains the minimum required code for quick connection and start the tour. </td>
+					</tr>
+				</table>
+
+			</div>
+			
+			<hr>
+			<!-- Files Connection-->
+			
+			<div id="Files_Connection" class="container">	
+				<h2>Files Connection</h2>
+				<ol>
+					<li>Javascript library jQuery <a href="#JavaScript">View details</a></li>
+					<li>The style file. Used for the decoration of all the elements of a plugin. <a href="#CSS_Structure">View details</a></li>
+					<li>The main plugin file <a href="#JavaScript">View details</a></li>
+					<li>The theme files css and js <a href="#themes">View details</a></li>
+				</ol>
+
+				</p>
+				<p>&lt;head> ...[THIS CODE]... &lt;/head></p>
+<pre><code class="language-html"><xmp><script src="js/jquery.js"></script>
+
+<link rel="stylesheet" href="css/iGuider.css">
+<script src="js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="themes/material/iGuider-theme-material.css">
+<script src="themes/material/iGuider-theme-material.js"></script>
+
+</xmp></code></pre>						
+				
+				
+			</div>
+			
+			<hr>
+			
+			<!-- Plugin Initialization-->
+			<div id="Plugin_Initialization" class="container">	
+				<h2>Plugin Initialization</h2>
+				
+				<p>Calling the plugin, you should be sure to specify the parameter "steps".</p>
+				<p>Parameter "steps" includes settings for each step of the tour.</p>
+				<p>The setting "target" should correspond to the value of the attribute "data-target" in the html code or selector name (class, id, other attributes).</p>
+				<p>You can omit the default parameters</p>
+<pre><code class="language-html"><xmp>			
+<script>
+$(window).on('load',function(){
+	iGuider({
+		tourID:'anyTourID',							//This string allows you to save data with a unique name about tour progress. 
+													//It can be used to save information on the progress of the tour for several users. 
+													//Or save the progress of each tour separately
+		tourTitle:'Tour Title Default',				//Tour title
+		tourSubtitle:'Tour Subtitle Default',
+		startStep:1,								//Step from which the tour begins
+		
+		overlayClickable:true,						//This parameter enables or disables the click event for overlying layer
+		overlayColor:'#000',						//Global color values of the overlay layer.
+		overlayOpacity:0.5,							//Global opacity values of the overlay layer.
+		
+		pagination:true,							//Shows the total number of steps and the current step number
+		registerMissingElements:true,				//Shows an absent element in tour map and find this element in DOM.
+		textDirection:'ltr',						//Global text direction. (ltr, rtl)
+		
+		shape:0,									//Global shape of highlighting. 0 - rectangle (default), 1 - circle, 2 - rounded rectangle
+		shapeBorderRadius:5,						//Global corner radius of rounded rectangle shape. Only when "shape" value is "2"
+		
+		width:320,									//Global width of the message block
+		
+		bgColor:false,								//Global background color of the message block
+		titleColor:false,							//Global title color of the message block
+		
+		modalContentColor:false,					//Global content color of the message block
+		modalTypeColor:false,						//Global modal type color of the message block
+		
+		paginationColor:false,						//Global pagination color of the message block
+		timerColor:false,							//Global timer color of the message block
+		
+		btnColor:false,								//Global buttons color
+		btnHoverColor:false,						//Global buttons hover color
+
+		spacing:10,									//Global indent highlighting around the element
+		loc:false,									//Global path to the page on which the step should work
+		timer:false,								//Global time after which an automatic switching to the next step
+		timerType:'line',							//Global timer shape type: 'line' or 'circle'
+		keyboard:true,								//Tour control by keyboard buttons. Left - the previous step, right - the next step, Esc - close tour.
+		keyboardEvent:false,						//This parameter sets the permission to trigger custom events.
+
+		intro:{										//Default intro settings
+			enable:true,							//If set to true, before the tour you will see the introductory slide, which will offer to see a tour. 
+			
+			title:'Welcome to the interactive tour',												//Title of introduction dialog
+			content:'This tour will tell you about the main site functionalities',					//Content of introduction dialog
+			
+			cover:'',								//Path to the cover of intro
+			overlayColor:false,						//For intro, you can specify the different color values of the overlay layer.
+			overlayOpacity:false,					//For intro, you can specify the different opacity values of the overlay layer.
+			width:false,							//Width of the intro message block
+			
+			bgColor:false,							//Background color of the intro message block
+			titleColor:false,						//Title color of the intro message block
+			
+			modalContentColor:false,				//Content color of the intro message block
+			modalTypeColor:false,					//Modal type color of the intro message block
+			
+			btnColor:false,							//Buttons color of the intro message block
+			btnHoverColor:false						//Buttons Hover color of the intro message block
+		},
+		
+		continue:{									//Default the continue message settings
+			enable:true,							//This parameter add the ability to continue the unfinished tour.    
+			
+			title:'Continue the unfinished tour?',											//Title of continue dialog
+			content:'Click "Continue" to start with step on which finished last time.',		//Content of continue dialog
+			
+			cover:'',								//Path to the cover of continue message    
+			overlayColor:false,						//For continue message, you can specify the different color values of the overlay layer.
+			overlayOpacity:false,					//For continue message, you can specify the different opacity values of the overlay layer.
+			width:false,							//Width of the continue message block
+			
+			bgColor:false,							//Background color of the continue message block
+			titleColor:false,						//Title color of the continue message block
+			
+			modalContentColor:false,				//Content color of the continue message block
+			modalTypeColor:false,					//Modal type color of the continue message block
+			
+			btnColor:false,							//Buttons color of the continue message block
+			btnHoverColor:false						//Buttons Hover color of the continue message block
+		},
+
+		tourMap: {									//Default Tour Checklist settings
+			enable:true,							//This parameter add the ability view list of steps.
+			position:'right',						//Checklist Position 
+			clickable:true,							//Specifies the clickability of links in the checklist of steps: true - clickable, false - disabled, or 'ready' - clickable only completed steps and current
+			open:false,								//Specifies to show or hide the Checklist at the start of the tour 
+			
+			bgColor:false,							//Background color of the Checklist
+			titleColor:false,						//Title color of the Checklist
+			
+			btnColor:false,							//Buttons color of the checklist block
+			btnHoverColor:false,					//Buttons hover color of the checklist block
+			
+			itemColor:false,						//Item color of the Checklist
+			itemHoverColor:false,					//Item hover color of the Checklist
+			itemActiveColor:false,					//Item Active color of the Checklist
+			itemActiveBg:false,						//Item Active BG color of the Checklist
+			itemNumColor:false,						//Item Number color of the Checklist
+			
+			checkColor:false,						//Check color of the Checklist
+			checkReadyColor:false					//Check Ready color of the Checklist
+		},
+		
+		steps:[{									//Default step settings
+			cover:'',								//Path to image file
+			title:'New Step Title',					//Name of step
+			content:'New Step Description',			//Description of step
+			position:'auto',						//Position of message
+			target:'uniqueName',					//Unique Name (<div data-target="uniqueName"></div>) of highlighted element or .className (<div class="className"></div>) or #idValue (<div id="idValue"></div>)
+			disable:false,							//Block access to element
+			overlayOpacity:0.5,						//For each step, you can specify the different opacity values of the overlay layer.
+			overlayColor:'#000',					//For each step, you can specify the different color values of the overlay layer in HEX .
+			spacing:10,								//Indent highlighting around the element, px
+			shape:0,								//Shape of highlighting (0 - rectangle, 1 - circle, 2 - rounded rectangle)
+			shapeBorderRadius:5,					//The corner radius of rounded rectangle shape. Only when "shape" value is "2"
+			timer:false,							//The time after which an automatic switching to the next step
+			event:'next',							//An event that you need to do to go to the next step
+			eventMessage:'Follow the required conditions to continue.',		//Message hint for steps with custom events
+			skip: false,							//Step can be skipped if you set parameter "skip" to true.
+			nextText:'Next',						//The text in the Next Button
+			prevText:'Prev',						//The text in the Prev Button
+			trigger:false,							//An event which is generated on the selected element, in the transition from step to step
+			stepID:'',								//Unique ID Name. This name is assigned to the "html" tag as "data-g-stepid" attribute (If not specified, the plugin generates it automatically in the form: "step-N")
+			waitElementTime:0,						//The parameter "waitElementTime" sets the time (ms) to wait for an item to appear
+			loc:false,								//The path to the page on which the step should work
+			ready:false,							//This parameter indicates whether the step was completed or not.
+			width:320,								//Width of the message block
+			
+			bgColor:false,							//Background color of the message block
+			titleColor:false,						//Title color of the message block
+			
+			modalContentColor:false,				//Content color of the message block
+			
+			paginationColor:false,					//Pagination color of the message block
+			timerColor:false,						//Timer color of the message block
+			
+			btnColor:false,							//Buttons color of the message block
+			btnHoverColor:false,					//Buttons Hover color of the message block
+			
+			keyboardEvent:false,					//This parameter sets the permission to simulate user events for step.
+
+			checkNext:{                             //Function in which you can carry out any verification by clicking on the "Next" button. 
+				func:function(){return true;},       ////If the function returns True, the step will be switched.
+				messageError:'Fulfill all conditions!'  //If the function returns "False", an error message will appear in the message window
+			},
+			checkPrev:{                             //Function in which you can carry out any verification by clicking on the "Prev" button. 
+				func:function(){return true;},
+				messageError:'Fulfill all conditions!'  
+			},
+			before:function(target){},					//Triggered before the start of step
+			during:function(target){},					//Triggered after the onset of step
+			after:function(target){},						//Triggered After completion of the step, but before proceeding to the next
+			delayBefore:0,							//The delay before the element search, ms
+			delayAfter:0							//The delay before the transition to the next step, ms
+		}],
+	
+		lang: {										//Default language settings
+			cancelTitle: 'Cancel Tour',				//The title in the cancel tour button
+			cancelText: '×',						//The text in the cancel tour button
+			hideText: 'Hide Tour Map',				//The text in the hidden tour map button 
+			tourMapText:'≡',						//The text in the show tour button
+			tourMapTitle: 'Tour Map',				//Title of Tour map button
+			nextTextDefault:'Next',					//The text in the Next Button
+			prevTextDefault:'Prev',					//The text in the Prev Button
+			endText:'End Tour',						//The text in the End Tour Button
+
+			contDialogBtnBegin:'Start over',		//Text in the start button of continue dialog 
+			contDialogBtnContinue:'Continue',		//Text in the continue button of continue dialog 
+			
+			introDialogBtnStart:'Start',			//Text in the start button of introduction dialog
+			introDialogBtnCancel:'Cancel',			//Text in the cancel button of introduction dialog
+		   
+			modalIntroType:'Tour Intro',			//Type Name of intro dialog
+			modalContinueType:'Unfinished Tour'		//Type Name of continue dialog
+		},
+		
+		create: function(){},						//Triggered when the iGuider is created
+		start: function(){},						//Triggered before first showing the step
+		progress: function(data){},					//Triggered together with start any step
+		end: function(){},							//Triggered when the tour ended, or was interrupted
+		abort: function(){},						//Triggered when the tour aborted
+		finish: function(){},						//Triggered when step sequence is over
+		play: function(){},							//Triggered when the timer state switches to "play"
+		pause: function(){},						//Triggered when the timer state switches to "pause"
+		
+		modalTemplate:								//Modal window template
+		'<div class="gWidget">'+
+			'<div class="gCover">[modal-cover]</div>'+
+			'<div class="gAction">'+
+				'<span class="gType">[modal-type]</span>'+
+				'<span class="gBtn">[modal-map]</span>'+
+				'<span class="gBtn">[modal-close]</span>'+
+				'<div class="gTimer">[modal-timer]</div>'+
+			'</div>'+
+			'<div class="gScroll">'+
+				'<div class="gHeader">[modal-header]</div>'+
+				'<div class="gContent">[modal-body]</div>'+
+			'</div>'+
+			'<div class="gFooter">'+
+				'<span class="gPage">'+
+					'<span class="gPageVal">[step-value]</span>'+
+					'<span class="gPageTotal">[step-total]</span>'+
+				'</span>'+
+				'<span class="gBtn">[modal-prev]</span>'+
+				'<span class="gBtn">[modal-next]</span>'+
+				'<span class="gBtn">[modal-cancel]</span>'+
+				'<span class="gBtn">[modal-start]</span>'+
+				'<span class="gBtn">[modal-begin-first]</span>'+
+				'<span class="gBtn">[modal-begin-continue]</span>'+
+			'</div>'+
+		'</div>',
+		
+		mapTemplate:								//Tour Map template
+		'<div class="g-map-pos">'+
+			'<div class="gMapAction">'+
+				'<span class="gBtn">[map-toggle]</span>'+
+				'<span class="gBtn">[map-hide]</span>'+
+			'</div>'+
+			'<div class="gMapHeader">[map-header]</div>'+
+			'<span class="gPage">'+
+				'<span class="gPageVal">[step-value]</span>'+
+				'<span class="gPageTotal">[step-total]</span>'+
+			'</span>'+
+			'<div class="gMapContent">[map-content]</div>'+
+			'<div class="gMapBufer"></div>'+
+		'</div>',
+		
+		debug: false								//Display of messages in the console
+	});
+})
+</script> 
+</xmp></code></pre>			
+				
+			</div>
+			
+			<hr>
+			
+			<!-- CSS Structure-->
+			<div id="CSS_Structure" class="container">	
+				<h2>CSS Structure</h2>
+				<p>Core CSS file <a target="_blank" href="css/iGuider.css">iGuider.css</a> (css/iGuider.css) in this plugin. It contains styles which are responsible for the correct plugin work.</p>
+			</div>
+			
+			<hr>
+			
+			<!-- JavaScript-->
+			<div id="JavaScript" class="container">	
+				<h2>JavaScript</h2>
+				<p>To use the plugin you must import two files of javascript:</p>
+				
+				<ul>
+					<p>
+						1. <a target="_blank" href="js/jquery-3.1.1.min.js">jQuery</a> (js/jquery-3.1.1.min.js)<br>
+						2. <a target="_blank" href="js/jquery.iGuider.js">jquery.iGuider.js</a> (js/jquery.iGuider.js)
+					</p>
+					
+					<p>1. jQuery is a Javascript library that greatly reduces the amount of code that you must write. If you imported this version of jQuery or any other, it is not necessary to import it for the second time. Supported by jquery 1.x , 2.x , 3.x</p>
+					<p>2. The main plugin code.</p>	
+				</ul>
+
+			</div>
+			
+			<hr>
+			
+			<!-- Themes Structure-->
+			<div id="themes" class="container">	
+				<h2>Themes Structure</h2>
+				<p>The theme consists of two files.</p>
+				
+				<ol>
+				<li>themeName.js - Contains the template code of the plugin interface.</li>
+				<p>The square brackets with the content ID are the keys by which the plugin determines where to insert the interface elements.</p>
+
+
+<pre><code class="language-js"><xmp>
+/* Template "material" for iGuider plugin. */
+
+//Modal window template
+modalTpl =						
+'<div class="gWidget">'+
+	'<div class="gCover">[modal-cover]</div>'+
+	'<div class="gAction">'+
+		'<span class="gType">[modal-type]</span>'+
+		'<span class="gBtn">[modal-map]</span>'+
+		'<span class="gBtn">[modal-close]</span>'+
+		'<div class="gTimer">[modal-timer]</div>'+
+	'</div>'+
+	'<div class="gScroll">'+
+		'<div class="gHeader">[modal-header]</div>'+
+		'<div class="gContent">[modal-body]</div>'+
+	'</div>'+
+	'<div class="gFooter">'+
+		'<span class="gPage">'+
+			'<span class="gPageVal">[step-value]</span>'+
+			'<span class="gPageTotal">[step-total]</span>'+
+		'</span>'+
+		'<span class="gBtn">[modal-prev]</span>'+
+		'<span class="gBtn">[modal-next]</span>'+
+		'<span class="gBtn">[modal-cancel]</span>'+
+		'<span class="gBtn">[modal-start]</span>'+
+		'<span class="gBtn">[modal-begin-first]</span>'+
+		'<span class="gBtn">[modal-begin-continue]</span>'+
+	'</div>'+
+'</div>'
+
+//Tour Map template
+mapTpl =  							
+'<div class="g-map-pos">'+
+	'<div class="gMapAction">'+
+		'<span class="gBtn">[map-toggle]</span>'+
+		'<span class="gBtn">[map-hide]</span>'+
+	'</div>'+
+	'<div class="gMapHeader">[map-header]</div>'+
+	'<span class="gPage">'+
+		'<span class="gPageVal">[step-value]</span>'+
+		'<span class="gPageTotal">[step-total]</span>'+
+	'</span>'+
+	'<div class="gMapContent">[map-content]</div>'+
+	'<div class="gMapBufer"></div>'+
+'</div>'
+
+</xmp></code></pre>
+				
+				<li><a href="themes\light\iGuider-theme-light.css"> themeName.css </a> - Contains the appearance styles of the plugin interface.</li>
+				<p>The theme styles file must be included!</p>
+
+				
+				</ol>
+
+			</div>
+			
+			<hr>
+			
+			<!-- Localization Files-->
+			<div id="Localization_Files" class="container">	
+				<h2>Localization Files</h2>
+				<p>Localize the iGuider help-tour language and format (English / Western formatting is the default). </p>
+				<p>The iGuider includes built-in support for languages that read right-to-left, such as Arabic and Hebrew.</p>
+				<p>To plugin interface was on the language you want, include to page the one of localization files.</p>
+				<p>These files are in the "localization" folder.</p>
+				<p>Include the file you want after including plugin files</p>
+<pre><code class="language-html"><xmp><script src="js/jquery.js"></script>
+
+<link rel="stylesheet" href="css/iGuider.css">
+<script src="js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="themes/material/iGuider-theme-material.css">
+<script src="themes/material/iGuider-theme-material.js"></script>
+
+<script src="localization/iGuider-de.js"></script>	
+</xmp></code></pre>	
+				<p>The available languages are:</p>
+				<ol>
+					<li><a href="localization/iGuider-af.js">iGuider-af.js</a></li>
+					<li><a href="localization/iGuider-ar.js">iGuider-ar.js</a></li>
+					<li><a href="localization/iGuider-az.js">iGuider-az.js</a></li>
+					<li><a href="localization/iGuider-be.js">iGuider-be.js</a></li>
+					<li><a href="localization/iGuider-bg.js">iGuider-bg.js</a></li>
+					<li><a href="localization/iGuider-bs.js">iGuider-bs.js</a></li>
+					<li><a href="localization/iGuider-ca.js">iGuider-ca.js</a></li>
+					<li><a href="localization/iGuider-cs.js">iGuider-cs.js</a></li>
+					<li><a href="localization/iGuider-cy.js">iGuider-cy.js</a></li>
+					<li><a href="localization/iGuider-da.js">iGuider-da.js</a></li>
+					
+					<li><a href="localization/iGuider-de.js">iGuider-de.js</a></li>
+					<li><a href="localization/iGuider-el.js">iGuider-el.js</a></li>
+					<li><a href="localization/iGuider-en.js">iGuider-en.js</a></li>
+					<li><a href="localization/iGuider-eo.js">iGuider-eo.js</a></li>
+					<li><a href="localization/iGuider-es.js">iGuider-es.js</a></li>
+					<li><a href="localization/iGuider-et.js">iGuider-et.js</a></li>
+					<li><a href="localization/iGuider-eu.js">iGuider-eu.js</a></li>
+					<li><a href="localization/iGuider-fa.js">iGuider-fa.js</a></li>
+					<li><a href="localization/iGuider-fi.js">iGuider-fi.js</a></li>
+					
+					<li><a href="localization/iGuider-fr.js">iGuider-fr.js</a></li>
+					<li><a href="localization/iGuider-gl.js">iGuider-gl.js</a></li>
+					<li><a href="localization/iGuider-he.js">iGuider-he.js</a></li>
+					<li><a href="localization/iGuider-hi.js">iGuider-hi.js</a></li>
+					<li><a href="localization/iGuider-hr.js">iGuider-hr.js</a></li>
+					<li><a href="localization/iGuider-hu.js">iGuider-hu.js</a></li>
+					<li><a href="localization/iGuider-hy.js">iGuider-hy.js</a></li>
+					<li><a href="localization/iGuider-id.js">iGuider-id.js</a></li>
+					<li><a href="localization/iGuider-is.js">iGuider-is.js</a></li>
+					<li><a href="localization/iGuider-it.js">iGuider-it.js</a></li>
+					
+					<li><a href="localization/iGuider-ja.js">iGuider-ja.js</a></li>
+					<li><a href="localization/iGuider-ka.js">iGuider-ka.js</a></li>
+					<li><a href="localization/iGuider-kk.js">iGuider-kk.js</a></li>
+					<li><a href="localization/iGuider-km.js">iGuider-km.js</a></li>
+					<li><a href="localization/iGuider-ko.js">iGuider-ko.js</a></li>
+					<li><a href="localization/iGuider-ky.js">iGuider-ky.js</a></li>
+					<li><a href="localization/iGuider-lb.js">iGuider-lb.js</a></li>
+					<li><a href="localization/iGuider-lt.js">iGuider-lt.js</a></li>
+					<li><a href="localization/iGuider-lv.js">iGuider-lv.js</a></li>
+					<li><a href="localization/iGuider-mk.js">iGuider-mk.js</a></li>
+					
+					<li><a href="localization/iGuider-ml.js">iGuider-ml.js</a></li>
+					<li><a href="localization/iGuider-ms.js">iGuider-ms.js</a></li>
+					<li><a href="localization/iGuider-nb.js">iGuider-nb.js</a></li>
+					<li><a href="localization/iGuider-nl.js">iGuider-nl.js</a></li>
+					<li><a href="localization/iGuider-nn.js">iGuider-nn.js</a></li>
+					<li><a href="localization/iGuider-pl.js">iGuider-pl.js</a></li>
+					<li><a href="localization/iGuider-pt.js">iGuider-pt.js</a></li>
+					<li><a href="localization/iGuider-ro.js">iGuider-ro.js</a></li>
+					<li><a href="localization/iGuider-ru.js">iGuider-ru.js</a></li>
+					<li><a href="localization/iGuider-sk.js">iGuider-sk.js</a></li>
+					
+					<li><a href="localization/iGuider-sl.js">iGuider-sl.js</a></li>
+					<li><a href="localization/iGuider-sq.js">iGuider-sq.js</a></li>
+					<li><a href="localization/iGuider-sr.js">iGuider-sr.js</a></li>
+					<li><a href="localization/iGuider-sv.js">iGuider-sv.js</a></li>
+					<li><a href="localization/iGuider-ta.js">iGuider-ta.js</a></li>
+					<li><a href="localization/iGuider-th.js">iGuider-th.js</a></li>
+					<li><a href="localization/iGuider-tj.js">iGuider-tj.js</a></li>
+					<li><a href="localization/iGuider-tr.js">iGuider-tr.js</a></li>
+					<li><a href="localization/iGuider-uk.js">iGuider-uk.js</a></li>
+					<li><a href="localization/iGuider-vi.js">iGuider-vi.js</a></li>
+					
+					<li><a href="localization/iGuider-zh.js">iGuider-zh.js</a></li>
+				</ol>
+				
+				<p>Example of use: <a href="demos/test-localization.html">view</a></p>
+
+			</div>
+			
+			<hr>
+			
+			<!-- Quick Start-->
+			<div id="Quick_Start" class="container">	
+				<h2>Quick Start</h2>
+				
+				<p>Copy this code into your page or use file <br>"quick-start-tpl.html" from archive.</p>
+				
+<pre><code class="language-html"><xmp>
+
+<!--Latest jQuery-->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--iGuider Core-->
+<link rel="stylesheet" href="css/iGuider.css">
+<script src="js/jquery.iGuider.js"></script>
+
+<!--iGuider Theme-->
+<link rel="stylesheet" href="themes/material/iGuider-theme-material.css">
+<script src="themes/material/iGuider-theme-material.js"></script>
+
+<script>
+/* iGuider Parameters */
+var opt = {
+    'tourTitle': 'Tour Title Default',
+    'steps': [
+        {
+            'title': 'New Step Title',
+            'content': 'New Step Description',
+            'target': ''
+        }
+    ]
+};
+
+/* iGuider Button */
+$(window).on('load',function(){
+    iGuider('button',opt);
+});
+</script>		
+
+
+</xmp></code></pre>	
+				
+				<p>Done!</p>
+
+
+
+			</div>
+			
+			<hr>
+			
+			<!-- WordPress-->
+			<div id="WordPress" class="container">	
+				<h2>WordPress Version</h2>
+				<h3>Installation</h3>
+				<p>Except jQuery plugin, in the archive there is WordpPress version of plugin "iGuiderWP.zip" <br>
+The plugin is located in the folder "wordpress_plugin"</p>
+
+				<ul>
+					<p>1. Install it like any other WP plugin</p>
+					<p>2. For edit the initialization file click "edit"</p>
+					<p><img src="doc_files/images/wp-01.png"></p>
+					<p>3. Then select the "init.iGuider.js" file</p>
+					<p><img src="doc_files/images/wp-02.png"></p>
+					<p><img src="doc_files/images/wp-03.png"></p>
+					<p>4. After editing, click the "Update" button.</p>
+					<p><img src="doc_files/images/wp-04.png"></p>
+				</ul>
+			</div>
+			
+			<hr>
+			
+			<!-- API-->
+			<div class="container">
+				<h1>API</h1>
+			</div>
+			
+			<hr>
+			
+			<!-- Options-->
+			<div id="Options" class="container">	
+				
+				<h2>Options</h2>
+
+				<table class="optionsTable table table-hover table-responsive" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th>Option</th>
+							<th>Default&nbsp;value</th>
+							<th>Datatype</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-opt="tourID">tourID</td>
+							<td>"anyTourID"</td>
+							<td>String</td>
+							<td>This string allows you to save data with a unique name about  tour progress. It can be used to save information on the progress of the tour for several users. Or save the progress of each tour separately.<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourTitle">tourTitle</td>
+							<td>"Tour Title Default"</td>
+							<td>String</td>
+							<td>Tour title<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="startStep">startStep</td>
+							<td>1</td>
+							<td>Number</td>
+							<td>Step from which the tour begins.<br>
+								It may take the values: <span class="value">any positive integer</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="overlayClickable">overlayClickable</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>If set to false, then links of steps on the tour map will not be clickable<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.overlayColor">overlayColor</td>
+							<td>"#000"</td>
+							<td>String</td>
+							<td>
+								Global color value of overlay layer<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span> or <span class="value">'black'</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.overlayOpacity">overlayOpacity</td>
+							<td>0.5</td>
+							<td>Number</td>
+							<td>
+								Global opacity value of overlay layer<br>
+								It may take the values: <span class="value">any positive integer from 0 to 1</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="pagination">pagination</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>Shows the total number of steps and the current step number<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="registerMissingElements">registerMissingElements</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>Shows an absent element in tour map and find this element in DOM.<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="textDirection">textDirection</td>
+							<td>"ltr"</td>
+							<td>String</td>
+							<td>The direction property specifies the text direction/writing direction.<br>
+								It may take the values: <span class="value">'ltr'</span> or <span class="value">'rtl'</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="shape">shape</td>
+							<td>0</td>
+							<td>Number</td>
+							<td>
+								Global shape of highlighting. 0 - rectangle (default), 1 - circle, 2 - rounded rectangle<br>
+								It may take the values: <span class="value">0</span> - rectangle (default), <span class="value">1</span> - circle, <span class="value">2</span> - rounded rectangle
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="shapeBorderRadius">shapeBorderRadius</td>
+							<td>5</td>
+							<td>Number</td>
+							<td>
+								Global corner radius of rounded rectangle shape. Only when "shape" paramenter has value "2"<br>
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="width">width</td>
+							<td>320</td>
+							<td>Number / String</td>
+							<td>
+								Global width of the message block, px,%<br>
+								It may take the values: <span class="value">320</span>, <span class="value">'320px'</span> or <span class="value">'50%'</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="spacing">spacing</td>
+							<td>10</td>
+							<td>Number</td>
+							<td>
+								Global indent highlighting around the element, px<br>
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="loc">loc</td>
+							<td>false</td>
+							<td>String</td>
+							<td>
+								Global path to the page on which the step should work. 
+								It may take the values: <span class="value">"anyPagePath"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="timer">timer</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global time after which an automatic switching to the next step<br>
+								It may take the values: <span class="value">any positive number</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="timerType">timerType</td>
+							<td>'line'</td>
+							<td>String</td>
+							<td>
+								Global timer shape type<br>
+								It may take the values: <span class="value">'line'</span> or <span class="value">'circle'</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="keyboard">keyboard</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>
+								Tour control by keyboard buttons. Left - the previous step, right - the next step, Esc - close tour.<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="keyboard">keyboardEvent</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>
+								This parameter sets the permission to trigger custom events.<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td data-opt="bgColor">bgColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global background color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="titleColor">titleColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global title color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="modalContentColor">modalContentColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global content color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="modalTypeColor">modalTypeColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global modal type color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="paginationColor">paginationColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global pagination color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="timerColor">timerColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global timer color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="btnColor">btnColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global buttons color<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="btnHoverColor">btnHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Global buttons hover color<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						
+						
+						
+						
+						<tr>
+							<td data-opt="lang">intro</td>
+							<td>
+<pre><code class="language-js"><xmp>intro:{	
+	enable:true,
+	cover:'',
+	
+	title:'Welcome to the interactive tour',
+	content:'This tour will tell you about the main site functionalities',
+	
+	overlayColor:false,
+	overlayOpacity:false,
+	width:false,
+	bgColor:false,
+	titleColor:false,
+	modalContentColor:false,
+	modalTypeColor:false,
+	btnColor:false,	
+	btnHoverColor:false
+}			
+</xmp></code></pre>		
+							
+							</td>
+							<td>Object</td>
+							<td>It contains parameters of the intro message<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.enable">intro.enable</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>If set to true, before the tour you will see the introductory slide, which will offer to see a tour.<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.cover">intro.cover</td>
+							<td></td>
+							<td>String</td>
+							<td>Path to the cover of intro.<br>
+								It may take the values: <span class="value">"Path to the cover"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.title">intro.title</td>
+							<td>"Welcome to the interactive tour"</td>
+							<td>String</td>
+							<td>Title of introduction dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        <tr>
+							<td data-opt="intro.content">intro.content</td>
+							<td>"This tour will tell you about the main site functionalities"</td>
+							<td>String</td>
+							<td>Content of introduction dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.overlayColor">intro.overlayColor</td>
+							<td>false</td>
+							<td>String / Boolean</td>
+							<td>
+								Color value of overlay layer for intro<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.overlayOpacity">intro.overlayOpacity</td>
+							<td>false</td>
+							<td>Number</td>
+							<td>
+								Opacity value of overlay layer for intro<br>
+								It may take the values: <span class="value">any positive integer from 0 to 1</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.width">intro.width</td>
+							<td>false</td>
+							<td>Number / String / Boolean</td>
+							<td>
+								Width of the message intro block, px,%<br>
+								It may take the values: <span class="value">320</span>, <span class="value">'320px'</span>, <span class="value">'50%'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="intro.bgColor">intro.bgColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Background color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.titleColor">intro.titleColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Title color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.modalContentColor">intro.modalContentColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Content color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.modalTypeColor">intro.modalTypeColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Modal type color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.btnColor">intro.btnColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="intro.btnHoverColor">intro.btnHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons Hover color of the intro message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="lang">continue</td>
+							<td>
+<pre><code class="language-js"><xmp>continue:{
+	enable:true,
+	cover:'',
+	
+	title:'Continue the unfinished tour?',
+	content:'Click "Continue" to start with step on which finished last time.',
+	
+	overlayColor:false,
+	overlayOpacity:false,
+	width:false,
+	bgColor:false,
+	titleColor:false,
+	modalContentColor:false,
+	modalTypeColor:false,
+	btnColor:false,
+	btnHoverColor:false
+}		
+</xmp></code></pre>		
+							
+							</td>
+							<td>Object</td>
+							<td>It contains parameters of the continue message<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.enable">continue.enable</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>This parameter add the ability to continue the unfinished tour.<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.cover">continue.cover</td>
+							<td></td>
+							<td>String</td>
+							<td>Path to the cover of continue message.<br>
+								It may take the values: <span class="value">"Path to the cover"</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="continue.title">continue.title</td>
+							<td>"Continue the unfinished tour?"</td>
+							<td>String</td>
+							<td>Title of continue dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        <tr>
+							<td data-opt="continue.content">continue.content</td>
+							<td>"Click \"Continue\" to start with step on which finished last time."</td>
+							<td>String</td>
+							<td>Content of continue dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="continue.overlayColor">continue.overlayColor</td>
+							<td>false</td>
+							<td>String / Boolean</td>
+							<td>
+								Color value of overlay layer for continue message<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.overlayOpacity">continue.overlayOpacity</td>
+							<td>false</td>
+							<td>Number / Boolean</td>
+							<td>
+								Opacity value of overlay layer for continue message<br>
+								It may take the values: <span class="value">any positive integer from 0 to 1</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="continue.width">continue.width</td>
+							<td>false</td>
+							<td>Number / String / Boolean</td>
+							<td>
+								Width of the message continue block, px,%<br>
+								It may take the values: <span class="value">320</span>, <span class="value">'320px'</span>, <span class="value">'50%'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="continue.bgColor">continue.bgColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Background color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.titleColor">continue.titleColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Title color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.modalContentColor">continue.modalContentColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Content color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.modalTypeColor">continue.modalTypeColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Modal type color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.btnColor">continue.btnColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="continue.btnHoverColor">continue.btnHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons Hover color of the continue message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="lang">tourMap</td>
+							<td>
+<pre><code class="language-js"><xmp>tourMap: {	
+	enable:true,
+	position:'right',
+	clickable:true,
+	open:false,
+	bgColor:false,
+	titleColor:false,
+	btnColor:false,
+	btnHoverColor:false,
+	itemColor:false,
+	itemHoverColor:false,
+	itemActiveColor:false,	
+	itemActiveBg:false,	
+	itemNumColor:false,	
+	checkColor:false,
+	checkReadyColor:false
+}	
+</xmp></code></pre>		
+							
+							</td>
+							<td>Object</td>
+							<td>It contains parameters of the Tour Map<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.enable">tourMap.enable</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>This parameter add the ability view list of steps.<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.position">tourMap.position</td>
+							<td>"right"</td>
+							<td>String</td>
+							<td>Tour Map Position<br>
+								It may take the values: <span class="value">"right"</span> or <span class="value">"left"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.clickable">tourMap.clickable</td>
+							<td>true</td>
+							<td>Boolean</td>
+							<td>If set to false, then links of steps on the tour map will not be clickable<br>
+								It may take the values: <span class="value">true</span> - clickable, <span class="value">false</span> - disabled, or <span class="value">'ready'</span> - clickable only completed steps and current
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.open">tourMap.open</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>Specifies to show or hide the map of the tour at the start of the tour<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="tourMap.bgColor">tourMap.bgColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Background color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.titleColor">tourMap.titleColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Title color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.btnColor">tourMap.btnColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons color of the checklist block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.btnHoverColor">tourMap.btnHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons hover color of the checklist block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.itemColor">tourMap.itemColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Item color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.itemHoverColor">tourMap.itemHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Item hover color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.itemActiveColor">tourMap.itemActiveColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Item Active color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.itemActiveBg">tourMap.itemActiveBg</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Item Active BG color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.itemNumColor">tourMap.itemNumColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Step Number color in the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.checkColor">tourMap.checkColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Check color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="tourMap.checkReadyColor">tourMap.checkReadyColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Check Ready color of the Checklist<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td data-opt="steps">steps</td>
+							<td>
+<pre><code class="language-js"><xmp>steps:[{
+	cover:'',
+	title:'New Step Title',
+	content:'New Step Description',
+	position:'auto',				
+	target:'uniqueName',			
+	disable:false,					
+	overlayOpacity:0.5,				
+	overlayColor:'#000',			
+	spacing:10,						
+	shape:0,	
+	shapeBorderRadius:5,								
+	timer:false,						
+	event:'next',
+	eventMessage:'Follow the required conditions to continue.',
+	skip: false,			
+	nextText:'Next',		
+	prevText:'Prev',		
+	trigger:false,			
+	stepID:'',				
+	waitElementTime:0,
+	loc:false,				
+	ready:false,
+	width:320,
+	keyboardEvent:false,
+	bgColor:false,
+	titleColor:false,
+	modalContentColor:false,
+	paginationColor:false,	
+	timerColor:false,
+	btnColor:false,	
+	btnHoverColor:false,
+	checkNext:{
+		func:function(target){return true},
+		messageError:'Fulfill all the conditions!'
+	},
+	checkPrev:{
+		func:function(target){return true},
+		messageError:'Fulfill all the conditions!'
+	},
+	before:function(target){},	
+	during:function(target){},	
+	after:function(target){},		
+	delayBefore:0,			
+	delayAfter:0			
+}]				
+</xmp></code></pre>									
+							</td>
+							<td>Array</td>
+							<td>Specifies information about each step of the tour<br>
+								It may take the values: <span class="value">array of objects</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.cover">steps[n].cover</td>
+							<td>false</td>
+							<td>Boolean / String</td>
+							<td>Path to image file<br>
+								It may take the values: <span class="value">false</span> or <span class="value">string value of path to image</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.title">steps[n].title</td>
+							<td>"New Step Title"</td>
+							<td>String</td>
+							<td>Title of step<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.content">steps[n].content</td>
+							<td>"New Step Description"</td>
+							<td>String</td>
+							<td>Description of step<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.position">steps[n].position</td>
+							<td>"auto"</td>
+							<td>String</td>
+							<td><p>Position of message.<br>
+								It may take the values: <span class="value">"auto"</span>, <span class="value">"center"</span> or positioning code: <span class="value">"xxx"</span></p>
+								<p><b>"auto"</b> - The plugin can automatically choose the best position out of 36 available to display a tour's message.</p>
+								<p><b>"center"</b> - The message is displayed in the center of screen and no element is highlighted. The parameter 'target' in this case is not required!</p>
+								<p><b>"xxx"</b> - Code which indicates the position of the window with the message</p>
+								<p>
+									tll, tlc, tlr, tcl, tcc, tcr, trl, trc, trr, rtt, rtc, rtb, rct, rcc, rcb, rbt, rbc, rbb, brr, brc, brl, bcr, bcc, bcl, blr, blc, bll, lbb, lbc, lbt, lcb, lcc, lct, ltb, ltc, ltt
+								</p>
+								<p><b>"<span style="color:red">x</span>xx"</b> - First Symbol: The position of message a relatively selected item. <br> 
+									It may take the values: <span class="value">t</span> (top),<span class="value">r</span> (right),<span class="value">b</span> (bottom),<span class="value">l</span> (left)
+								</p>
+								<p><b>"x<span style="color:red">x</span>x"</b> - Second Symbol: The position of corner a relatively selected item.<br>
+									a) if first symbol is "l" or "r" it may take the values:<span class="value">t</span> (top), <span class="value">c</span> (center),<span class="value">b</span> (bottom);<br>
+									b) if first symbol is "t" or "b" it may take the values:<span class="value">l</span> (left), <span class="value">c</span> (center),<span class="value">r</span> (right);
+								</p>
+								<p><b>"xx<span style="color:red">x</span>"</b> - Third Symbol: The position of the window with a message a relatively coner. <br>
+									a) if first symbol is "l" or "r" it may take the values:<span class="value">t</span> (top), <span class="value">c</span> (center),<span class="value">b</span> (bottom);<br>
+									b) if first symbol is "t" or "b" it may take the values:<span class="value">l</span> (left), <span class="value">c</span> (center),<span class="value">r</span> (right);
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.target">steps[n].target</td>
+							<td>""</td>
+							<td>String</td>
+							<td>
+								<ol>
+									<li>
+										<p>
+										Search for page elements that need to be highlighted can be done in several ways:<br>
+										<pre><code class="language-js"><xmp>target: 'uniqueName'	/*<div data-target="uniqueName"></div>*/</xmp></code></pre>				
+										<pre><code class="language-js"><xmp>target: '.className'	/*<div class="className"></div>*/</xmp></code></pre>									
+										<pre><code class="language-js"><xmp>target: '#idValue'		/*<div id="idValue"></div>*/</xmp></code></pre>
+										<pre><code class="language-js"><xmp>target: '<tagname class="classname">' /*<tagname class="classname">content</tagnam>*/</xmp></code></pre>
+										
+										</p>
+									</li>
+									<li>
+										<p>
+										You can highlight several elements at the same time. To do this, give them the same names or list them separated by commas.
+										<pre><code class="language-js"><xmp>target: '.name-1, .name-2, .name-3'</xmp></code></pre>	
+										</p>
+									</li>
+									<li>
+										<p>
+										Message in center of screen without specifying a specific target.
+										<pre><code class="language-js"><xmp>target: ''	/*or Absent target parameter.*/</xmp></code></pre>	
+										</p>
+									</li>
+								</ol>
+							
+
+								<p>
+								It may take the values: <span class="value">"any string value"</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.disable">steps[n].disable</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>
+								Block access to element<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.overlayOpacity">steps[n].overlayOpacity</td>
+							<td>0.5</td>
+							<td>Number</td>
+							<td>
+								Opacity value of overlay layer<br>
+								It may take the values: <span class="value">any positive number from 0 to 1</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.overlayColor">steps[n].overlayColor</td>
+							<td>"#000"</td>
+							<td>Number</td>
+							<td>
+								Clor value of overlay layer<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span> or <span class="value">'black'</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.spacing">steps[n].spacing</td>
+							<td>10</td>
+							<td>Number</td>
+							<td>
+								Indent highlighting around the element, px<br>
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.shape">steps[n].shape</td>
+							<td>0</td>
+							<td>Number</td>
+							<td>
+								Shape of highlighting<br>
+								It may take the values: <span class="value">0</span> - rectangle (default), <span class="value">1</span> - circle, <span class="value">2</span> - rounded rectangle
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.shapeBorderRadius">steps[n].shapeBorderRadius</td>
+							<td>5</td>
+							<td>Number</td>
+							<td>
+								The corner radius of rounded rectangle shape. Only when "shape" paramenter has value "2"<br>
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="steps.timer">steps[n].timer</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								The time after which an automatic switching to the next step, ms<br>
+								It may take the values: <span class="value">any positive number</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.event">steps[n].event</td>
+							<td>"next"</td>
+							<td>String / Array</td>
+							<td>
+								An event that you need to do to go to the next step<br>
+								<p>It may take the values: <span class="value">"next"</span>, <span class="value">"click"</span>, <span class="value">"mousedown"</span>, <span class="value">"mouseup"</span>, <span class="value">"mouseenter"</span>, <span class="value">"keydown"</span>, <span class="value">"keyup"</span>, <span class="value">"blur"</span>, <span class="value">"submit"</span>  
+									and others <a target="_blank" href="https://api.jquery.com/category/events/">jQuery events</a>.
+								</p>
+								If you want to listen for the event in another element, then use the array construction. The first array element is an "event", the second element is a jQuery object<br>
+								<p>It may take the values: <span class="value">["eventName","yourSelector"]</span><br>
+									<span class="value">"eventName"</span> - Any jQuery event  <a target="_blank" href="https://api.jquery.com/category/events/">jQuery events</a><br>
+									<span class="value">"yourSelector"</span> - Any jQuery selector name (".classname","#idname", and other jquery selectors <a target="_blank" href="https://api.jquery.com/category/selectors/">jQuery selectors</a>)
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.event">steps[n].eventMessage</td>
+							<td>"Follow the required conditions to continue."</td>
+							<td>String</td>
+							<td>
+								Message hint for steps with custom events<br>
+								It may take the values: <span class="value">any text</span>.
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.skip">steps[n].skip</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>
+								Step can be skipped if you set parameter "skip" to true.<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>.
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.nextText">steps[n].nextText</td>
+							<td>"Next"</td>
+							<td>String</td>
+							<td>
+								The text in the Next Button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.prevText">steps[n].prevText</td>
+							<td>"Prev"</td>
+							<td>String</td>
+							<td>
+								The text in the Prev Button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.trigger">steps[n].trigger</td>
+							<td>false</td>
+							<td>String / Boolean</td>
+							<td>
+								An event which is generated on the selected element, in the transition from step to step. <a target="_blank" href="https://api.jquery.com/category/events/">jQuery events</a><br>
+								It may take the values: <span class="value">Name of Event</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.stepID">steps[n].stepID</td>
+							<td>false</td>
+							<td>String</td>
+							<td>
+								Unique ID Name. This name is assigned to the "html" tag as "data-g-stepid" attribute (If not specified, the plugin generates it automatically in the form: "step-N")<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.waitElementTime">steps[n].waitElementTime</td>
+							<td>0</td>
+							<td>Number</td>
+							<td>
+								The parameter "waitElementTime" sets the time (ms) to wait for an item to appear<br>
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.loc">steps[n].loc</td>
+							<td>false</td>
+							<td>String</td>
+							<td>
+								The path to the page on which the step should work. 
+								It may take the values: <span class="value">"anyPagePath"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.ready">steps[n].ready</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>
+								This parameter indicates whether the step was completed or not.<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>.
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.width">steps[n].width</td>
+							<td>320</td>
+							<td>Number / String</td>
+							<td>
+								<p>
+									For more convenient display of content, you can adjust the width of the message window.<br>
+									You can change this width by setting the value in pixels or persent (screen width relative).<br>
+									The minimum width is 320 pixels.
+								</p>
+								<p>If you do not specify the width of the window, it will accept the default value.</p>
+								It may take the values (for example): <span class="value">500</span>, <span class="value">'500px'</span> or <span class="value">'500%'</span>.
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="steps.keyboard">steps[n].keyboardEvent</td>
+							<td>false</td>
+							<td>Boolean</td>
+							<td>
+								This parameter sets the permission to trigger custom events for current step.<br>
+								It may take the values: <span class="value">true</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="steps.bgColor">steps[n].bgColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Background color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.titleColor">steps[n].titleColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Title color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.modalContentColor">steps[n].modalContentColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Content color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.paginationColor">steps[n].paginationColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Pagination color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.timerColor">steps[n].timerColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Timer color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.btnColor">steps[n].btnColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.btnHoverColor">steps[n].btnHoverColor</td>
+							<td>false</td>
+							<td>Boolean / Number</td>
+							<td>
+								Buttons Hover color of the message block<br>
+								It may take the values: Any color format <span class="value">'#000'</span>, <span class="value">'rgb(0,0,0)'</span>, <span class="value">'black'</span> or <span class="value">false</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td data-opt="steps.checkNext">steps[n].checkNext</td>
+							<td>
+<pre><code class="language-js"><xmp>checkNext: {
+	func:function(target){return true},
+	messageError:'Fulfill all the conditions!'
+}
+</xmp></code></pre>
+							</td>
+							<td>Object</td>
+							<td>
+								An object containing parameters that set conditions for the transition between steps to forward.<br>
+								It may take the values: <span class="value">array of objects</span>.
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.checkNext.func">steps[n].checkNext.func</td>
+							<td><pre><code class="language-js"><xmp>function(target){return true}</xmp></code></pre></td>
+							<td>Function</td>
+							<td>
+								Function in which you can carry out any verification by clicking on the "Next" button. <br>If the function returns True, the step will be switched.<br>
+								It must return the values: <span class="value">false</span> or <span class="value">true</span>.
+								<pre><code class="language-js"><xmp>function(target){
+	var a = [YOUR DATA];
+	var b = [YOUR DATA];
+	if(a == b){
+		return true;
+	}else{
+		return false;
+	}
+}</xmp></code></pre>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.checkNext.messageError">steps[n].checkNext.messageError</td>
+							<td>"Fulfill all the conditions!"</td>
+							<td>String</td>
+							<td>
+								If the function returns "False" (steps[n].checkNext.func), an error message will appear in the message window<br>
+								It may take the values: <span class="value">any text</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.checkPrev">steps[n].checkPrev</td>
+							<td>
+<pre><code class="language-js"><xmp>checkPrev: {
+	func:function(target){return true},
+	messageError:'Fulfill all the conditions!'
+}
+</xmp></code></pre>
+							</td>
+							<td>Object</td>
+							<td>
+								An object containing parameters that set conditions for the transition between steps to back.<br>
+								It may take the values: <span class="value">array of objects</span>.
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.checkPrev.func">steps[n].checkPrev.func</td>
+							<td><pre><code class="language-js"><xmp>function(target){return true}</xmp></code></pre></td>
+							<td>Function</td>
+							<td>
+								Function in which you can carry out any verification by clicking on the "Prev" button. <br>If the function returns True, the step will be switched.<br>
+								It must return the values: <span class="value">false</span> or <span class="value">true</span>.
+								<pre><code class="language-js"><xmp>function(target){
+	var a = [YOUR DATA];
+	var b = [YOUR DATA];
+	if(a == b){
+		return true;
+	}else{
+		return false;
+	}
+}</xmp></code></pre>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.checkPrev.messageError">steps[n].checkPrev.messageError</td>
+							<td>"Fulfill all the conditions!"</td>
+							<td>String</td>
+							<td>
+								If the function returns "False" (steps[n].checkPrev.func), an error message will appear in the message window<br>
+								It may take the values: <span class="value">any text</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="steps.delayBefore">steps[n].delayBefore</td>
+							<td>0</td>
+							<td>Number</td>
+							<td>
+								The delay before the element search, ms
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+                        <tr>
+							<td data-opt="steps.delayAfter">steps[n].delayAfter</td>
+							<td>0</td>
+							<td>Number</td>
+							<td>
+								The delay before the transition to the next step, ms
+								It may take the values: <span class="value">any positive number</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="lang">lang</td>
+							<td>
+<pre><code class="language-js"><xmp>lang: {	
+	cancelTitle: 'Cancel Tour',
+	cancelText:	'×',
+	hideText: 'Hide Tour Map',
+	tourMapText:'≡',
+	tourMapTitle: 'Tour Map',
+	nextTextDefault:'Next',
+	prevTextDefault:'Prev',
+	endText:'End Tour',				
+	
+	contDialogBtnBegin:'Start from beginning',
+	contDialogBtnContinue:'Continue',
+
+	introDialogBtnStart:'Start',															
+	introDialogBtnCancel:'Cancel',
+	
+	modalIntroType:'Tour Intro',
+	modalContinueType:'Unfinished Tour'
+}	
+</xmp></code></pre>		
+							
+							</td>
+							<td>Object</td>
+							<td>It contains information about the text of the interface elements<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.cancelTitle">lang.cancelTitle</td>
+							<td>"Cancel Tour"</td>
+							<td>String</td>
+							<td>The ttitle in the cancel tour button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.cancelText">lang.cancelText</td>
+							<td>"×"</td>
+							<td>String</td>
+							<td>The text in the cancel tour button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.hideText">lang.hideText</td>
+							<td>"Hide Tour Map"</td>
+							<td>String</td>
+							<td>The text in the hidden tour map button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.tourMapText">lang.tourMapText</td>
+							<td>"≡"</td>
+							<td>String</td>
+							<td>The text in the show tour button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.tourMapTitle">lang.tourMapTitle</td>
+							<td>"Tour Map"</td>
+							<td>String</td>
+							<td>Title of Tour map button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.nextTextDefault">lang.nextTextDefault</td>
+							<td>"Next"</td>
+							<td>String</td>
+							<td>The text in the Next Button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.prevTextDefault">lang.prevTextDefault</td>
+							<td>"Prev"</td>
+							<td>String</td>
+							<td>The text in the Prev Button<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.endText">lang.endText</td>
+							<td>"End Tour"</td>
+							<td>String</td>
+							<td>Sets the text for the close button in the last step of the tour<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        
+                        <tr>
+							<td data-opt="lang.contDialogBtnBegin">lang.contDialogBtnBegin</td>
+							<td>"Start from beginning"</td>
+							<td>String</td>
+							<td>Text in the start button of continue dialog <br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        <tr>
+							<td data-opt="lang.contDialogBtnContinue">lang.contDialogBtnContinue</td>
+							<td>"Continue"</td>
+							<td>String</td>
+							<td>Text in the continue button of continue dialog <br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        
+                        <tr>
+							<td data-opt="lang.introDialogBtnStart">lang.introDialogBtnStart</td>
+							<td>"Start"</td>
+							<td>String</td>
+							<td>Text in the start button of introduction dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+                        <tr>
+							<td data-opt="lang.introDialogBtnCancel">lang.introDialogBtnCancel</td>
+							<td>"Cancel"</td>
+							<td>String</td>
+							<td>Text in the cancel button of introduction dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>	
+
+						<tr>
+							<td data-opt="lang.modalIntroType">lang.modalIntroType</td>
+							<td>"Tour Intro"</td>
+							<td>String</td>
+							<td>Type Name of intro dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>
+						<tr>
+							<td data-opt="lang.modalContinueType">lang.modalContinueType</td>
+							<td>"Unfinished Tour"</td>
+							<td>String</td>
+							<td>Type Name of continue dialog<br>
+								It may take the values: <span class="value">"any string value"</span>
+							</td>
+						</tr>						
+						
+						<tr>
+							<td data-opt="modalTemplate">modalTemplate</td>
+							<td>
+<pre><code class="language-js"><xmp>
+modalTemplate: 
+'<div class="gWidget">'+
+	'<div class="gCover">[modal-cover]</div>'+
+	'<div class="gAction">'+
+		'<span class="gType">[modal-type]</span>'+
+		'<span class="gBtn">[modal-map]</span>'+
+		'<span class="gBtn">[modal-close]</span>'+
+		'<div class="gTimer">[modal-timer]</div>'+
+	'</div>'+
+	'<div class="gScroll">'+
+		'<div class="gHeader">[modal-header]</div>'+
+		'<div class="gContent">[modal-body]</div>'+
+	'</div>'+
+	'<div class="gFooter">'+
+		'<span class="gPage">'+
+			'<span class="gPageVal">[step-value]</span>'+
+			'<span class="gPageTotal">[step-total]</span>'+
+		'</span>'+
+		'<span class="gBtn">[modal-prev]</span>'+
+		'<span class="gBtn">[modal-next]</span>'+
+		'<span class="gBtn">[modal-cancel]</span>'+
+		'<span class="gBtn">[modal-start]</span>'+
+		'<span class="gBtn">[modal-begin-first]</span>'+
+		'<span class="gBtn">[modal-begin-continue]</span>'+
+	'</div>'+
+'</div>'	
+</xmp></code></pre>		
+							</td>
+							<td>String</td>
+							<td>Modal window template<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="mapTemplate">mapTemplate</td>
+							<td>
+<pre><code class="language-js"><xmp>
+mapTemplate: 							//Tour Map template
+'<div class="g-map-pos">'+
+	'<div class="gMapAction">'+
+		'<span class="gBtn">[map-toggle]</span>'+
+		'<span class="gBtn">[map-hide]</span>'+
+	'</div>'+
+	'<div class="gMapHeader">[map-header]</div>'+
+	'<span class="gPage">'+
+		'<span class="gPageVal">[step-value]</span>'+
+		'<span class="gPageTotal">[step-total]</span>'+
+	'</span>'+
+	'<div class="gMapContent">[map-content]</div>'+
+	'<div class="gMapBufer"></div>'+
+'</div>'
+</xmp></code></pre>		
+							
+							</td>
+							<td>String</td>
+							<td>Tour Map template<br>
+								It may take the values: <span class="value">objects</span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td data-opt="debug">debug</td>
+							<td>false</td>
+							<td>boolean</td>
+							<td>
+								Display of messages in the console<br>
+								It may take the values: <span class="value">false</span> or <span class="value">true</span>.
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				
+			</div>
+			
+			<hr>
+			
+			<!-- Methods-->
+			<div id="Methods" class="container">	
+			
+				<h2>Methods</h2>
+				<table class="methodsTable table table-hover table-responsive" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><div class="value">prev()</div></td>
+						<td>
+							<p>Switches the tour to the previous step</p>
+							<p>This method does not accept any arguments</p>
+<pre><code class="language-js"><xmp>
+iGuider('prev');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">next()</div></td>
+						<td>
+							<p>Switches the tour to the next step</p>
+							<p>This method does not accept any arguments</p>
+<pre><code class="language-js"><xmp>
+iGuider('next');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">update()</div></td>
+						<td>
+							<p>Updating the position of elements highlighting</p>
+							<p>This method does not accept any arguments</p>
+<pre><code class="language-js"><xmp>
+iGuider('update');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">map(position)</div></td>
+						<td>
+							<p>Sets the tour map in the specified part of the screen</p>
+							<p>
+								<b>position</b><br>
+								<div>Type: String</div>
+								<div>Map Tour position: "left","right" or "toggle"</div>
+								<div>"toggle" - changes position to the opposite.</div>
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('map','left');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">destroy()</div></td>
+						<td>
+							<p>Removes all effects of plugin. It returns all elements in the condition before the initialization of the plugin</p>
+							<p>This method does not accept any arguments</p>
+<pre><code class="language-js"><xmp>
+iGuider('destroy');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">setStep(number)</div></td>
+						<td>
+							<p>This method switches the tour to the specified step.</p>
+							<p>
+								<b>number</b><br>
+								<div>Type: String or Number</div>
+								<div>Step number</div>
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('setStep','2');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">getStep()</div></td>
+						<td>
+							<p>This method returns the active step number.</p>
+							<p>This method does not accept any arguments</p>
+<pre><code class="language-js"><xmp>
+iGuider('getStep');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">timerState(state)</div></td>
+						<td>
+							<p>This method switches the auto-viewing between states: "play" and "pause".</p>
+							<p>
+								<b>state</b><br>
+								<div>Type: String</div>
+								<div>timer state: "play" or "pause"</div>
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('timerState','pause');
+</xmp></code></pre>									
+						</td>
+					</tr>
+					
+					<tr>
+						<td><div class="value">design(type)</div></td>
+						<td>
+							<p>This method allows you to fix the state of the message block at any stage of the tour.</p>
+							<p>
+								<b>type</b><br>
+								<div>Type: String</div>
+								<div>message type: "intro", "continue" or step number. f.e. "3"</div>
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('design','3');
+</xmp></code></pre>									
+						</td>
+					</tr>
+
+					<tr>
+						<td><div class="value">button(options)</div></td>
+						<td>
+							<p>This method shows the preset button to display and start the tour list.</p>
+							<p>
+								<b>options</b><br>
+								<div>Type: Object (for one tour) or Array (for several tours)</div>
+								
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('button',{
+	/*...options...*/
+});
+
+/* or */
+
+iGuider('button',[
+	{/*...options 1...*/},
+	{/*...options 2...*/},
+	{/*...options N...*/}
+]);
+</xmp></code></pre>									
+						</td>
+					</tr>
+					
+					<tr>
+						<td><div class="value">set(options)</div></td>
+						<td>
+							<p>This method declares a set of parameters for one or several tours in order to be able to run the tour by referring to this set by a unique identifier.
+							<br>
+							For each tour in the parameters must be specified parameter "tourID", otherwise the set will not be installed.
+							<br>
+							Sets are declared using an array.
+							<br>
+							To use the parameters set, use the "run" method.
+							</p>
+							<p>
+								<b>options</b><br>
+								<div>Type: Array</div>
+							</p>
+<pre><code class="language-js"><xmp>/* Declaring of parameters for one tour */
+iGuider('set',[
+		{tourID:'anyCustomName',...}
+	]
+);				
+
+/* Declaring options for multiple tours */
+iGuider('set',[
+		{tourID:'one',...}, 
+		{tourID:'two',...},
+		... 
+		{tourID:'anyCustomName',...}
+	]
+);				
+</xmp></code></pre>	
+<p>The name of the method "set" is optional.</p>	
+<pre><code class="language-js"><xmp>iGuider([
+		{tourID:'one',...}, 
+		{tourID:'two',...}
+	]
+);	
+			
+</xmp></code></pre>									
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">run(id)</div></td>
+						<td>
+							<p>This method starts a tour from the parameter set that matches the passed identifier by "set" method.
+							<br>
+							Each running tour stops the demonstration of the previous tour.
+							</p>
+
+
+							<p>
+								<b>id</b><br>
+								<div>Type: String</div>
+								
+							</p>
+<pre><code class="language-js"><xmp>
+iGuider('set',[
+		{tourID:'one',...}, 
+		{tourID:'two',...}
+	]
+);	
+
+iGuider('run','one');
+			
+</xmp></code></pre>									
+						</td>
+					</tr>
+				</table>
+			
+			 </div>   
+			 
+			<hr>
+			
+			<!-- Events-->
+			<div id="Events" class="container">
+						
+				<h2 data-target="about_5">Events</h2>
+				<table data-target="about_6" class="eventsTable table table-hover table-responsive" width="100%" border="0" cellspacing="0" cellpadding="0">
+				
+					<tr>
+						<td><div class="value">create()</div></td>
+						<td>
+							<p>Triggered when the plugin is created</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	create: function(){}
+});
+</xmp></code></pre>								
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">start()</div></td>
+						<td>
+							<p>Triggered before first showing the step</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	start: function(){}
+});
+</xmp></code></pre>	
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">progress()</div></td>
+						<td>
+							<p>Triggered together with start any step</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	progress: function(data){}
+});
+</xmp></code></pre>	
+
+							
+							<p>
+								<b>data</b><br>
+								<div>Type:object</div>
+								<div>data.step - Step number</div>
+								<div>data.steps - Total number of steps</div>
+							</p>			
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">end()</div></td>
+						<td>
+							<p>Triggered when the tour ended, or was interrupted</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	end: function(){}
+});
+</xmp></code></pre>	
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">abort()</div></td>
+						<td>
+							<p>Triggered when the tour aborted</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	abort: function(){}
+});
+</xmp></code></pre>	
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">finish()</div></td>
+						<td>
+							<p>Triggered when step sequence is over.</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	finish: function(){}
+});
+</xmp></code></pre>	
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">steps[n].before()</div></td>
+						<td>
+							<p>Triggered before the start of step</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	steps: [{
+		before:function(target){}
+	}]
+});				
+</xmp></code></pre>								
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">steps[n].during()</div></td>
+						<td>
+							<p>Triggered after the onset of step</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	steps: [{
+		during:function(target){}
+	}]
+});				
+</xmp></code></pre>								
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">steps[n].after()</div></td>
+						<td>
+							<p>Triggered After completion of the step, but before proceeding to the next</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	steps: [{
+		after:function(target){}
+	}]
+});				
+</xmp></code></pre>								
+						</td>
+					</tr>
+					
+					<tr>
+						<td><div class="value">play()</div></td>
+						<td>
+							<p>Triggered when the timer state switches to "play".</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	play:function(){}
+});				
+</xmp></code></pre>								
+						</td>
+					</tr>
+					<tr>
+						<td><div class="value">pause()</div></td>
+						<td>
+							<p>Triggered when the timer state switches to "pause".</p>
+<pre><code class="language-js"><xmp>
+iGuider({
+	pause:function(){}
+});				
+</xmp></code></pre>								
+						</td>
+					</tr>
+				</table>
+
+			</div>   
+			
+			<hr>
+			
+			<div id="Additional_Functionality" class="container">	
+			
+				<h2>Additional Functionality</h2>
+
+				<table data-target="about_6" class="eventsTable table table-hover table-responsive" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><div class="value">data-iguider</div></td>
+						<td>
+							<p>This is interactive data-attribute "data-iguider". In this attribute, you can specify the ID of the tour. If the tour parameters with this identifier were previously declared in the parameter set by the "set" method, then by clicking on the element with the data-attribute, the tour corresponding to the ID will be launched.</p>
+<pre><code class="language-html"><xmp>
+<script>
+$(window).on('load',function(){
+	
+	/*This is object with tour options*/
+	var opt_one = {
+		tourID:'one',
+		...
+	};
+	var opt_two = {
+		tourID:'two',
+		...
+	};
+
+	iGuider('set',[opt_one,opt_two]);
+})
+</script> 
+
+
+<a class="btn" data-iguider="one">Start One</a>
+<a class="btn" data-iguider="two">Start Two</a>
+	
+</xmp></code></pre>								
+						</td>
+					</tr>
+				</table>
+			
+			 </div>   
+			 
+			<hr>
+			
+			<!-- Selector Getter-->
+			<div id="SelectorGetter" class="container">	
+			
+				<h2>Selector Getter</h2>
+
+<p>Addition to the iGuider and iTour plugins.<br> 
+Gets an unique selector code for any element on the page.</p>
+<p>
+<img style="height:200px;" src="doc_files/images/01.jpg">
+</p>				
+
+<p>Select one of the options</p>
+<ul>
+	<li>Install from <a target="_blank" href="https://chrome.google.com/webstore/detail/iguider-selector-getter/ceabgjngiaghidhfihcgjgeclglghfkd?hl=ru">Chrome Web Store</a><br>
+	<i>Does not work on local pages</i><br><br>
+	</li>
+	<li>Install from unpacked directory in Developer mode<br>
+	<i>You can start by turning on Developer mode. Click the Chrome menu icon and select Extensions from the Tools menu. Ensure that the "Developer mode" checkbox in the top right-hand corner is checked. Now you can reload extensions, load an unpacked directory of files as if it were a packaged extension, and more.<br>
+	The packed extension file is located in the "chrome_extension" folder.</i>
+	</li>
+</ul>
+
+
+<p><img style="height:200px;" src="doc_files/images/02.jpg"></p>
+<p>After turning on the extension, you will see the boundaries of the page elements by hovering the mouse over them. When you right-click on any element of the page, you get a unique selector code for this element. This code will be displayed in a popup fixed window.</p>auto-viewing
+
+<p>After you receive the selector code, you can save it to the clipboard, and then paste it into the iGuider plugin initialization code. Popup window can be moved in the any place of your screen, that it does not block the elements you need.</p>
+				
+			
+			 </div>   
+			 
+			<hr>
+			
+			
+
+			<!-- Update History-->
+			<div id="Update_History" class="container">		
+				<h2>Update History</h2>
+				
+<h4>Version 4.3 (December 16, 2018)</h4>	
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added interactive data-attribute "data-iguider". In this attribute, you can specify the ID of the tour. If the tour parameters with this identifier were previously declared in the parameter set by the "set" method, then by clicking on the element with the data-attribute, the tour corresponding to the ID will be launched.</li>
+	<li>Added new method "run". This method starts a tour from the parameter set that matches the passed identifier.</li>
+	<li>Added new method "set". This method declares a set of parameters for one or several tours in order to be able to run the tour by referring to this set by a unique identifier.</li>
+	<li>In the checklist,  added installation of the viewed step to "ready" state, if this step does not require user events or conditions.</li>
+	<li>Added file "quick-start-tpl.html". This file contains the minimum required code for quick connection and start the tour.</li>
+</ul>	
+<h5>CHANGES</h5>
+<ul>
+	<li>Fully redesigned logic of the message automatic positioning.</li>
+	<li>Various other improvements.</li>
+</ul>				
+				
+<h4>Version 4.2 (December 11, 2018)</h4>	
+<h5>CHANGES</h5>
+<ul>
+	<li>Improved tour navigation across pages.</li>
+</ul>	
+				
+<h4>Version 4.1 (December 10, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new method "design". It allows you to fix the state of the message block at any stage of the tour.</li>
+	<li>Added new method "button". This method shows the preset button to display and start the tour list.</li>
+	<li>Added new event "play". This event triggered when the timer state switches to "play".</li>
+	<li>Added new event "pause". This event triggered when the timer state switches to "pause".</li>
+	<li>Added new attribute "data-g-step" into HTML tag. This attribute displays the current step number.</li>
+</ul>				
+<h5>CHANGES</h5>
+<ul>
+	<li>The attribute name has been changed, in which the value of the stepID parameter is displayed. Changed "data-step" to "data-g-stepid"</li>
+	<li>Improved block width adaptation with message relative to screen width</li>
+	<li>Improved display of the block with the message when scrolling the page.</li>
+</ul>	
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed switching themes in the builder.</li>
+</ul>
+
+<h4>Version 4.0 (December 06, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new event "start". Triggered before first showing the step</li>
+	<li>Added preview window to the tour builder</li>
+	<li>Added new event "progress". Triggered together with start any step</li>
+	<li>Added restoration of the set checklist position after updating the page</li>
+</ul>	
+<h5>CHANGES</h5>
+<ul>
+	<li>Improved work with alternative highlighting</li>
+	<li>Improved operation of "delayBefore" and "delayAfter" parameters</li>
+	<li>Changed the name of the short code in the template for the cover</li>
+</ul>				
+				
+<h4>Version 3.1 (November 30, 2018)</h4>
+<h5>CHANGES</h5>
+<ul>
+	<li>Improved visualization for Right to Left text orientation</li>
+	<li>Removed the effect of the highlight shape to scrolling</li>
+</ul>	
+				
+<h4>Version 3.0 (November 30, 2018)</h4>
+<h5>CHANGES</h5>
+<ul>
+	<li>Removed the "duration" sub-parameter </li>
+	<li>The sub-parameters "messageNextError" and "messagePrevError" have been removed from "lang" parameter</li>
+	<li>The sub-parameters "introTitle" and "introContent" have been renamed to "title" and "content" and transferred from "lang" to "intro"</li>
+	<li>The sub-parameters "contDialogTitle" and "contDialogContent" have been renamed to "title" and "content" and transferred from "lang" to "continue"</li>
+</ul>
+				
+<h4>Version 2.12 (November 29, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new value "ready" for sub-parameter "clickable" in to tourMap Options. This value makes clickable only completed steps and current</li>
+	<li>Added new sub-parameter "eventMessage" in to Step Options. This parameter sets message hint for steps with custom events</li>
+	<li>Added new parameter "keyboardEvent" in to General Options. This parameter sets the permission to trigger custom events: true or false (default)</li>
+	<li>Added new sub-parameter "keyboardEvent" in to Step Options. This parameter sets the permission to trigger custom events for current step: true or false (default)</li>
+</ul>
+<h5>CHANGES</h5>
+<ul>
+	<li>Improved translations: czech and slovakia</li>
+</ul>
+				
+<h4>Version 2.11 (November 27, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new parameter "timerType" in to General Options. Sets shape type of the timer progress bar: "line" (default) or "circle"</li>
+	<li>Added auto-view control buttons: "play" and "pause"</li>
+	<li>Added new method "timerState". This method switches the auto-viewing between states: "play" and "pause".</li>
+</ul>
+<h5>CHANGES</h5>
+<ul>
+	<li>Changed user interaction logic with auto-viewing.</li>
+</ul>	
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Improved work with missing elements on the page.</li>
+</ul>			
+				
+<h4>Version 2.10 (November 26, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Added local storage clearing of all plugin data when the tour is completed.</li>
+	<li>Fixed corner display conditions in the message window.</li>
+</ul>				
+				
+<h4>Version 2.9 (November 26, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new method "setStep". This method switches the tour to the specified step.</li>
+	<li>Added new method "getStep". This method returns the active step number.</li>
+</ul>
+
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Added overlay layer while waiting for the first element to appear. Checklist will be open only after the appearance of the item.</li>
+	<li>Improved the behavior of the block with the message at extremely small screen resolutions.</li>
+	<li>Improved the behavior of the block with a message that is larger than the visible area of the screen.</li>
+</ul>				
+				
+<h4>Version 2.8 (November 24, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Improved scrolling in the help tour on the tour builder page  (parameters generator).</li>
+	<li>Fixed a situation in which there was a search for a non-existent object and error display in the debager.</li>
+	<li>Corrected positioning of the message in conditions of lack of space at the top or bottom of the target block.</li>
+</ul>
+						
+				
+<h4>Version 2.7 (November 23, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed positioning of the highlighting when scrolling the page while waiting for the hidden item to appear.</li>
+</ul>
+				
+<h4>Version 2.6 (November 22, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed the problem of incorrect display of steps in the checklist on devices with a small screen height</li>
+</ul>				
+				
+<h4>Version 2.5 (November 22, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new parameter "bgColor". Global background color of the message block.</li>
+	<li>Added new sub-parameter "bgColor" for the parent parameters: intro, continue, tourMap and steps.</li>
+	
+	<li>Added new parameter "titleColor". Global title color of the message block.</li>
+	<li>Added new sub-parameter "titleColor" for the parent parameters: intro, continue, tourMap and steps.</li>
+	
+	<li>Added new parameter "modalContentColor". Content color of the intro message block.</li>
+	<li>Added new sub-parameter "modalContentColor" for the parent parameters: intro, continue and steps.</li>
+	
+	<li>Added new parameter "modalTypeColor". Global modal type color of the message block.</li>
+	<li>Added new sub-parameter "modalTypeColor" for the parent parameters: intro and continue.</li>
+	
+	<li>Added new parameter "paginationColor". Global pagination color of the message block.</li>
+	<li>Added new sub-parameter "paginationColor" for the parent parameter: steps.</li>
+	
+	<li>Added new parameter "timerColor". Global timer color of the message block.</li>
+	<li>Added new sub-parameter "timerColor" for the parent parameter: steps.</li>
+	
+	<li>Added new parameter "btnColor". Global buttons color.</li>
+	<li>Added new sub-parameter "btnColor" for the parent parameters: intro, continue, tourMap and steps.</li>
+	
+	<li>Added new parameter "btnHoverColor". Global buttons hover color.</li>
+	<li>Added new sub-parameter "btnHoverColor" for the parent parameters: intro, continue, tourMap and steps.</li>
+	
+	<li>Added new sub-parameter "itemColor" for the parent parameter: tourMap. Item color of the Checklist</li>
+	<li>Added new sub-parameter "itemHoverColor" for the parent parameter: tourMap. Item hover color of the Checklist</li>
+	<li>Added new sub-parameter "itemActiveColor" for the parent parameter: tourMap. Item Active color of the Checklist</li>
+	<li>Added new sub-parameter "itemActiveBg" for the parent parameter: tourMap. Item Active BG color of the Checklist</li>
+	<li>Added new sub-parameter "itemNumColor" for the parent parameter: tourMap. Item Number color of the Checklist</li>
+	<li>Added new sub-parameter "checkColor" for the parent parameter: tourMap. Check color of the Checklist</li>
+	<li>Added new sub-parameter "checkReadyColor" for the parent parameter: tourMap. Check Ready color of the Checklist</li>
+</ul>	
+<h5>CHANGES</h5>
+<ul>
+	<li>In connection with the emergence of new style control parameters, from the package removed themes: light, dark, aero, violet, snow, club</li>
+</ul>
+				
+<h4>Version 2.4 (November 17, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed bug with using destroy method together with tour without steps.</li>
+
+</ul>					
+				
+<h4>Version 2.3 (November 13, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new theme "Neon". The old "Neon" theme is no longer in the archive.</li>
+	<li>Added new theme "Violet". The old "Violet" theme is no longer in the archive.</li>
+</ul>					
+				
+<h4>Version 2.2 (November 9, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new theme "Material"</li>
+	<li>Added the transfer of the target object in the functions: before, during, after.</li>
+	<li>Improved work with multi-page tours. Accounted for more options toggle between pages.</li>
+</ul>	
+				
+<h4>Version 2.1 (November 5, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added additional automatic scrolling of the page in order to maximally place an object and a block  with a large message in the screen.</li>
+	<li>Added new demo "test-large-message". For Large content testing.</li>
+	<li>Added new demo "snippet-check-fields". For required fields.</li>
+	<li>Added new sub-parameter "width" into the parameters of intro. This parameter set the width of the intro message block.</li>
+	<li>Added new sub-parameter "width" into the parameters of continue. This parameter set the width of the continue message block.</li>
+</ul>	
+				
+<h4>Version 2.0 (November 4, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new parameter "toggle" for method "map".</li>
+	<li>Added new theme "Relate"</li>
+	<li>Added control by arrows on the keyboard. Left - the previous step, right - the next step.</li>
+	<li>Added parameter "keyboard" to enable / disable the ability to control the tour using the keyboard.</li>
+</ul>				
+				
+<h4>Version 1.11 (November 3, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added automatic scrolling in the block with a list of steps to ensure that the active step is always visible.</li>
+	<li>Improved automatic search for the best position of the message for blocks with a high height.</li>
+	<li>Added the transfer of the target object in the function heckNext, chechPrev.</li>
+</ul>	
+				
+<h4>Version 1.10 (October 30, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new parameter "loc". Global path to the page on which the step should work. Used to link a tour to a specific page.</li>
+	<li>Added new parameter "timer". Global time value after which the tour automatic switching to the next step.</li>
+</ul>				
+				
+<h4>Version 1.9 (October 30, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new parameter "spacing". This parameter set the global indent highlighting around the element.</li>
+	<li>Added new parameter "width". This parameter set the global width of the message block.</li>
+	<li>Added new parameter "shapeBorderRadius". Global corner radius of rounded rectangle shape.</li>
+	<li>Added new parameter "shape". This parameter set the global shape of highlighting.</li>
+</ul>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed a bug causing incorrect calculation of the z-index of dynamic elements.</li>
+</ul>
+		
+				
+<h4>Version 1.8 (October 29, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new sub-parameter "width". This parameter sets width of the message block for a specific step.</li>
+</ul>		
+		
+<h4>Version 1.7 (October 28, 2018)</h4>
+<h5>CHANGES</h5>
+<ul>
+	<li>A part of the logic was rewritten in order to make the plugin more flexible to extend the functionality.</li>
+</ul>
+				
+<h4>Version 1.6 (October 27, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>The plugin code from this day provide for the declaration of numerical values of parameters in brackets, as string value.</li>
+	<li>Added sub-parameter "waitElementTime". This parameter sets the time (ms) to wait for an item to appear</li>
+	<li>Added sub-parameters "checkNext" and "checkPrev". Functions in which you can carry out any verification by clicking on the "Next" or "Prev" button.</li>
+	<li>Saving the progress of the tour after updating the page</li>
+	<li>Added the ability to continue the tour after refreshing the page.</li>
+</ul>
+
+<h4>Version 1.5 (May 24, 2018)</h4>
+<h5>BUGFIXES</h5>
+<ul>
+	<li>Fixed bug of calculating the coordinates of the highlighted area.</li>
+</ul>
+
+<h4>Version 1.4 (April 27, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added a warning message when the plugin is working on local pages in the browser Internet Explorer 11 and highest.</li>
+</ul>
+
+<h4>Version 1.3 (April 19, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>In a files set added WordPress version of plugin </li> 
+	<li>Added chrome extension, which gets an unique selector code for any element on the page</li>
+	<li>Innovation. To display a message in the center, do not specify the target</li>				
+	<li>Added iGuider Builder</li>
+</ul> 
+ 
+<h4>Version 1.2 (April 05, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Changes have been made to the processing of the values for the parameters "cover"</li> 
+</ul> 	
+
+<h4>Version 1.1 (January 12, 2018)</h4>
+<h5>NEW FEATURES</h5>
+<ul>
+	<li>Added new rectangle shape with rounded corners</li> 
+</ul> 
+
+<h4>Version 1.0 (November 27, 2017)</h4>
+<h5>Release</h5>
+				
+
+			</div>
+			<hr>
+			<footer class="footer text-center">
+				Copyright © 2017 <a href="http://codecanyon.net/user/yurik417/portfolio" target="_blank">MASSCODE</a> All Rights Reserved
+			</footer>	
+		</div>
+	</div>
+	
+	
+	
+<link rel="stylesheet" href="doc_files/css/prism.css">
+<script src="doc_files/js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "search" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2302
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2302
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "order" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "order" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "start" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[04-Mar-2026 17:01:48 America/Lima] PHP Warning:  Undefined array key "length" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 2304
+[2026-03-04T17:01:48-05:00][ERROR] Excepción en controlador: reportedocumentos, acción: get_cotizaciones, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php, línea: 2316, mensaje: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0,0' at line 6 , traza: #0 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(2316): PDOStatement->execute()
+#1 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(2183): ReportedocumentosController->get_cotizaciones(Array, Object(Contribuyente), Object(Usuario))
+#2 [internal function]: ReportedocumentosController->getCotizacionesAction()
+#3 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ReportedocumentosController), 'getCotizaciones...', Array)
+#4 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#5 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#6 {main}
+[19-Mar-2026 19:52:21 America/Lima] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/GestiondedocumentosController.php on line 170

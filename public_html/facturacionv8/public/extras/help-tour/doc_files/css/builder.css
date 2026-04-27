@@ -1,0 +1,516 @@
+/*
+ * jQuery iGuider builder css v 1.0
+ *
+ * Copyright 2018, Linnik Yura | LI MASS CODE | https://codecanyon.net/user/yurik417
+ *
+ * Last Update 06.05.2018
+ */
+
+
+.builderTabItemWrap {
+	
+}
+.builderTabItem {
+	float:left;
+	margin-right:-100%;
+	width:100%;
+	opacity:0;
+	position:relative;
+	z-index:-1;
+	max-height:0;
+	overflow:hidden;
+}
+.builderTabItem.builderTabItem-active {
+	opacity:1;
+	z-index:10;
+	max-height:inherit;
+	overflow:visible;
+}
+.builder {
+	position:relative;
+	z-index:1;
+}
+.builderHead {
+	padding:20px;
+	position:relative; 
+	z-index:1;
+}
+.builderHead:before {
+	content:'';
+	position:absolute;
+	top:40px;
+	left:0;
+	height:30px;
+	width:10px;
+	background-color:#000;
+}
+.builder [data-type="boolean"] {
+	
+}
+.builder [data-type="number"] {
+	background:green;
+	text-align:right;
+	width:50px;
+	border:0;
+	background:none;
+	padding:0;
+	box-shadow:none;
+	float:right;
+	left:auto;
+	height:auto;
+	position:relative;
+	padding-top:10px;
+	margin-left:-100%;
+}
+[data-number_mid] {
+	height:34px;
+	margin-top:25px;
+	padding:0;
+	width:100%;
+}
+[data-select_mid]{
+	
+}
+.paramColumn {
+	max-width:360px;
+}
+
+.builder [data-type="string"] {
+	
+}
+.builder [data-type="select"] {
+
+}
+
+.builderPar {
+	border-top:1px solid #eee;
+	margin:0 20px;
+	position:relative;
+	height:62px;
+	z-index:2;
+}
+.builderPar.builderParBig {
+	height:124px;
+}
+.builderPar.builderParXL {
+	height:500px;
+}
+.paramLabel {
+	text-align:left !important;
+	float:left;
+	margin-right:-100%;
+	display: inline-block;
+    font-weight: 700;
+    max-width: 100%;
+	padding:5px 0 0 0;
+}
+.paramControlWrap {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	right:0;
+	
+}
+.paramControl,
+[data-select_mid] {
+	background:none;
+	border:0;
+	color:#666;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	padding:20px 0 0 0;
+	font-size:12px;
+}
+[data-select_mid] {
+	margin-left:-4px;
+}
+
+
+
+[data-select_mid] {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-mos-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+}
+
+
+textarea.paramControl {
+	line-height:1.2em;
+	padding-top:32px;
+	width:100%;
+	height:100%;
+	max-width:100%;
+	max-height:100%;
+	min-width:100%;
+	min-height:100%;
+	font-family:Arial;
+	
+}
+
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  float:right;
+  margin-top:13px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #AD9A5F;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.builder .form-control { margin-bottom:2px}
+.builder label {padding-left:0;}
+.builderHead h3 { font:700 15px/30px Arial, Helvetica, sans-serif; text-transform:uppercase; padding:20px 0; margin:0;}
+
+.builderActions {
+	float:right;
+	padding:20px 0;
+	font-size:10px;
+}
+
+.disable,
+.disable:hover,
+.disable:focus {opacity:0.4 !important; cursor:default !important; text-decoration:none !important; border-color:transparent;}
+.builderStep--tpl { display:none}
+
+.builderTabMenu a {
+	display:block;
+	height:62px;
+	line-height:62px;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	margin:0 20px;
+    font-weight: 700;
+    text-align: left;
+	color:#000;
+	cursor:pointer;
+}
+.builderTabMenu a:hover {
+	text-decoration:none;
+	color:#666;
+}
+.builderTabMenu a.active {
+	text-decoration:none;
+	color:#AD9A5F;
+}
+a:active,
+a:focus {
+	outline:none !important;
+}
+.builderResult {
+	position:relative;
+	z-index:2;
+	margin:0 -10px;
+	border:0;
+	font:14px/1.2em Arial, Helvetica, sans-serif;
+	border-top:1px solid #eee;
+	margin:0 20px;
+	height:calc(100vh - 110px);
+}
+.resultField {
+	max-width:100%;
+	min-width:100%;
+	max-height:100%;
+	min-height:100%;
+	height:100%;
+	width:100%;
+	border:0;
+	background:#fff;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.builder + .builder + .builder {
+	margin-top:10px;
+}
+
+.addStep,
+.addStep:focus  {
+	width:60px;
+	height:60px;
+	font:20px/60px Arial, Helvetica, sans-serif;
+	color:#fff;
+	background-color:#576c75;
+	text-align:center;
+	border-radius:50%;
+	text-decoration:none;
+	position:relative;
+	left:50%;
+	top:-34px;
+	margin-left:-30px;
+	z-index:10;
+	display:block;
+}
+.addStep:hover {
+	text-decoration:none;
+	color:#fff;
+	background-color:#677589;
+}
+[data-tip] {
+	position:relative;
+}
+[data-tip]:after {
+	content:attr(data-tip);
+	position:absolute;
+	padding:5px 10px;
+	background-color:#000;
+	color:#fff;
+	font:11px/1.2em Arial, Helvetica, sans-serif;
+	left:50%;
+	bottom:100%;
+	transform:translateX(-50%);
+	margin-bottom:5px;
+}
+[data-help]:after {
+	content:attr(data-help);
+	position:absolute;
+	padding:10px;
+	background-color:#000;
+	color:#fff;
+	font:12px/1.2em Arial, Helvetica, sans-serif;
+	bottom:100%;
+	margin-bottom:10px;
+	left:0;
+	width:250px;
+	display:none;
+}
+[data-help]:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:-5px;
+	transform:translateY(-50%);
+	border: 5px solid transparent; 
+	border-top: 5px solid #000; 
+	z-index:5;
+	display:none;
+}
+.builderPar:hover [data-help]:after {
+	display:block;
+}
+.builderPar:hover [data-help]:before {
+	display:block;
+}
+.builderActions label {
+	font-weight:400;	
+	text-transform:uppercase;
+}
+.builderActions a {
+	text-decoration:none;
+	border-width:0 0 1px 0;
+	border-style:dashed;
+	text-transform:uppercase;
+}
+.builderActions *:hover {
+	opacity:1;
+}
+.builderActions label,
+.builderActions a {
+	margin:0 0 0 15px;
+	opacity:0.8;
+	position:relative;
+	display:inline-block;
+	font-weight:700;
+	line-height:1.4em;
+}
+.builderActions *:before {
+	content:'';
+	display:inline-block;
+	width:4px;
+	height:4px;
+	border-radius:50%;
+	background-color:#fff;
+	position:absolute;
+	top:9px;
+	left:-11px;
+	opacity:0.4;
+}
+.builderActions *:first-child:before {
+	display:none;
+}
+.stepDown,
+.stepUp {
+	border-color:transparent !important;
+}
+.checkLabel input {
+	display:inline-block;
+	vertical-align:bottom;
+	position:relative;
+	top:-2px;
+	margin-right:3px !important;
+}
+.builderResult {
+	position:relative;
+}
+.builderStep {
+	padding-bottom:40px;
+	border-bottom:10px solid #eee;
+}
+.paramWrap {
+	width: 20vw;
+	height: 100vh;
+	border-right: 1px solid #eee;
+	float: left;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.groupWrap {
+	width: 200px;
+	height: 100vh;
+	border-right: 1px solid #eee;
+	float: left;
+	overflow: hidden;
+	overflow-y: auto;
+	position: relative;
+	z-index: 1;
+}
+.resultWrap {
+	height: 100vh;
+	overflow: hidden;
+}
+.previewWrap {
+	width: 35vw;
+	height: 100vh;
+	border-right: 1px solid #eee;
+	float: left;
+	overflow: hidden;
+	overflow-y: auto;
+	position:relative;
+}
+.headerVert {
+	width: 75px;
+	height: 100vh;
+	border-right: 1px solid #eee;
+	float: left;
+	position:relative;
+	text-align:center;
+}
+.builderTab {
+	height: 100vh;
+}
+
+
+.plugTitle {
+	text-align: center;
+	white-space: nowrap;
+	height: 75px;
+	position: absolute;
+	top: 40px;
+	right: 100%;
+	transform-origin:right top;
+	transform: rotate(-90deg);
+	line-height: 75px;
+}
+.doc {
+	text-align: center;
+	white-space: nowrap;
+	height: 75px;
+	position: absolute;
+	bottom: 40px;
+	left: 100%;
+	transform-origin:left bottom;
+	transform: rotate(-90deg);
+	line-height: 75px;
+}
+.doc a {
+	margin-right:40px;
+}
+.addStepPos {
+	height: 200px;
+	width: 100%;
+}
+.theme-item {
+	position:relative;
+	overflow:hidden;
+	padding:13px 0;
+	margin:0 20px;
+	border-top:1px solid #eee;
+}
+.theme-item-pic {
+	width:100%;
+	display:block;
+	width:50%;
+	float:left;
+	margin-right:20px;
+}
+.theme-check-wrap {
+	position:absolute;
+	top:-13px;
+	right:0;
+}
+.theme-item-title {
+	position:relative;
+}
+.theme-title-text {
+	font-weight:700;
+}
+.b-bad-size body * {display:none;}
+.b-bad-size body:after {
+	display:block;
+	content:'The screen width is not suitable for using the builder. 1200px and higher recommended.';
+	position:fixed;
+	max-width:800px;
+	padding:20px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+	
+}

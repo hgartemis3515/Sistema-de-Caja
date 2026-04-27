@@ -1,0 +1,193 @@
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+label{
+	font-weight: 700;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	 
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	min-width: 1em;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+a.breadcrumb-elements-item, a.breadcrumb-item {
+	display: inline-block;
+	color: inherit;
+	transition: opacity ease-in-out .15s;
+}
+.border-bottom-danger {
+	border-bottom-color: #00BCD4!important;
+}
+.border-bottom-2 {
+	border-bottom: 2px solid;
+}
+.breadcrumb-item {
+	padding: .625rem 0;
+	color: inherit;
+}
+.button-large{
+	margin: 1em;
+	text-align: center;
+}
+.breadcrumb-item+.breadcrumb-item {
+	padding-left: .625rem;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+	display: inline-block;
+	padding-right: .625rem;
+	color: inherit;
+	content: "/";
+}
+.breadcrumb-line-light {
+	background-color: #fff;
+	border-color: #ddd;
+	color: #333;
+}
+.breadcrumb-item.active {
+	color: #999;
+}
+.btn {
+	position: relative;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-width: 0;
+	padding: 8px 17px;
+}
+.cont-pt2{
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.d-block {
+	display: block!important;
+}
+.dataTables_filter input {
+	margin-left: 1em;
+}
+.header-highlight .navbar-header:not([class*=bg-]) {
+	background-color: #00BCD4;
+	-webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+.float-right{
+	float: right;
+}
+
+.table-responsive {
+	padding: 1em;
+}
+.font-weight-bold{
+font-weight: 700;
+}
+.form-control:not(.border-bottom-1):not(.border-bottom-2):not(.border-bottom-3):focus {
+	border-color: #00BCD4;
+	transition-timing-function: ease;
+}
+.label-form{
+	font-weight: 700;
+	padding: 5px 5px;
+}
+.label-form i{
+	color: #00BCD4;
+}
+.mr-2, .mx-2 {
+	margin-right: .625rem!important;
+}
+.mb-2{
+	margin-bottom: 2em;
+}
+.navigation li a {
+color: #263238;
+} 
+.navigation li a:hover, .navigation li a:focus {
+background-color: #00BCD4;
+color: #fff;
+}
+.navbar-info {
+background-color: #00BCD4;
+-webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+border-top: 1px solid transparent;
+border-bottom: 1px solid transparent;
+
+}
+.navbar-info .navbar-nav > li > a {
+color: #fff;
+font-weight: 700;
+}
+.panel {
+    margin-bottom: 20px;
+    border-top: 2px solid #00BCD4;
+    color: #333333;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.page-header-content {
+	position: relative;
+	padding: 0 1.25rem;
+}
+.page-title small.d-block {
+	margin-left: 0;
+}
+.page-title small {
+	display: inline-block;
+	margin-left: .625rem;
+}
+.page-title small:before {
+	content: '';
+	margin-right: 20px;
+}
+.small, small {
+	font-size: 80%;
+	font-weight: 400;
+}
+.sidebar {
+color: #263238;
+background-color: #fff;
+z-index: 99;
+box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+.sidebar-default .navigation li > a:hover, .sidebar-default .navigation li > a:focus {
+    background-color: #00BCD4;
+}
+.table-responsive {
+    padding: 1em;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	right: 15px;
+	padding: 10px 10px;
+}
+.text-muted {
+	color: #999!important;
+}
+.title-card{
+	font-weight: 700;
+	color:  #00BCD4;
+	text-transform: uppercase;
+	font-size: 14px;
+	}
+@media(min-width:1600px)
+{
+	body{
+		font-size: 15px;
+	}
+	.form-group {
+    margin-bottom: 40px;
+    position: relative;
+	}
+	label{
+		font-size: 15px;
+	}
+}

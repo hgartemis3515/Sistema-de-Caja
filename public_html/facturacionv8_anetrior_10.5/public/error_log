@@ -1,0 +1,746 @@
+[23-Dec-2024 10:06:09 America/Lima] PHP Warning:  Trying to access array offset on true in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireController.php on line 261
+[23-Dec-2024 10:07:31 America/Lima] PHP Warning:  Trying to access array offset on true in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireController.php on line 261
+[28-Dec-2024 04:59:13 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[02-Jan-2025 14:10:07 America/Lima] PHP Warning:  Trying to access array offset on true in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireController.php on line 261
+[02-Jan-2025 14:10:36 America/Lima] PHP Warning:  Trying to access array offset on true in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireController.php on line 261
+[02-Jan-2025 14:15:43 America/Lima] PHP Warning:  Trying to access array offset on true in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireController.php on line 261
+[02-Jan-2025 14:21:56 America/Lima] PHP Fatal error:  Uncaught Error: Class "ZipArchive" not found in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SirecomprasController.php:442
+Stack trace:
+#0 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SirecomprasController.php(90): SirecomprasController->descargar_propuesta_rce(Object(Contribuyente), Object(SireRce), Array)
+#1 [internal function]: SirecomprasController->sireComprasConsultarYDescargarPropuestaAction()
+#2 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(SirecomprasController), 'sireComprasCons...', Array)
+#3 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#4 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#5 {main}
+  thrown in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SirecomprasController.php on line 442
+[03-Feb-2025 10:23:49 America/Lima] PHP Warning:  Undefined property: stdClass::$codigo_error_api in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/GestiondedocumentosController.php on line 2640
+[03-Feb-2025 10:24:06 America/Lima] PHP Warning:  Undefined property: stdClass::$codigo_error_api in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/GestiondedocumentosController.php on line 2640
+[23-Mar-2025 13:34:54 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[23-Mar-2025 13:34:54 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[2025-05-22T10:59:05-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 1648, mensaje: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-03-B001-30548-produccion' for key 'PRIMARY' , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('INSERT INTO `do...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->insert('doc_electronico', Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowInsert(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico', false)
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(1648): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(38): FacturaController->guardar_factura_en_bd(5, 18, Array, Array, Array, Array, Array)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-06-20T12:24:14-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 33)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(14, 33, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-06-20T12:30:22-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 33)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(14, 33, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-06-20T12:39:21-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 33)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(14, 33, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[09-Jul-2025 14:13:52 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 14:13:52 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[09-Jul-2025 15:33:07 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 15:33:07 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[09-Jul-2025 15:33:39 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 15:41:56 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 15:41:56 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[09-Jul-2025 15:42:24 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 15:42:31 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[09-Jul-2025 16:06:01 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[09-Jul-2025 16:06:01 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[2025-07-24T10:22:38-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 10)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 10, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[26-Jul-2025 09:12:40 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DownloadController.php on line 356
+[26-Jul-2025 15:12:46 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DownloadController.php on line 356
+[2025-08-11T13:46:12-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-08-11T13:46:12-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[14-Aug-2025 20:37:29 America/Lima] PHP Warning:  Undefined array key "monto_detraccion" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php on line 1636
+[14-Aug-2025 20:37:29 America/Lima] PHP Warning:  Undefined array key "detalle" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php on line 1061
+[14-Aug-2025 20:37:29 America/Lima] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php on line 1061
+[2025-09-10T10:39:52-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-09-10T10:40:12-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-09-11T17:56:18-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 33)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(14, 33, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-09-21T17:16:49-05:00][ERROR] Excepción en controlador: sireventas, acción: sire_ventas_lista_periodos, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireventasController.php, línea: 1436, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->query('SELECT COUNT(*)...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->fetchOne('SELECT COUNT(*)...', NULL, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->has(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql))
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/SireventasController.php(1436): Phalcon\Mvc\Model->save()
+#7 [internal function]: SireventasController->sireVentasListaPeriodosAction()
+#8 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(SireventasController), 'sireVentasLista...', Array)
+#9 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#10 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#11 {main}
+[02-Oct-2025 16:39:30 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:30 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:30 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:30 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:39:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:02 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:02 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:10 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:10 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:11 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:30 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:30 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:39 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:40 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:40 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:40 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:40 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:41 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:41 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:41 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:41 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:48 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:48 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:40:52 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:40:52 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:50 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:51 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:51 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:52 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:52 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:53 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:53 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:54 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:54 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:44:59 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:44:59 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:00 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:00 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:01 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:30 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:30 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:31 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:45:41 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:45:41 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:37 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:37 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:46:38 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:23 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:23 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:26 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:26 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:28 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:28 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:28 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:28 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:29 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:43 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:43 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:47:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:47:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:09 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:09 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:14 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:14 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:15 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:27 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:28 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:28 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:30 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:30 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:44 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:45 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:49 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:49 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:48:53 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:48:53 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:49:04 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:49:04 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[02-Oct-2025 16:49:24 America/Lima] PHP Warning:  Attempt to read property "tipo_empresa" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 82
+[02-Oct-2025 16:49:24 America/Lima] PHP Warning:  Attempt to read property "id_contribuyente" on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 84
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "search" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 197
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 197
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "order" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "order" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Trying to access array offset on null in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "start" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[26-Oct-2025 15:46:42 America/Lima] PHP Warning:  Undefined array key "length" in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php on line 199
+[2025-10-26T15:46:42-05:00][ERROR] Excepción en controlador: reportedocumentos, acción: get_lista_documentos, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php, línea: 226, mensaje: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0,0' at line 1 , traza: #0 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(226): PDOStatement->execute()
+#1 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(71): ReportedocumentosController->get_lista_documentos(Array, Object(Contribuyente), Object(Usuario))
+#2 [internal function]: ReportedocumentosController->getListaDocumentosAction()
+#3 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ReportedocumentosController), 'getListaDocumen...', Array)
+#4 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#5 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#6 {main}
+[2025-11-09T17:49:42-05:00][ERROR] Excepción en controlador: herramientas, acción: get_sugerencias_producto, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/HerramientasController.php, línea: 1356, mensaje: SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like' Término de consulta: {%🤬%}, traza: #0 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/HerramientasController.php(1356): PDOStatement->execute()
+#1 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/HerramientasController.php(1295): HerramientasController->get_sugerencias_producto(Array, 4)
+#2 [internal function]: HerramientasController->getSugerenciasProductoAction()
+#3 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(HerramientasController), 'getSugerenciasP...', Array)
+#4 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#5 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#6 {main}
+[23-Nov-2025 10:33:17 America/Lima] PHP Notice:  file_put_contents(): Write of 1830 bytes failed with errno=28 No space left on device in /home/humbertoguadalup/public_html/facturacionv8/apis/libreriaqr/vendor/endroid/qr-code/src/Writer/Result/AbstractResult.php on line 29
+[23-Nov-2025 10:33:17 America/Lima] PHP Notice:  file_put_contents(): Write of 7277 bytes failed with errno=28 No space left on device in /home/humbertoguadalup/public_html/facturacionv8/apis/snappypdf/vendor/knplabs/knp-snappy/src/Knp/Snappy/AbstractGenerator.php on line 505
+[23-Nov-2025 10:33:21 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[23-Nov-2025 10:33:21 America/Lima] PHP Deprecated:  Phalcon\Http\Cookie::setDomain(): Passing null to parameter #1 ($domain) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ControllerBase.php on line 260
+[23-Nov-2025 10:33:26 America/Lima] PHP Notice:  file_put_contents(): Write of 1830 bytes failed with errno=28 No space left on device in /home/humbertoguadalup/public_html/facturacionv8/apis/libreriaqr/vendor/endroid/qr-code/src/Writer/Result/AbstractResult.php on line 29
+[23-Nov-2025 10:33:26 America/Lima] PHP Notice:  file_put_contents(): Write of 7277 bytes failed with errno=28 No space left on device in /home/humbertoguadalup/public_html/facturacionv8/apis/snappypdf/vendor/knplabs/knp-snappy/src/Knp/Snappy/AbstractGenerator.php on line 505
+[10-Dec-2025 12:51:07 America/Lima] PHP Warning:  session_start(): Failed to decode session object. Session has been destroyed in /home/humbertoguadalup/public_html/facturacionv8/app/config/services.php on line 71
+[2025-12-19T15:07:10-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T10:58:36-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T11:06:40-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T11:16:49-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T11:19:04-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T11:52:02-05:00][ERROR] Excepción en controlador: reportedocumentos, acción: enviar_documento_sunat, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(1498): FacturaController->enviar_factura_api(Array, 'solo_firma', 9)
+#8 [internal function]: ReportedocumentosController->enviarDocumentoSunatAction()
+#9 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ReportedocumentosController), 'enviarDocumento...', Array)
+#10 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#11 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#12 {main}
+[2025-12-21T11:55:52-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 10)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 10, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T11:55:52-05:00][ERROR] Excepción en controlador: reportedocumentos, acción: enviar_documento_sunat, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(1498): FacturaController->enviar_factura_api(Array, 'solo_firma', 7)
+#8 [internal function]: ReportedocumentosController->enviarDocumentoSunatAction()
+#9 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ReportedocumentosController), 'enviarDocumento...', Array)
+#10 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#11 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#12 {main}
+[2025-12-21T12:00:09-05:00][ERROR] Excepción en controlador: resumendeboletas, acción: crear_resumen_individual, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php, línea: 1283, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->query('SELECT COUNT(*)...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->fetchOne('SELECT COUNT(*)...', NULL, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->has(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql))
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1283): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1087): ResumendeboletasController->crear_resumen_anulado_para_continuar_numeracion(4, '2025-12-21', Array, 1)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1019): ResumendeboletasController->enviar_resumen_api(Array, 4, '2025-12-21', 1, Array, '/home/humbertog...', 7)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(249): ResumendeboletasController->crear_resumen_individual(Array, 1, 'si')
+#10 [internal function]: ResumendeboletasController->crearResumenIndividualAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ResumendeboletasController), 'crearResumenInd...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T12:01:24-05:00][ERROR] Excepción en controlador: reportedocumentos, acción: enviar_documento_sunat, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ReportedocumentosController.php(1498): FacturaController->enviar_factura_api(Array, 'solo_firma', 7)
+#8 [internal function]: ReportedocumentosController->enviarDocumentoSunatAction()
+#9 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(ReportedocumentosController), 'enviarDocumento...', Array)
+#10 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#11 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#12 {main}
+[2025-12-21T12:17:11-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T12:18:42-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T12:20:09-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T12:33:59-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-21T13:55:09-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php, línea: 1283, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->query('SELECT COUNT(*)...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->fetchOne('SELECT COUNT(*)...', NULL, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->has(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql))
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1283): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1087): ResumendeboletasController->crear_resumen_anulado_para_continuar_numeracion(4, '2025-12-21', Array, 1)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/ResumendeboletasController.php(1019): ResumendeboletasController->enviar_resumen_api(Array, 4, '2025-12-21', 1, Array, '/home/humbertog...', 11)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(136): ResumendeboletasController->crear_resumen_individual(Array, 1, 'si')
+#10 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 11, Array, Array, Array, Array, Array)
+#11 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#12 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#13 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#14 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#15 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#16 {main}
+[2025-12-29T17:29:34-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 10)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 10, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-29T17:30:18-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 10)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(4, 10, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[2025-12-29T18:08:45-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 317, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(317): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/BoletaController.php(110): FacturaController->enviar_factura_api(Array, 'solo_firma', 18)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(721): BoletaController->procesar_boleta(5, 18, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[04-Jan-2026 15:47:42 America/Lima] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/GestiondedocumentosController.php on line 170
+[2026-01-13T12:37:08-05:00][ERROR] Excepción en controlador: documentoelectronico, acción: guardar_documento, archivo: /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php, línea: 358, mensaje: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away , traza: #0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo\AbstractPdo->execute('UPDATE `doc_ele...', Array, Array)
+#3 [internal function]: Phalcon\Db\Adapter\AbstractAdapter->update('doc_electronico', Array, Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model->doLowUpdate(Object(Phalcon\Mvc\Model\MetaData\Memory), Object(Phalcon\Db\Adapter\Pdo\Mysql), 'doc_electronico')
+#5 [internal function]: Phalcon\Mvc\Model->doSave(Object(Phalcon\Support\Collection))
+#6 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(358): Phalcon\Mvc\Model->save()
+#7 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/FacturaController.php(56): FacturaController->enviar_factura_api(Array, 'inmediato', 9)
+#8 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(701): FacturaController->procesar_factura(4, 9, Array, Array, Array, Array, Array)
+#9 /home/humbertoguadalup/public_html/facturacionv8/app/controllers/DocumentoelectronicoController.php(560): DocumentoelectronicoController->procesar_documento_electronico(Object(Usuario), Array)
+#10 [internal function]: DocumentoelectronicoController->guardarDocumentoAction()
+#11 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->callActionMethod(Object(DocumentoelectronicoController), 'guardarDocument...', Array)
+#12 [internal function]: Phalcon\Dispatcher\AbstractDispatcher->dispatch()
+#13 /home/humbertoguadalup/public_html/facturacionv8/public/index.php(36): Phalcon\Mvc\Application->handle('/facturacionv8/...')
+#14 {main}
+[15-Feb-2026 16:27:39 America/Lima] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4198400 bytes) in /home/humbertoguadalup/public_html/facturacionv8/app/controllers/HerramientasController.php on line 1612

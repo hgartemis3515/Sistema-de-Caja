@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<link rel="stylesheet" href="../../doc_files/css/style.css">
+
+			
+<script src="../../js/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="../../css/iGuider.css">
+<script src="../../js/jquery.iGuider.js"></script>
+
+<link id="theme-css" rel="stylesheet" href="../../themes/material/iGuider-theme-material.css">
+<script id="theme-js" src="../../themes/material/iGuider-theme-material.js"></script>	
+
+<script>
+$(window).on('load',function(){
+
+	$.theme = 'material';
+	function addScript(src){
+		var script = document.createElement('script');
+		script.src = src;
+		script.id = 'theme-js';
+		script.async = false;
+		document.head.appendChild(script);
+	}
+	function addCss(href){
+		var linkEl = document.createElement('link');
+		linkEl.href = href;
+		linkEl.id = 'theme-css';
+		linkEl.async = false;
+		linkEl.rel = 'stylesheet';
+		document.head.appendChild(linkEl);
+	}
+
+	var callback = function(opt){
+		if(opt.steps){
+			iGuider('destroy');
+
+			for(var i=0; i < opt.steps.length; i++){
+				if(opt.steps[i].target){
+					opt.steps[i].target = 'el';
+				}
+				if(i == (opt.steps.length-1)){
+					$.sOpt = opt;
+					iGuider($.sOpt);
+					iGuider('button',$.sOpt);
+				}
+			}
+		}else{
+			console.log('opt.steps is absent')
+		}
+	};
+
+	var checkScript = function(opt){
+		try {
+			if(mapTpl){
+				callback(opt);
+			}else{
+				setTimeout(function(){
+					checkScript(opt);
+				},300)
+			}
+		} catch (err) {
+			setTimeout(function(){
+				checkScript(opt);
+			},300)
+		}
+	};
+	
+	var addFiles = function(theme,opt){
+		$('#theme-css').remove();
+		$('#theme-js').remove();
+		
+		mapTpl = false;
+		modalTpl = false;
+		
+		addCss('../../themes/'+theme+'/iGuider-theme-'+theme+'.css');
+		addScript('../../themes/'+theme+'/iGuider-theme-'+theme+'.js');
+		
+		checkScript(opt);
+		
+	};
+	
+	var delay = 1;
+
+
+	var processMessage = function(msg) {
+		//Verify data and origin (in this case the local context page)
+		if (!msg.data) {
+			return;
+		}
+		
+		var opt = JSON.parse(msg.data.opt);
+		$.designType = msg.data.type;
+		
+		if($.designType){
+			opt.create = function(){
+				iGuider('design',$.designType);
+			};
+		}
+		
+		opt.debug = false;
+		
+		
+		
+		if(!$.theme){
+			$.theme = msg.data.theme;
+			addFiles(msg.data.theme,opt);
+		}else{
+			if($.theme != msg.data.theme){
+				$.theme = msg.data.theme;
+				addFiles(msg.data.theme,opt);
+			}else{
+				callback(opt);
+			}
+		}
+		
+		$('.preview_message').hide();
+		if($.designType == 'intro'){
+			$('#ms-intro').show();
+		}
+		if($.designType == 'continue'){
+			$('#ms-continue').show();
+		}
+		if(parseFloat($.designType) > -1){
+			$('#ms-steps').show();
+		}
+
+	};
+	window.addEventListener("message", processMessage);
+	
+})
+</script> 
+
+</head>
+<body>
+
+<div style="position:absolute; left:50%; bottom:50px; transform:translateX(-50%); text-align:center;">
+	<div id="ms-intro" class="preview_message">
+		Attention! <br>
+		In this tab settings tour functionality is limited to the "Introduction" window. All buttons are disabled.
+	</div>
+	<div id="ms-continue" class="preview_message">
+		Attention! <br>
+		In this tab settings tour functionality is limited to the "Continue" window. All buttons are disabled.
+	</div>
+	<div id="ms-steps" class="preview_message">
+		Attention! <br>
+		In this tab settings tour functionality is limited to the "Step" window. All buttons are disabled besides "Tour Map".
+		By default, the step that is currently being edited is displayed.
+		Use the checklist (Tour Map) to navigate the steps.
+	</div>
+</div>
+<div style="position:absolute; left:50%; top:50px; transform:translateX(-50%); text-align:center;" >
+	
+	<div class="custom-element" data-target="el">Test Element</div>
+	<p>This element will always be highlighted instead of the specified element in the parameters.</p>		
+</div>
+
+
+
+</body>
+</html>

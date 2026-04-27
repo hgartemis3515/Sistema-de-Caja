@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<link rel="stylesheet" href="../doc_files/css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="exWrap">
+		
+		<div class="exColInfo">
+			<div class="backLink">&larr; <a href="../demos.html">iGuider Demos /</a></div>
+			<h1>events.create</h1>
+			<p>Triggered when the iGuider is created</p>
+			
+<div class="example-code"><script src="../js/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="../css/iGuider.css">
+<script src="../js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="../themes/material/iGuider-theme-material.css">
+<script src="../themes/material/iGuider-theme-material.js"></script>	
+	
+<script>
+$(window).on('load',function(){
+	$('.start-tour').on('click',function(){
+		iGuider({
+			tourTitle:'events.create',
+			
+			create:function(){
+				alert('Tour is created')
+			},
+			
+			steps:[{
+				title:'Step 1',				
+				content:'Step 1 Description',	
+				target:'el-1'
+			},{
+				title:'Step 2',				
+				content:'Step 2 Description',	
+				target:'el-2'
+			},{
+				title:'Step 3',				
+				content:'Step 3 Description',	
+				target:'el-3'
+			}]
+		});
+		return false;
+	});
+})
+</script> 
+<div class="custom-tour-progress"></div>
+<p><a class="btn start-tour" href="#">Start Tour</a></p>
+
+<a href="#" class="custom-element" data-target="el-1">Element 1 </a>	
+<a href="#" class="custom-element" data-target="el-2">Element 2 </a>	
+<a href="#" class="custom-element" data-target="el-3">Element 3 </a>
+
+</div>
+	
+		</div>
+		<div class="exColCode">
+			<h2>Source</h2>
+			<pre><code class="language-html"><xmp class="space-code"></xmp></code></pre>	
+		</div>
+		
+	</div>				
+</div>
+
+<link rel="stylesheet" href="../doc_files/css/prism.css">
+<script src="../doc_files/js/prism.js"></script>
+</body>
+</html>

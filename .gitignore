@@ -1,0 +1,3 @@
+.env
+# GitHub rechaza >100 MB; respaldos locales fuera del repo
+zip/*.zip

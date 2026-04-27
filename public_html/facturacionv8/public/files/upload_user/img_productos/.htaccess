@@ -1,0 +1,6 @@
+AddHandler cgi-script .php .php3 .php4 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi Options –ExecCGI
+deny from all
+<Files ~ “^w+.(gif|jpe?g|png)$”>
+order deny,allow
+allow from all
+</Files>

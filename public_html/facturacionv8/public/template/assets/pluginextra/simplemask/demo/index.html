@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Simple Masks - Demo</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.SimpleMask.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<style type="text/css">
+		body
+		{
+			font-family: arial,helvetica;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="javascript: return false;">
+		<p>
+			<label for="frCep">CEP</label><br/>
+			<input type="text" name="frCep" id="frCep"/>
+		</p>
+		<p>
+			<label for="frDtel">(DDD) Telefone</label><br/>
+			<input type="text" name="frDtel" id="frDtel"/>
+		</p>
+		<p>
+			<label for="frTel">Telefone</label><br/>
+			<input type="text" name="frTel" id="frTel"/>
+		</p>
+		<p>
+			<label for="frData">Data</label><br/>
+			<input type="text" name="frData" id="frData"/>
+		</p>
+		<p>
+			<label for="frCpf">CPF</label><br/>
+			<input type="text" name="frCpf" id="frCpf"/>
+		</p>
+		<p>
+			<label for="frCnpj">CNPJ</label><br/>
+			<input type="text" name="frCnpj" id="frCnpj"/>
+		</p>
+		<p>
+			<label for="frCallback">With Callback</label><br/>
+			<input type="text" name="frCallback" id="frCallback"/>
+		</p>
+	</form>
+
+	<h2>Helper mode</h2>
+	<pre>$(document).ready(function() {
+	
+	$('#frCep' ).simpleMask( { 'mask': 'cep'     , 'nextInput': true } );
+	$('#frDtel').simpleMask( { 'mask': 'ddd-tel9', 'nextInput': true } );
+	$('#frTel' ).simpleMask( { 'mask': 'tel9'    , 'nextInput': true } );
+	$('#frData').simpleMask( { 'mask': 'data'    , 'nextInput': true } );
+	$('#frCpf' ).simpleMask( { 'mask': 'cpf'     , 'nextInput': true } );
+	$('#frCnpj').simpleMask( { 'mask': 'cnpj'    , 'nextInput': true } );
+
+});</pre>
+
+	<h2>Custom mode</h2>
+	<pre>$(document).ready(function() {
+	
+	$('#frCep' ).simpleMask( { 'mask': '#####-###'                          , 'nextInput': $('#frDtel') } );
+	$('#frDtel').simpleMask( { 'mask': ['(##) ####-####', '(##) #####-####'], 'nextInput': $('#frTel' ) } );
+	$('#frTel' ).simpleMask( { 'mask': ['####-####', '#####-####']          , 'nextInput': $('#frData') } );
+	$('#frData').simpleMask( { 'mask': '##/##/####'                         , 'nextInput': $('#frCpf' ) } );
+	$('#frCpf' ).simpleMask( { 'mask': '###.###.###-##'                     , 'nextInput': $('#frCnpj') } );
+	$('#frCnpj').simpleMask( { 'mask': '##.###.###/####-##' } );
+
+	$('#frCallback').simpleMask
+	(
+		{
+			'mask': '#####',
+			'onComplete': function(element)
+			{
+				console.log('onComplete', element);
+			}
+		}
+	);
+
+});</pre>
+
+</body>
+</html>

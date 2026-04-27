@@ -1,0 +1,97 @@
+<?php
+
+class Etiquetaxdocumento extends \Phalcon\Mvc\Model
+{
+
+    /**
+     *
+     * @var integer
+     */
+    public $id_contribuyente;
+
+    /**
+     *
+     * @var string
+     */
+    public $id_tipodoc_electronico;
+
+    /**
+     *
+     * @var string
+     */
+    public $serie_comprobante;
+
+    /**
+     *
+     * @var integer
+     */
+    public $numero_comprobante;
+
+    /**
+     *
+     * @var string
+     */
+    public $tipo_envio_sunat;
+
+    /**
+     *
+     * @var integer
+     */
+    public $id_etiqueta;
+
+    /**
+     *
+     * @var string
+     */
+    public $estado;
+
+    /**
+     *
+     * @var string
+     */
+    public $fecha_registro;
+
+    /**
+     *
+     * @var integer
+     */
+    public $idusuario;
+
+    /**
+     *
+     * @var string
+     */
+    public $fecha_inactivo;
+
+    /**
+     * Initialize method for model.
+     */
+    public function initialize()
+    {
+        $this->setSchema("humbertoguadalup_bd_sys_facturacion");
+        $this->setSource("etiquetaxdocumento");
+    }
+
+    /**
+     * Allows to query a set of records that match the specified conditions
+     *
+     * @param mixed $parameters
+     * @return Etiquetaxdocumento[]|Etiquetaxdocumento|\Phalcon\Mvc\Model\ResultSetInterface
+     */
+    public static function find($parameters = null): \Phalcon\Mvc\Model\ResultsetInterface
+    {
+        return parent::find($parameters);
+    }
+
+    /**
+     * Allows to query the first record that match the specified conditions
+     *
+     * @param mixed $parameters
+     * @return Etiquetaxdocumento|\Phalcon\Mvc\Model\ResultInterface|\Phalcon\Mvc\ModelInterface|null
+     */
+    public static function findFirst($parameters = null): ?\Phalcon\Mvc\ModelInterface
+    {
+        return parent::findFirst($parameters);
+    }
+
+}

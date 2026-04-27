@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<link rel="stylesheet" href="../doc_files/css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="exWrap">
+		
+		<div class="exColInfo">
+			<div class="backLink">&larr; <a href="../demos.html">iGuider Demos /</a></div>
+			<h1>steps.position</h1>
+			<p>Position of message.<br>
+			It may take the values: <span class="value">"auto"</span>, <span class="value">"center"</span> or positioning code: <span class="value">"xxx"</span></p>
+			<p><b>"auto"</b> - The plugin automatically choose the best position out of 36 available to display a tour's message (default)</p>
+			<p><b>"center"</b> - The message is displayed in the center of screen and no element is highlighted. The parameter "name" in this case is not required!</p>
+			<p><b>"xxx"</b> - Code which indicates the position of the window with the message</p>
+			<p>
+				tll, tlc, tlr, tcl, tcc, tcr, trl, trc, trr, rtt, rtc, rtb, rct, rcc, rcb, rbt, rbc, rbb, brr, brc, brl, bcr, bcc, bcl, blr, blc, bll, lbb, lbc, lbt, lcb, lcc, lct, ltb, ltc, ltt
+			</p>
+			<p><b>"<span style="color:red">x</span>xx"</b> - First Symbol: The position of message a relatively selected item. <br> 
+				It may take the values: <span class="value">t</span> (top),<span class="value">r</span> (right),<span class="value">b</span> (bottom),<span class="value">l</span> (left)
+			</p>
+			<p><b>"x<span style="color:red">x</span>x"</b> - Second Symbol: The position of corner a relatively selected item.<br>
+				a) if first symbol is "l" or "r" it may take the values:<span class="value">t</span> (top), <span class="value">c</span> (center),<span class="value">b</span> (bottom);<br>
+				b) if first symbol is "t" or "b" it may take the values:<span class="value">l</span> (left), <span class="value">c</span> (center),<span class="value">r</span> (right);
+			</p>
+			<p><b>"xx<span style="color:red">x</span>"</b> - Third Symbol: The position of the window with a message a relatively coner. <br>
+				a) if first symbol is "l" or "r" it may take the values:<span class="value">t</span> (top), <span class="value">c</span> (center),<span class="value">b</span> (bottom);<br>
+				b) if first symbol is "t" or "b" it may take the values:<span class="value">l</span> (left), <span class="value">c</span> (center),<span class="value">r</span> (right);
+			</p>
+			
+<div class="example-code"><script src="../js/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="../css/iGuider.css">
+<script src="../js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="../themes/material/iGuider-theme-material.css">
+<script src="../themes/material/iGuider-theme-material.js"></script>	
+	
+<script>
+$(window).on('load',function(){
+	$('.start-tour').on('click',function(){
+		iGuider({
+			tourTitle:'steps.position',
+			steps:[{
+				title:'Step 1',				
+				content:'Step 1 Description',	
+				target:'el-1',
+				position:'auto'
+			},{
+				title:'Step 2',				
+				content:'Step 2 Description',	
+				target:'el-2',
+				position:'trr'
+			},{
+				title:'Step 3',				
+				content:'Step 3 Description',	
+				target:'el-3',
+				position:'rcc'
+			},{
+				title:'Step 4',				
+				content:'Step 4 Description',	
+				position:'center'
+			}]
+		});
+		return false;
+	});
+})
+</script> 
+
+<p><a class="btn start-tour" href="#">Start Tour</a></p>
+
+<span class="custom-element" data-target="el-1">Element 1 </span>	
+<span class="custom-element" data-target="el-2">Element 2 </span>	
+<span class="custom-element" data-target="el-3">Element 3 </span>	
+
+</div>
+	
+		</div>
+		<div class="exColCode">
+			<h2>Source</h2>
+			<pre><code class="language-html"><xmp class="space-code"></xmp></code></pre>	
+		</div>
+		
+	</div>				
+</div>
+
+<link rel="stylesheet" href="../doc_files/css/prism.css">
+<script src="../doc_files/js/prism.js"></script>
+</body>
+</html>

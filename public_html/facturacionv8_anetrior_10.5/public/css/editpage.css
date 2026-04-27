@@ -1,0 +1,1102 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin:0px;
+    padding:0px;
+    border:0px
+}
+textarea:focus,input:focus,select:focus {outline: none;}
+iframe{
+    width: 100%;
+    height: 90%;
+    top: 80px;
+    left: 0;
+    position: fixed;
+}
+.editor-header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background: #263238;
+    height: 50px;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+.editor-logo{
+    float: left;
+    height: 50px;
+    padding: 5px 15px 5px 15px;    
+    border-right: solid 1px rgba(255,255,255,0.1);
+    box-sizing: border-box;
+}
+.editor-logo img{
+    height: 100%;
+    width: auto;
+}
+.editor-header-url{
+    float: left;
+    width: 400px;
+    height: 30px;
+    margin: 10px 0 0 0;    
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+.editor-header-url p{
+    text-align: left;
+    color: rgba(255,255,255,0.3);
+}
+.editor-configurar{
+    float: right;
+    height: 50px;
+    width: auto;
+}
+.editor-configurar a{
+    height: 50px;
+    width: auto;
+    border-left: solid 1px rgba(255,255,255,0.1);
+    padding: 0 15px;
+    display: inline-block;
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+.editor-configurar a i{
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    font-weight: normal;
+}
+.editor-configurar a:hover{
+    background: #304047;
+}
+.editor-publicar{
+    background: #3172bd;
+    font-size: 14px;
+}
+.editor-publicar i{
+    margin: 0 10px 0 0;
+}
+.editor-publicar:hover{
+    background: #4587d3 !important;
+}
+/*
+********************************************************************************
+    Estilos para tabs
+********************************************************************************
+*/
+.editor-paneles{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50px;
+    height: 100%;
+    background: #45555c;
+}
+.nav-tabs {
+    border-bottom: 1px solid #344147;
+    margin: 0;
+}
+/*
+.nav-tabs li{
+    height: 23px;
+    width: auto;
+    padding: 0 10px;
+    top: -23px;   
+    position: relative;
+    overflow: inherit;
+    display: inline-block;
+    margin: 0 -3px;
+}
+*/
+.nav-tabs li p{
+    padding: 0 15px;
+    line-height: 23px;
+    height: 23px;
+    width: auto !important;
+    position: relative;
+    z-index: 1;
+    background: #354248;
+    border: none !important;
+    text-transform: none;
+    font-size: 11px !important;
+    z-index: 1;   
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.nav-tabs li p:after, .nav-tabs li p:before{
+    border-top: 11px solid transparent;
+    border-right: 6px solid #354248;
+    border-bottom: 12px solid #354248;
+    border-left: 6px solid transparent;
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -12px;
+    z-index: 10;
+}
+.nav-tabs li p:before{
+    border-top: 11px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #354248;
+    border-left: 6px solid #354248;
+    left: auto;
+    right: -12px;
+}
+.nav-tabs > li.active > p, .nav-tabs > li.active > p:hover, .nav-tabs > li.active > p:focus {
+    color: #fff;    
+    cursor: default;
+    background: #45555c;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.nav-tabs > li.active > p:after {
+    border-top: 11px solid transparent;
+    border-right: 6px solid #45555c;
+    border-bottom: 12px solid #45555c;
+    border-left: 6px solid transparent;
+}
+.nav-tabs > li.active > p:before {
+    border-top: 11px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #45555c;
+    border-left: 6px solid #45555c;
+}
+.nav-tabs li p:hover{
+    color: rgba(255,255,255,0.7);
+}
+/*
+********************************************************************************
+    Estilos para menu de dispositivos responsive
+********************************************************************************
+*/
+.editor-menu-responsivo{
+    background: #45555c;
+    width: 100%;
+    float: left;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    border-bottom: 1px solid #344147;
+    text-align: center !important;
+}
+.editor-menu-responsivo a{
+    display: inline-block !important;
+    height: 25px;
+    width: auto;
+    margin: 5px 0 0 0;
+    padding: 0 10px 5px 10px;
+    border-right: solid 1px rgba(0,0,0,0.15);
+    float: none !important;
+    border-radius: 3px 3px 0 0;
+    box-sizing: border-box;
+}
+.editor-menu-responsivo a i{
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+}
+.editor-menu-responsivo a:last-child{
+    border: none;
+}
+.editor-menu-responsivo a:hover i{
+    color: rgba(255,255,255,0.8);
+}
+.editor-menu-activo{
+    background: #4587d3;
+    border: none;
+}
+.editor-menu-activo i{
+    color: #fff !important;
+}
+/*
+********************************************************************************
+    Estilos para edició de texto
+********************************************************************************
+*/
+.editor-texto{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100px;
+    z-index: 1;
+}
+.editor-texto-opciones{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    background: #45555c;
+    min-height: 100px;
+    z-index: 1;
+}
+.editor-tabsdos{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    height: 30px;
+    padding: 0;
+    background: #45555c;
+    box-sizing: border-box;
+}
+.editor-tabsdos li{
+    height: 30px;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+.editor-tabsdos li p{
+    padding: 0 15px;
+    line-height: 30px;
+    height: 30px;
+    width: auto !important;
+    position: relative;
+    z-index: 1;
+    background: #354248;
+    border: none !important;
+    text-transform: none;
+    font-size: 11px !important;
+    z-index: 1;   
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.editor-tabsdos li p:before{
+    border-top: 15px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 15px solid #354248;
+    border-left: 4px solid #354248;
+    right: -8px;
+}
+.editor-tabsdos li p:after{
+    display: none;
+}
+.editor-tabsdos > li.active > p:before {
+    border-top: 15px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 15px solid #45555c;
+    border-left: 4px solid #45555c;
+}
+.editor-tabsdos li p i{
+    line-height: 30px;
+    text-align: center;
+}
+/*
+********************************************************************************
+    Estilos para tabs
+********************************************************************************
+*/
+.editor-tabcontentdos{
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 20;
+    background: #263238;
+    min-height: 150px;
+}
+.editor-titulotabdos{
+    width: 100%;
+    height: auto;
+    float: left;
+    height: auto;
+    padding: 9px 12px;
+    box-sizing: border-box;
+    background: #45555c;
+    font-size: 15px;
+    text-align: left;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+.editor-titulotabdos i{
+    font-size: 14px;
+    margin: 0 10px 0 0;
+}
+/*
+********************************************************************************
+    Estilos para sidebar
+********************************************************************************
+*/
+.sidebar{
+    position: fixed;
+    right: 17px;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 280px;
+    background: #263238;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-bottom: -80px;
+}
+/*
+********************************************************************************
+    Estilos para menu de navegación
+********************************************************************************
+*/
+.navbar{
+    padding: 0;
+    float: left;
+    height: 25px;
+    min-height: 25px;
+    width: 100%;
+    position: relative;
+    background: #263238;
+        
+}
+.navbar-nav{
+    margin: 0;
+    height: 25px;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+.navbar-nav > li{
+    height: 25px;
+    padding: 0;
+    width: 100%;
+    position: relative;    
+}
+.navbar-nav > li a{
+    height: 25px;
+    padding: 0; 
+    width: 100%;
+    text-align: left;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background: #263238;
+}
+.navbar-nav > li a i{
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+}
+.navbar-nav > li a:hover{
+    background: #3a474d !important;
+}
+.navbar-nav > li a:hover i{
+    color: rgba(255,255,255,0.9);
+}
+/*
+********************************************************************************
+    Estilos para zona del editor
+********************************************************************************
+*/
+.editor-contenido-sidebar{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.editor-grupo-form{
+    width: 92px;
+    height: 27px;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 10px 5px 0 5px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: solid 1px #1f282d;
+    position: relative;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    border-collapse: separate;
+}
+.editor-grupo-form #demo_vertical{
+    width: 52px;
+    height: 25px;
+    color: rgba(255,255,255,0.7);
+    text-align: left;
+    background: #45555c;
+    padding: 0 10px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    border: none;
+}
+.editor-icon-boton{
+    position: relative;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background: #1f282d;
+    z-index: 10;
+    text-align: center;
+}
+.editor-icon-boton i{
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    line-height: 25px;
+}
+.input-group-btn-vertical {
+    padding: 0 !important;
+    border-left: solid 1px #1f282d;
+}
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+    height: 13px;
+    width: 12px;
+    float: left;
+    margin: 0;  
+    padding: 0;
+    background: #354248;
+    border-radius: 0;
+    color: rgba(255,255,255,0.5);
+    border-bottom: solid 1px #1f282d;
+    text-align: center;
+}
+.bootstrap-touchspin .input-group-btn-vertical > .btn:hover{
+    background-color: #4b595f;
+}
+.bootstrap-touchspin .input-group-btn-vertical i{
+    line-height: 13px;
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    top: -6px;
+    margin: 0;
+    left: 0;
+    padding: 0;
+}
+.bootstrap-touchspin .input-group-btn-vertical > .btn:hover {
+    background-color: #4b595f;
+}
+.bootstrap-touchspin .input-group-btn-vertical > .btn:focus {
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+.bootstrap-touchspin .input-group-btn-vertical > .btn:active {
+    border: 1px solid #333434;
+    background-color: #3f4041;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+.editor-division{
+    width: 100%;
+    height: 1px;
+    float: left;
+    margin: 15px 0 5px 0;
+    background: rgba(0,0,0,0.3);
+}
+.content-pickcolor {
+    overflow: hidden;
+    cursor: pointer;
+    padding: 3px;
+    display: inline-block;
+    border: 0px solid #ddd;
+    background-color: #1f282d;
+    vertical-align: middle;
+    border-radius: 100%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px 5px 0 5px;
+}
+.sp-replacer {
+    overflow: hidden;
+    cursor: pointer;
+    padding: 3px;
+    display: inline-block;
+    border: 0px solid #ddd;
+    background-color: #1f282d;
+    vertical-align: middle;
+    border-radius: 100%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px 5px 0 5px;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    width: 18px;
+}
+.sp-preview {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+    float: left;
+    z-index: 0;
+    border-radius: 100%;
+}
+.sp-preview, .sp-preview .sp-preview-inner {
+    border-radius: 100%;
+}
+/*
+********************************************************************************
+    Estilos para Select
+********************************************************************************
+*/
+.editor-selectdos{
+    width: 119px;
+    height: 30px;
+}
+.select2-container{
+    color: #c6c8c8;
+    vertical-align: baseline;
+    background-color: #45555c;
+    box-shadow: inset 0 1px #737373;
+    border: none;
+    border-radius: 4px;
+}
+.select2-container:hover, .botonsidebar:hover{
+    background-color: #4b595f;
+}
+.select2-selection--single {
+    cursor: pointer;
+    outline: 0;
+    display: block;
+    padding: 0 10px;
+    line-height: 26px;
+    position: relative;
+    border: 1px solid transparent;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 30px;
+}
+.select2-selection--single .select2-selection__arrow::after {
+    content: '\f0d7';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -8px;
+    font-size: 15px;
+    line-height: 1;
+    color: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.select2-container--open .select2-selection--single .select2-selection__arrow::after {
+    content: '\f0d8';
+}
+.select2-dropdown {
+    background-color: #45555c;
+    color: rgba(255,255,255,0.6);
+}
+.select2-results__option.select2-results__option--highlighted {
+    background-color: #3b4a51;
+}
+.select2-results__option[aria-selected="true"] {
+    background-color: #1f282d;
+    color: #fff;
+}
+.selecttres{
+    width: 100px;
+}
+/*
+********************************************************************************
+    Estilos para botones del sidebar
+********************************************************************************
+*/
+.editor-form-boton{
+    width: auto;
+    height: auto;
+    margin: 10px 5px 0 5px;
+}
+.botonsidebar{
+    float: left;
+    margin: 0;
+    height: 30px;
+    width: 34px;
+    cursor: pointer;
+    color: #c6c8c8;
+    vertical-align: baseline;
+    background-color: #45555c;
+    box-shadow: inset 0 1px #737373;
+    border: none;
+    border-right: solid 1px #1f282d;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+.sidebar .botonsidebar:active, .sidebar .botonsidebar:focus {
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+.sidebar .botonsidebar:active i, .sidebar .botonsidebar:focus i{
+    color: #4587d3;
+}
+.botonsidebarultimo{
+    border: none;
+}
+.botonsidtres{
+    width: auto !important;
+    padding: 0 12px;
+    font-size: 11px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.editor-contenido-sidebardos{
+    padding: 0;
+}
+.category-content{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navigation li{
+    width: 100%;
+    position: relative;
+    float: left;
+    background: #334046;
+}
+.navigation > li > a {
+    padding: 12px 20px 12px 40px;
+    min-height: 44px;
+    font-weight: 500;
+}
+.navigation li > .has-ul::after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 20px;
+    right: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -o-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+}
+.navigation li.active > .has-ul::after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.checkeditor{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 30000;    
+}
+.bootstrap-switch {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -2px;
+    margin-right: 8px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all ease-in-out 50ms;
+    -o-transition: all ease-in-out 50ms;
+    transition: all ease-in-out 50ms;
+    transform: scale(0.7,0.7);
+    -o-transform: scale(0.7,0.7);
+    -webkit-transform: scale(0.7,0.7);
+    -ms-transform: scale(0.7,0.7);
+}
+.contenido-acordion{
+    padding: 0 10px 10px 10px !important;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    min-height: 140px;
+}
+.editor-flechas{
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    float: right;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: solid 1px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+.botonflecha{
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -13px;
+    width: 27px;
+    height: 27px;
+}
+.bfdos{
+    left: 10px;
+    top: 45px;
+    margin-left: 0;
+}
+.bfdos i{
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+.bftres{
+    left: auto;
+    right: 10px;
+    top: 45px;
+}
+.bftres i{
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+.bfcuatro{
+    top: 80px;
+}
+.bfcuatro i{
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+.bfcentro{
+    top: 45px;
+}
+.btnradius{
+    left: 10px;
+    margin-left: 0;
+}
+.btnradius i{
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+}
+.btnradiusdos{
+    top: 80px;
+}
+.btnradiusdos i{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+.btnradiustres{
+    top: 10px;
+}
+.btnradiustres i{
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+}
+.btnradiuscuatro{
+    right: 10px;
+    left: auto;
+    margin-left: 0;
+}
+.btnradiuscuatro i{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+.editor-alineado, .editor-limpiar{
+    width: 100%;
+    margin: 18px 0 0 5px;
+    border: none;
+}
+.editor-alineado{
+    width: auto;
+    margin: 18px 50px 0 5px;
+}
+.editor-border-uno{
+    width: 67px;
+}
+.nombre-elemnto-editor{
+    float: left;
+    width: auto;
+    margin: 13px 0 0 5px;
+    color: rgba(255,255,255,0.8);
+    font-size: 12px;
+}
+.botonsombra {
+    position: relative;
+    float: left;
+    left: 0;
+    top: 0;
+    margin: 10px 2px 0 3px;
+}
+/*
+********************************************************************************
+    Estilos para Zona del video
+********************************************************************************
+*/
+.editor-url-video{
+    width: 250px;
+}
+.url-video{
+    width: 223px;
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.7);
+    text-align: left;
+    background: #45555c;
+    float: left;
+    height: 25px;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+}
+.chekautoplay{
+    position: relative;
+    float: left;
+    margin: 5px 70px -5px -8px;
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+.nombre-boton{
+    margin: 5px 0 5px 0;
+}
+.tab-fondo{
+    margin: 10px 0 0 0;
+    float: left;
+}
+.tabs-fondos li{
+    width: 50%;
+    float: left;
+    padding: 0 !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+.tabs-fondos li p{
+    text-align: center !important;
+    box-shadow: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.tabs-fondos li p:after, .tabs-fondos li p:before{
+    display: none !important;
+}
+.tabcontentfondo{
+    background: #45555c;
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 30px;
+    text-align: center;
+}
+.botonfondoimagen{
+    background: #3172bd;
+    font-size: 15px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    float: none;
+    border: 1px solid #134f7f;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.36);
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.36);
+    margin: 10px 0;
+}
+.botonfondoimagen:hover{
+    background: #4587d3 !important;
+}
+.sp-degradado{
+    float: none;
+    display: inline-block;
+}
+.btndegradado{
+    clear: both;
+    position: relative;
+    display: inline-block;
+    float: none;
+    margin: 7px 5px 5px;
+    background: #354248;
+    vertical-align: top;
+}
+.btnremoverdeg{
+    float: none;
+    display: inline-block;
+    background: #354248;
+    margin: 10px 0 0 0;
+}
+.needit{
+    width: 100%;
+}
+.navacordos li{
+    padding-left: 5px;
+}
+.navigation-accordion li a i{
+    margin: 0 10px 0 0;
+}
+.navigation-accordion > li > ul li:last-child {
+    padding-bottom: 0;
+}
+.navigation-accordion > li > ul li:first-child {
+    padding-top: 0;
+}
+/*
+********************************************************************************
+    Estilos para botones de capas
+********************************************************************************
+*/
+.botonescapas{
+    clear: both !important;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 30000 !important;
+    width: 70px !important;
+    height: 40px;
+}
+.botoncapas{
+    clear: both !important;
+    position: absolute !important;     
+    width: auto!important;
+    padding: 0 !important;
+    background: none !important;
+    min-height: 0px !important; 
+    height: auto !important;
+    float: left !important;
+    top: 12px;
+    left: 0;
+    opacity: 0.5;
+}
+.botoncapas:hover{
+    background: none !important;
+    opacity: 0.8;
+}
+.botoncapas:after{
+    display: none !important;
+}
+.botoncapasdos{
+    left: 25px;
+}
+.botoncapastres{
+    left: 50px;
+}
+/*
+ * estilos responsivos
+ */
+ 
+.sp-colorboton-tipografia, .sp-colorboton, .sp-colorboton-degradado1, .sp-colorboton-degradado2, .sp-colorboton-border, .sp-colorboton-shadow, .sp-colorboton-acordion, .sp-colorimagen-border, .sp-colorimagen-sombra, .sp-colorvideo-border {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.content-image-preview-control {
+    text-align: center;
+}
+
+.control-image-preview {
+    max-height: 160px;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #3172bd;
+    margin: 10px;
+}
+
+.content-box-preview-control {
+    text-align: center;
+}
+
+.control-box-preview {
+    max-height: 160px;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #3172bd;
+    margin: 10px;
+}
+.custom_txt {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 13px;
+    line-height: 1.5384616;
+    color: #333333;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.editor-url-textarea{
+    width: 250px;
+    height: 100px;
+}
+.editor-url-textarea .editor-icon-boton{
+    height: 100%;
+    margin-top: 12px;
+}
+.url-textarea{
+    width: 223px;
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.7);
+    text-align: left;
+    background: #45555c;
+    float: left;
+    height: 100px !important;
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 15px;
+}

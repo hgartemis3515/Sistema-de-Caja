@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<link rel="stylesheet" href="../doc_files/css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="exWrap">
+		<div class="exColInfo">
+			<div class="backLink">&larr; <a href="../demos.html">iGuider Demos /</a></div>
+			<h1>steps.target</h1>
+			<ol>
+				<li>
+					<p>
+					Search for page elements that need to be highlighted can be done in several ways:<br>
+					<pre><code class="language-js"><xmp>target: 'uniqueName'	/*<div data-target="uniqueName"></div>*/</xmp></code></pre>				
+					<pre><code class="language-js"><xmp>target: '.className'	/*<div class="className"></div>*/</xmp></code></pre>									
+					<pre><code class="language-js"><xmp>target: '#idValue'		/*<div id="idValue"></div>*/</xmp></code></pre>
+					<pre><code class="language-js"><xmp>target: '<tagname class="classname">' /*<tagname class="classname">content</tagnam>*/</xmp></code></pre>
+					
+					</p>
+				</li>
+				<li>
+					<p>
+					You can highlight several elements at the same time. To do this, give them the same names or list them separated by commas.
+					<pre><code class="language-js"><xmp>target: '.name-1, .name-2, .name-3'</xmp></code></pre>	
+					</p>
+				</li>
+				<li>
+					<p>
+					Message in center of screen without specifying a specific target.
+					<pre><code class="language-js"><xmp>target: ''	/*or Absent target parameter.*/</xmp></code></pre>	
+					</p>
+				</li>
+			</ol>
+
+<div class="example-code"><script src="../js/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="../css/iGuider.css">
+<script src="../js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="../themes/material/iGuider-theme-material.css">
+<script src="../themes/material/iGuider-theme-material.js"></script>	
+	
+<script>
+$(window).on('load',function(){
+	$('.start-tour').on('click',function(){
+		iGuider({
+			tourTitle:'steps.target',			
+			steps:[{
+				title:'Attribute data-target',				
+				content:'<xmp>target:\'name\'\n\n<span data-target="name">\n   Content \n</span></xmp>',	
+				target:'name'
+			},{
+				title:'Class name',
+				content:'<xmp>target:\'.name\'\n\n<span class="name">\n   Content \n</span></xmp>',
+				target:'.name',
+			},{
+				title:'Id name',
+				content:'<xmp>target:\'#name\'\n\n<span id="name">\n   Content \n</span></xmp>',
+				target:'#name',
+			},{
+				title:'Full open tag code',	
+				content:'<xmp>target:\'<span class="name-1">\'\n\n<span class="name-1">\n   Content \n</span></xmp>',
+				target:'<span class="name-1">'
+			},{
+				title:'Unique selector path name',		
+				content:'<xmp>target:\'html body span.name-2\'\n\n<span class="name-2">\n   Content \n</span></xmp>',
+				target:'html body span.name-2'
+			},{
+				title:'Attribute selector',		
+				content:'<xmp>target:\'[align="left"]\'\n\n<span align="left">\n   Content \n</span></xmp>',
+				target:'[align="left"]'
+			},{
+				title:'Multiple targets',		
+				content:'<xmp>target:\'.name, #name, .name-2\'</xmp>',	
+				target:'.name, #name, .name-2'
+			},{
+				title:'Message in center of screen',		
+				content:'<xmp>Absent target parameter\nor\ntarget:\'\'</xmp>',	
+				target:''
+			}]
+		});
+		return false;
+	});
+})
+</script> 
+
+<p><a class="btn start-tour" href="#">Start Tour</a></p>
+
+<span class="custom-element" data-target="name">Element 1</span>	
+<span class="custom-element name">Element 2</span>	
+<span class="custom-element" id="name">Element 3</span>	
+<span class="custom-element name-1">Element 4</span>	
+<span class="custom-element name-2">Element 5</span>	
+<span class="custom-element" align="left">Element 6</span>
+</div>
+		</div>
+		<div class="exColCode">
+			<h2>Source</h2>
+			<pre><code class="language-html"><xmp class="space-code"></xmp></code></pre>	
+		</div>
+	</div>				
+</div>
+
+<link rel="stylesheet" href="../doc_files/css/prism.css">
+<script src="../doc_files/js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    
+    # Permite caracteres especiales en la URL
+    RewriteCond %{REQUEST_URI} ^(.*)$
+    RewriteRule ^(.*)$ index.php?_url=/%1 [QSA,L,B]
+</IfModule>
+
+# Añade esta parte para asegurarte de que el encabezado Authorization se pase a PHP
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+
+# Asegúrate de que AllowEncodedSlashes está activado
+<IfModule mod_allowmethods.c>
+    AllowEncodedSlashes On
+</IfModule>
+
+# Permite caracteres especiales en la URL
+Options -MultiViews

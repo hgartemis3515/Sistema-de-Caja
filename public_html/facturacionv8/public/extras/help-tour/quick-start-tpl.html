@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<script src="js/jquery-3.1.1.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<link rel="stylesheet" href="css/iGuider.css">
+<script src="js/jquery.iGuider.js"></script>
+
+<link rel="stylesheet" href="themes/material/iGuider-theme-material.css">
+<script src="themes/material/iGuider-theme-material.js"></script>
+
+<script>
+var opt = {
+    'tourTitle': 'Tour Title Default',
+    'steps': [
+        {
+            'title': 'New Step Title',
+            'content': 'New Step Description',
+            'target': '#el_1'
+			
+        },
+        {
+            'title': 'New Step Title 2',
+            'content': 'New Step Description',
+            'target': '#el_2'
+        }
+    ]
+};
+
+$(window).on('load',function(){
+    iGuider('button',opt);
+});
+</script>
+
+</head>
+<body>
+	<div style="max-width:800px; margin:40px auto;">
+		<p id="el_1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p id="el_2">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+	</div>
+</body>
+</html>
