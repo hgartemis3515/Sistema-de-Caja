@@ -116,6 +116,33 @@ class ControllerBase extends Controller
         
         return $lista;
     }
+
+    /** true si el host es desarrollo local (php -S, XAMPP, LAN típica, etc.). */
+    protected function isLocalDevHost() {
+        $hostClean = str_replace('www.', '', (string) (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : ''));
+        if (preg_match('/^(127\.0\.0\.1|localhost|::1)(\:\d+)?$/i', $hostClean)) {
+            return true;
+        }
+        $hostNoPort = preg_replace('/:\d+$/', '', $hostClean);
+        if (preg_match('/^192\.168\.\d{1,3}\.\d{1,3}$/', $hostNoPort)) {
+            return true;
+        }
+        if (preg_match('/^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', $hostNoPort)) {
+            return true;
+        }
+        if (preg_match('/^172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}$/', $hostNoPort)) {
+            return true;
+        }
+        return false;
+    }
+
+    /** Claves de prueba oficiales: siempre pasan siteverify y admiten localhost. */
+    protected function getRecaptchaTestKeys() {
+        return array(
+            'public' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+            'private' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+        );
+    }
     
     protected function get_parametros_iniciales() {
         $dominio = $_SERVER['HTTP_HOST'];
@@ -157,8 +184,15 @@ class ControllerBase extends Controller
         $data['id_patrocinador'] = 1;
         $data['mostrar_chat'] = $mostrar_chat;
         $data['modulo_marketing'] = 'no';
-        $data['captcha_key_public'] = $this->captcha_key_public;
-        $data['captcha_key_private'] = $this->captcha_key_private;
+        $data['dev_local_host'] = $this->isLocalDevHost();
+        if ($data['dev_local_host']) {
+            $t = $this->getRecaptchaTestKeys();
+            $data['captcha_key_public'] = $t['public'];
+            $data['captcha_key_private'] = $t['private'];
+        } else {
+            $data['captcha_key_public'] = $this->captcha_key_public;
+            $data['captcha_key_private'] = $this->captcha_key_private;
+        }
         $data['custom_data_style'] = $this->get_custom_data_style_system($id_contribuyente);
 
         return $data;

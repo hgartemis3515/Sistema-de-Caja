@@ -7,11 +7,13 @@ class LoginController extends ControllerBase {
         
         $this->assets
         ->addCss($this->baseUri . "public/css/main-indigo.css");
+        // Las vistas usan widget reCAPTCHA v2 (.g-recaptcha + data-callback). ?i=v3 no dispara el callback → botón "Acceder" queda disabled.
+        $recaptchaJs = 'https://www.google.com/recaptcha/api.js';
         $this->assets
         ->addJs($this->baseUri . "public/template/assets/js/plugins/forms/styling/uniform.min.js?i=v2")
         ->addJs($this->baseUri . "public/template/assets/js/core/app.js?i=v2")
         ->addJs($this->baseUri . "public/template/assets/js/plugins/forms/selects/select2.min.js?i=v2")
-        ->addJs("https://www.google.com/recaptcha/api.js?i=v3", false)
+        ->addJs($recaptchaJs, false)
         ->addJs($this->baseUri . "public/js/login.js?i=".rand());
         
         $auth = $this->getSessionUser();
@@ -28,9 +30,7 @@ class LoginController extends ControllerBase {
         }
 
         // HTTPS + sin www (producción). En 127.0.0.1 / localhost no redirigir: php -S no tiene TLS ni ruta /facturacionv8/.
-        $hostClean = str_replace('www.', '', (string) ($_SERVER['HTTP_HOST'] ?? ''));
-        $isDevLocal = (bool) preg_match('/^(127\.0\.0\.1|localhost|::1)(\:\d+)?$/i', $hostClean);
-        if (!$isDevLocal) {
+        if (!$this->isLocalDevHost()) {
             $host = (string) ($_SERVER['HTTP_HOST'] ?? '');
             if (strpos($host, 'www.') !== false) {
                 $dominio = str_replace('www.', '', $host);
@@ -86,13 +86,17 @@ class LoginController extends ControllerBase {
 			$herramientas = new HerramientasController;
 			if($herramientas->verificar_validez_email($_GET['email'])) {
 
-				$secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
-				$captcha = $_GET['g-recaptcha-response'];
-				$ip_user = $_SERVER["REMOTE_ADDR"];
+				$captcha_ok = $this->isLocalDevHost();
+				if (!$captcha_ok) {
+					$secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
+					$captcha = isset($_GET['g-recaptcha-response']) ? $_GET['g-recaptcha-response'] : '';
+					$ip_user = $_SERVER["REMOTE_ADDR"];
 
-				$result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
-				$result_captcha = json_decode($result_captcha);
-				if($result_captcha->success != true) {
+					$result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
+					$result_captcha = json_decode($result_captcha);
+					$captcha_ok = ($result_captcha && $result_captcha->success == true);
+				}
+				if(!$captcha_ok) {
 					$accion = 'recover';
 				} else {
 					$usuario = Usuario::findFirst(array("email = :email: and estado = 'activo'", 'bind' => array('email' => $_GET['email'])));
@@ -151,18 +155,20 @@ class LoginController extends ControllerBase {
 			$token = $datapost['token'];
 
 
-			$secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
-			$captcha = $datapost['g-recaptcha-response'];
-			$ip_user = $_SERVER["REMOTE_ADDR"];
+			if (!$this->isLocalDevHost()) {
+				$secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
+				$captcha = isset($datapost['g-recaptcha-response']) ? $datapost['g-recaptcha-response'] : '';
+				$ip_user = $_SERVER["REMOTE_ADDR"];
 
-			$result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
-			$result_captcha = json_decode($result_captcha);
-			if($result_captcha->success != true) {
-				$resp['respuesta'] = 'ok';
-				$resp['titulo'] = 'Error';
-				$resp['mensaje'] = 'Debes Activar el Captcha';
-				echo json_encode($resp);
-				exit();
+				$result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
+				$result_captcha = json_decode($result_captcha);
+				if(!$result_captcha || $result_captcha->success != true) {
+					$resp['respuesta'] = 'ok';
+					$resp['titulo'] = 'Error';
+					$resp['mensaje'] = 'Debes Activar el Captcha';
+					echo json_encode($resp);
+					exit();
+				}
 			}
 			
 			$password = trim($datapost['password']);
@@ -234,18 +240,20 @@ class LoginController extends ControllerBase {
             $password = $this->request->getPost('password');
             $user = Usuario::findFirst(array("email = :email: and password = :password: and estado = 'activo'", 'bind' => array('email' => $email, 'password' => $password)));
             
-            $secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
-			$captcha = $this->request->getPost('g-recaptcha-response');
-            $ip_user = $_SERVER["REMOTE_ADDR"];
-            
-            $result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
-			$result_captcha = json_decode($result_captcha);
-			if($result_captcha->success != true) {
-				$this->flashSession->error('Debes Activar el Recaptcha');
-                return $this->dispatcher->forward(array(
-                    "controller" => "login",
-                    "action" => "index"
-                ));
+            if (!$this->isLocalDevHost()) {
+				$secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
+				$captcha = $this->request->getPost('g-recaptcha-response');
+				$ip_user = $_SERVER["REMOTE_ADDR"];
+
+				$result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
+				$result_captcha = json_decode($result_captcha);
+				if(!$result_captcha || $result_captcha->success != true) {
+					$this->flashSession->error('Debes Activar el Recaptcha');
+					return $this->dispatcher->forward(array(
+						"controller" => "login",
+						"action" => "index"
+					));
+				}
             }
             
             if (!$user) {
@@ -315,26 +323,28 @@ class LoginController extends ControllerBase {
             $codigo_ubigeo = !isset($datapost['ubigeo'])?'':$datapost['ubigeo'];
             $idpatrocinador = !isset($datapost['idpatrocinador'])?1:$datapost['idpatrocinador'];
 
-            if(!isset($datapost['g-recaptcha-response']) || $datapost['g-recaptcha-response'] == '') {
-                $msj['respuesta'] = 'error';
-                $msj['titulo'] = 'Error';
-                $msj['mensaje'] = 'Debes verificar que no eres un robot!';
-                echo json_encode($msj);
-                exit();
-            }
+            if (!$this->isLocalDevHost()) {
+                if(!isset($datapost['g-recaptcha-response']) || $datapost['g-recaptcha-response'] == '') {
+                    $msj['respuesta'] = 'error';
+                    $msj['titulo'] = 'Error';
+                    $msj['mensaje'] = 'Debes verificar que no eres un robot!';
+                    echo json_encode($msj);
+                    exit();
+                }
 
-            $secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
-            $captcha = $datapost['g-recaptcha-response'];
-            $ip_user = $_SERVER["REMOTE_ADDR"];
+                $secret_key = $this->get_parametros_iniciales()['captcha_key_private'];
+                $captcha = $datapost['g-recaptcha-response'];
+                $ip_user = $_SERVER["REMOTE_ADDR"];
 
-            $result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
-            $result_captcha = json_decode($result_captcha);
-            if($result_captcha->success != true) {
-                $msj['respuesta'] = 'error';
-                $msj['titulo'] = 'Error';
-                $msj['mensaje'] = 'Debes demostrar que no eres un robot!';
-                echo json_encode($msj);
-                exit();
+                $result_captcha = $this->url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$captcha&remoteip=$ip_user");
+                $result_captcha = json_decode($result_captcha);
+                if(!$result_captcha || $result_captcha->success != true) {
+                    $msj['respuesta'] = 'error';
+                    $msj['titulo'] = 'Error';
+                    $msj['mensaje'] = 'Debes demostrar que no eres un robot!';
+                    echo json_encode($msj);
+                    exit();
+                }
             }
 
             //$idpatrocinador = 2;

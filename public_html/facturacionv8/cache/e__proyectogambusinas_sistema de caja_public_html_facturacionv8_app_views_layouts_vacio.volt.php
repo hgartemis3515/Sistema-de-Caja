@@ -9,6 +9,7 @@
     <meta property="og:url" content="https://<?php echo $data_empresa['url_domain']; ?>/facturacionv8/<?php echo $this->router->getControllerName(); ?>/<?php echo $this->router->getActionName(); ?>" />
     <meta property="og:image" content='https://<?php echo $data_empresa["url_domain"]; ?><?php echo $data_empresa["logo_img_56"]; ?>' />
     <meta name="dominio" content="<?php echo $data_empresa['url_domain']; ?>">
+    <script>window.APP_DEV_LOCAL = <?php echo (isset($data_empresa['dev_local_host']) && $data_empresa['dev_local_host']) ? 'true' : 'false'; ?>;</script>
     <!-- Page title -->
     <title><?= $pageTitle ?? '' ?></title>
     <!-- /Page title -->

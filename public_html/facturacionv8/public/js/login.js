@@ -1,6 +1,62 @@
+function recaptchaResponseOk() {
+	if (typeof window.APP_DEV_LOCAL !== 'undefined' && window.APP_DEV_LOCAL === true) {
+		return true;
+	}
+	if (typeof grecaptcha === 'undefined' || typeof grecaptcha.getResponse !== 'function') {
+		return false;
+	}
+	var t = '';
+	try {
+		t = grecaptcha.getResponse(0) || grecaptcha.getResponse();
+	} catch (e) {
+		try { t = grecaptcha.getResponse(); } catch (e2) {}
+	}
+	return t !== '' && t != null;
+}
+
+function recaptchaSafeReset() {
+	if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.reset === 'function') {
+		grecaptcha.reset();
+	}
+}
+
+function getLoginSubmitButton() {
+	var $b = $('.frm_login button[type="submit"]').first();
+	if ($b.length) {
+		return $b;
+	}
+	return $('.btn-login').first();
+}
+
+/** Google reCAPTCHA invoca por nombre en window (iframe → callback global). */
+function enableLoginSubmitIfAllowed() {
+	var $btn = getLoginSubmitButton();
+	if (!$btn.length) {
+		return;
+	}
+	var allow = (typeof window.APP_DEV_LOCAL !== 'undefined' && window.APP_DEV_LOCAL === true);
+	if (!allow) {
+		allow = recaptchaResponseOk();
+	}
+	if (allow) {
+		$btn.prop('disabled', false).removeAttr('disabled').removeClass('disabled');
+	}
+}
+
+function habilitar_login() {
+	enableLoginSubmitIfAllowed();
+}
+
+window.habilitar_login = habilitar_login;
+
 $(function() {
-	inicializar_checkboxes();
-	$('.js-example-basic-single').select2();
+	try {
+		inicializar_checkboxes();
+	} catch (e) { /* sin .control-success en login */ }
+	try {
+		$('.js-example-basic-single').select2();
+	} catch (e) { /* sin select2 o sin nodos */ }
+	enableLoginSubmitIfAllowed();
 	$('.btn_guardaruser').click(registrar_contribuyente);
 	$('#show-passwd').on('click', function(e) {
 		var current = $(this).attr('action');
@@ -32,7 +88,13 @@ $(function() {
 	verificar_accion();
 
 	$(".btn_cambiar_password").click(cambiar_password);
-     
+
+	$(window).on('load', enableLoginSubmitIfAllowed);
+
+	var pollLoginBtn = setInterval(enableLoginSubmitIfAllowed, 350);
+	setTimeout(function() {
+		clearInterval(pollLoginBtn);
+	}, 120000);
 });
 
 function cambiar_password() {
@@ -59,7 +121,7 @@ function cambiar_password() {
 	
 	var datastring = $("#frm_recover_password").serializeArray();
 
-	if (grecaptcha.getResponse() == ""){
+	if (!recaptchaResponseOk()){
         $(light).unblock();
         swal({
             title: "Problemas!",
@@ -97,7 +159,7 @@ function cambiar_password() {
                 confirmButtonText: "Ok",
             }, function() {
 				$(light).unblock();
-				grecaptcha.reset();
+				recaptchaSafeReset();
             });
         }
     }, function(reason){
@@ -110,7 +172,7 @@ function cambiar_password() {
 			confirmButtonText: "Ok"
 		}, function() {
 			$(light).unblock();
-			grecaptcha.reset();
+			recaptchaSafeReset();
 		});
     });
 }
@@ -130,10 +192,6 @@ function inicializar_checkboxes() {
 
 function enableBtn() {
 	$(".btn_guardaruser").prop('disabled', false);
-}
-
-function habilitar_login() {
-	$(".btn-login").prop('disabled', false);
 }
 
 function registrar_contribuyente() {
@@ -160,7 +218,7 @@ function registrar_contribuyente() {
 	
 	var datastring = $("#frm_singup").serializeArray();
 
-	if (grecaptcha.getResponse() == ""){
+	if (!recaptchaResponseOk()){
         $(light).unblock();
         swal({
             title: "Problemas!",
@@ -198,7 +256,7 @@ function registrar_contribuyente() {
                 confirmButtonText: "Ok",
             }, function() {
 				$(light).unblock();
-				grecaptcha.reset();
+				recaptchaSafeReset();
             });
         }
     }, function(reason){
@@ -211,7 +269,7 @@ function registrar_contribuyente() {
 			confirmButtonText: "Ok"
 		}, function() {
 			$(light).unblock();
-			grecaptcha.reset();
+			recaptchaSafeReset();
 		});
     });
 }
