@@ -246,6 +246,11 @@ class ControllerBase extends Controller
     }
 
     protected function redirect_user($user) {
+        if ($this->isLocalDevHost()) {
+            $this->response->redirect('dashboard');
+            $this->response->send();
+            exit;
+        }
         $usuario = Usuario::findFirst(array("idusuario = :idusuario:", 'bind' => array('idusuario' => $user['idusuario'])));
         $contribuyente = Contribuyente::findFirst(array("id_contribuyente = :id_contribuyente:", 'bind' => array('id_contribuyente' => $usuario->id_contribuyente)));
         $dominio = $_SERVER['HTTP_HOST'];

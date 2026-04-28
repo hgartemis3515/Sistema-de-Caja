@@ -32,7 +32,7 @@ set "WEB_PORT=!WEB_PORT: =!"
 
 REM /D = directorio inicial del proceso (rutas con espacios en "Sistema de caja")
 REM No usar pipes ni comillas raras en el titulo: CMD las interpreta mal.
-start "Facturacionv8" /D "%ROOT%" cmd /k php -S 127.0.0.1:!WEB_PORT! -t public
+start "Facturacionv8" /D "%ROOT%" cmd /k php -S 127.0.0.1:!WEB_PORT! router-dev-server.php
 
 timeout /t 2 /nobreak >nul
 REM Sin comillas alrededor de la URL: evita error "sintaxis de etiqueta del volumen"

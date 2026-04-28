@@ -8,6 +8,12 @@ class NotFoundPlugin extends Injectable
 {
     public function beforeException(Event $event, MvcDispatcher $dispatcher, \Exception $exception)
     {
+        $msg = $exception->getMessage();
+        if ($msg !== '' && stripos($msg, 'cyclic') !== false) {
+            $event->stop();
+            return false;
+        }
+
         // Obtener el servicio del router desde el contenedor de dependencias
         $router = $this->getDI()->get('router');
 
@@ -50,6 +56,11 @@ class NotFoundPlugin extends Injectable
             switch ($exception->getCode()) {
                 case DispatcherException::EXCEPTION_HANDLER_NOT_FOUND:
                 case DispatcherException::EXCEPTION_ACTION_NOT_FOUND:
+                    if ($dispatcher->getControllerName() === 'errors'
+                        && in_array($dispatcher->getActionName(), ['show404', 'show500', 'show401'], true)) {
+                        $event->stop();
+                        return false;
+                    }
                     $dispatcher->forward([
                         'controller' => 'errors',
                         'action'     => 'show404',

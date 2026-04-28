@@ -7,11 +7,24 @@ $baseUri = $di->getShared('config')->application->baseUri;
 
 $router = new Router(false); // No usar rutas predeterminadas
 
-// Eliminar barras adicionales
+// true convierte "///" en "/" pero en algunas versiones la raíz queda "" y el matcheo falla.
 $router->removeExtraSlashes(true);
 
+$trimBase = rtrim((string) $baseUri, '/');
+$pathPrefix = ($trimBase === '') ? '/' : ($trimBase . '/');
+$homePattern = ($trimBase === '') ? '/' : ($trimBase . '/');
+
+$defHome = [
+    'controller' => 'index',
+    'action'     => 'index',
+];
+$router->add($homePattern, $defHome)->setName('home');
+if ($pathPrefix === '/') {
+    $router->add('', $defHome)->setName('homeEmpty');
+}
+
 $router->add(
-    $baseUri . ':controller/:action/:params',
+    $pathPrefix . ':controller/:action/:params',
     [
         'controller' => 1,
         'action' => 2,
@@ -20,7 +33,7 @@ $router->add(
 )->setName('defaultRoute');
 
 $router->add(
-    $baseUri . ':controller',
+    $pathPrefix . ':controller',
     [
         'controller' => 1,
         'action' => 'index',

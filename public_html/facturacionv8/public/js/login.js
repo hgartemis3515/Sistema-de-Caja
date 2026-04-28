@@ -7,11 +7,20 @@ function recaptchaResponseOk() {
 	}
 	var t = '';
 	try {
-		t = grecaptcha.getResponse(0) || grecaptcha.getResponse();
-	} catch (e) {
-		try { t = grecaptcha.getResponse(); } catch (e2) {}
-	}
-	return t !== '' && t != null;
+		t = grecaptcha.getResponse();
+		if (t && t !== '') {
+			return true;
+		}
+		for (var i = 0; i < 8; i++) {
+			try {
+				var r = grecaptcha.getResponse(i);
+				if (r && r !== '') {
+					return true;
+				}
+			} catch (e) { /* widget id no existe */ }
+		}
+	} catch (e) { /* sin widgets */ }
+	return false;
 }
 
 function recaptchaSafeReset() {
@@ -43,11 +52,30 @@ function enableLoginSubmitIfAllowed() {
 	}
 }
 
+/**
+ * reCAPTCHA v2: este callback solo se ejecuta tras verificación correcta.
+ * No volver a leer getResponse aquí (puede fallar con varios widgets / timing).
+ */
 function habilitar_login() {
-	enableLoginSubmitIfAllowed();
+	var $btn = getLoginSubmitButton();
+	if ($btn.length) {
+		$btn.prop('disabled', false).removeAttr('disabled').removeClass('disabled');
+	}
 }
 
 window.habilitar_login = habilitar_login;
+
+function deshabilitar_login() {
+	if (typeof window.APP_DEV_LOCAL !== 'undefined' && window.APP_DEV_LOCAL === true) {
+		return;
+	}
+	var $btn = getLoginSubmitButton();
+	if ($btn.length) {
+		$btn.prop('disabled', true).attr('disabled', 'disabled');
+	}
+}
+
+window.deshabilitar_login = deshabilitar_login;
 
 $(function() {
 	try {

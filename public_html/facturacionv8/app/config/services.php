@@ -124,18 +124,18 @@ $di->setShared('view', function () {
 $di->setShared('dispatcher', function () use ($di) {
     $eventsManager = $di->getShared('eventsManager');
 
-    // Adjuntando el plugin de seguridad
+    // Parámetros de ruta: primero (antes de Security); no usar el evento genérico "dispatch" (puede re-disparar y colapsar en ciclo de forwards).
+    $eventsManager->attach('dispatch:beforeExecuteRoute', new UrlDecodePlugin());
+
     $securityPlugin = new SecurityPlugin();
     $eventsManager->attach('dispatch:beforeExecuteRoute', $securityPlugin);
 
-    // Manejo de excepciones y errores 404 usando NotFoundPlugin
     $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin());
-
-    // Registrar el UrlDecodePlugin
-    $eventsManager->attach('dispatch', new UrlDecodePlugin());
 
     $dispatcher = new Dispatcher();
     $dispatcher->setEventsManager($eventsManager);
+    $dispatcher->setDefaultController('index');
+    $dispatcher->setDefaultAction('index');
 
     return $dispatcher;
 });

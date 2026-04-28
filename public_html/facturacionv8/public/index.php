@@ -112,7 +112,18 @@ try {
     if (!empty($_GET['_url'])) {
         $requestUri = $_GET['_url'];
     }
-    $application->handle($requestUri)->send();
+    $pathOnly = parse_url((string) $requestUri, PHP_URL_PATH);
+    if ($pathOnly === null || $pathOnly === '' || $pathOnly === false) {
+        $pathOnly = '/';
+    }
+    // Misma lógica que router-dev-server.php: quitar /facturacionv8 (cualquier mayúscula) para Phalcon.
+    if (is_string($pathOnly) && preg_match('#^/facturacionv8(?=/|$)#i', $pathOnly)) {
+        $pathOnly = (string) preg_replace('#^/facturacionv8#i', '', $pathOnly);
+        if ($pathOnly === '') {
+            $pathOnly = '/';
+        }
+    }
+    $application->handle($pathOnly)->send();
 
 } catch (\Exception $e) {
     // Manejar excepciones

@@ -51,7 +51,13 @@ if ($baseUriOverride !== false && $baseUriOverride !== '') {
         $baseUri = $baseUriOverride;
     }
 } else {
-    $baseUri = preg_replace('/public([\/\\\\])index.php$/', '', $_SERVER['PHP_SELF'] ?? '/');
+    $self = (string) ($_SERVER['PHP_SELF'] ?? '/');
+    // php -S con router-dev-server.php: PHP_SELF no es public/index.php → rutas mal formadas y "/" no matchea.
+    if (str_contains($self, 'router-dev-server.php')) {
+        $baseUri = '/';
+    } else {
+        $baseUri = preg_replace('/public([\/\\\\])index.php$/', '', $self);
+    }
 }
 if ($baseUri === '' || $baseUri === null) {
     $baseUri = '/';

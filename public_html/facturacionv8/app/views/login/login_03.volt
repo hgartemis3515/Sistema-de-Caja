@@ -66,7 +66,8 @@ content: "";
     .g-recaptcha {
     transform:scale(0.78);
     -webkit-transform:scale(0.78);
-    transform-origin: ;-webkit-transform-origin: ;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
     }
 }
 @media only screen and (min-width: 600px) {
@@ -279,7 +280,7 @@ content: "";
                         <?= $this->flashSession->output() ?>
                     </div>
                     <div class="col-md-12 text-center captcha">
-                        <div style="margin: 0 auto;" class="g-recaptcha" data-sitekey="<?php echo $data_empresa['captcha_key_public']; ?>" data-callback="habilitar_login"></div>
+                        <div style="margin: 0 auto;" class="g-recaptcha" data-sitekey="<?php echo $data_empresa['captcha_key_public']; ?>" data-callback="habilitar_login" data-expired-callback="deshabilitar_login"></div>
                     </div>
                         <div class="col-md-12" style="margin-top: 15px;">
                         <div class="text-center sign-up">

@@ -121,7 +121,7 @@ input.form-control {
                                 <?= $this->flashSession->output() ?>
                             </div>
                             <div class="col-md-12 text-center captcha" style="margin: auto;">
-                                <div  class="g-recaptcha" data-sitekey="<?php echo $data_empresa['captcha_key_public']; ?>" data-callback="habilitar_login"></div>
+                                <div  class="g-recaptcha" data-sitekey="<?php echo $data_empresa['captcha_key_public']; ?>" data-callback="habilitar_login" data-expired-callback="deshabilitar_login"></div>
                             </div>
                                 <div class="col-md-12" style="margin-top: 15px;">
                                 <div class="text-center sign-up">

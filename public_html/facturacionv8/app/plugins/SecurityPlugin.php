@@ -258,12 +258,76 @@ class SecurityPlugin extends Injectable {
 		return $this->persistent->acl;
 	}
 
+	/**
+	 * El ACL usa slugs fijos (contribuyente_admin, …). En rol_usuario suele guardarse nombre legible
+	 * (“Administrador”) o el seed local usa alias distintos; hay que mapear antes de isAllowed().
+	 */
+	private function resolveAclRoleName(?array $auth): string {
+		if (!is_array($auth) || $auth === []) {
+			return 'guest';
+		}
+		$raw = isset($auth['rol']) && is_string($auth['rol']) ? trim($auth['rol']) : '';
+		if ($raw === '') {
+			return 'guest';
+		}
+		$known = [
+			'super_admin', 'super_soporte', 'patrocinador',
+			'contribuyente_admin', 'contribuyente_vendedor', 'guest',
+		];
+		if (in_array($raw, $known, true)) {
+			return $raw;
+		}
+		$alias = isset($auth['rol_alias']) && is_string($auth['rol_alias']) ? strtolower(trim($auth['rol_alias'])) : '';
+		$byAlias = [
+			'admin' => 'contribuyente_admin',
+			'vendedor' => 'contribuyente_vendedor',
+			'admin_emp' => 'contribuyente_admin',
+		];
+		if ($alias !== '' && isset($byAlias[$alias])) {
+			return $byAlias[$alias];
+		}
+		$byLowerName = [
+			'administrador' => 'contribuyente_admin',
+			'vendedor' => 'contribuyente_vendedor',
+			'administrador empresa' => 'contribuyente_admin',
+		];
+		$key = strtolower($raw);
+		if (isset($byLowerName[$key])) {
+			return $byLowerName[$key];
+		}
+		if (isset($auth['id_rol'])) {
+			$id = (int) $auth['id_rol'];
+			if ($id === 1) {
+				return 'contribuyente_admin';
+			}
+			if ($id === 2) {
+				return 'contribuyente_vendedor';
+			}
+			if ($id === 3) {
+				return 'contribuyente_admin';
+			}
+		}
+		return 'guest';
+	}
+
 	//Para la versión anterior de phalcon se utilizaba: public function beforeDispatch(Event $event, Dispatcher $dispatcher) {
 	public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher) {
 		
 		//creamos una instancia de logger
 		$controller = $dispatcher->getControllerName();
 		$action = $dispatcher->getActionName();
+		if ($controller === null || $controller === '' || $controller === false) {
+			$dispatcher->setControllerName('index');
+			$dispatcher->setActionName('index');
+			$controller = 'index';
+			$action = 'index';
+		}
+		if ($action === null || $action === '' || $action === false) {
+			$dispatcher->setActionName('index');
+			$action = 'index';
+		}
+		$controller = strtolower((string) $controller);
+		$action = strtolower((string) $action);
 		
 		$auth = $this->session->get('authv8');
 		if($controller == 'login' && in_array($action, array('logout', 'inicio_sesion_remoto', 'login_remoto'))) {
@@ -292,10 +356,10 @@ class SecurityPlugin extends Injectable {
 			}
 		}
 		
-		if (!$auth){
+		if (!$auth) {
 			$role = 'guest';
 		} else {
-			$role = $auth["rol"];
+			$role = $this->resolveAclRoleName($auth);
 		}
 		
 		$acl = $this->getAcl();
