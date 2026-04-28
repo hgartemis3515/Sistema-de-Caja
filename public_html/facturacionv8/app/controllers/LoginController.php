@@ -27,25 +27,23 @@ class LoginController extends ControllerBase {
             $accion = 'register';
         }
 
-        //necesario para redigir el tráfico a solo HTTPS, y además sin WWW
-        if (strpos($_SERVER['HTTP_HOST'], 'www.') !== false) {
-            $dominio = $_SERVER['HTTP_HOST'];
-            $dominio = str_replace('www.', '', $_SERVER['HTTP_HOST']);
-            header("Location: https://$dominio/facturacionv8/login");
-        }
-
-        if(isset($_SERVER['HTTPS'])) {
-            if ($_SERVER['HTTPS'] == "on") {
-                
-            } else {
-                $dominio = $_SERVER['HTTP_HOST'];
-                $dominio = str_replace('www.', '', $_SERVER['HTTP_HOST']);
-                header("Location: https://$dominio/facturacionv8/login");
+        // HTTPS + sin www (producción). En 127.0.0.1 / localhost no redirigir: php -S no tiene TLS ni ruta /facturacionv8/.
+        $hostClean = str_replace('www.', '', (string) ($_SERVER['HTTP_HOST'] ?? ''));
+        $isDevLocal = (bool) preg_match('/^(127\.0\.0\.1|localhost|::1)(\:\d+)?$/i', $hostClean);
+        if (!$isDevLocal) {
+            $host = (string) ($_SERVER['HTTP_HOST'] ?? '');
+            if (strpos($host, 'www.') !== false) {
+                $dominio = str_replace('www.', '', $host);
+                header("Location: https://{$dominio}/facturacionv8/login");
+                exit;
             }
-        } else {
-            $dominio = $_SERVER['HTTP_HOST'];
-            $dominio = str_replace('www.', '', $_SERVER['HTTP_HOST']);
-            header("Location: https://$dominio/facturacionv8/login");
+            $httpsOn = isset($_SERVER['HTTPS'])
+                && (strtolower((string) $_SERVER['HTTPS']) === 'on' || (string) $_SERVER['HTTPS'] === '1');
+            if (!$httpsOn) {
+                $dominio = str_replace('www.', '', $host);
+                header("Location: https://{$dominio}/facturacionv8/login");
+                exit;
+            }
         }
         
         //login personalizado

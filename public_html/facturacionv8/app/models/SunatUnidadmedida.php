@@ -32,7 +32,7 @@ class SunatUnidadmedida extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("humbertoguadalup_bd_sys_facturacion");
+        $this->setSchema(APP_DB_SCHEMA);
         $this->setSource("sunat_unidadmedida");
     }
 

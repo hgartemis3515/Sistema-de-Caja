@@ -62,6 +62,11 @@ define('APP_PATH', BASE_PATH . '/app');
     }
 })();
 
+if (!defined('APP_DB_SCHEMA')) {
+    $__dbn = getenv('DB_NAME');
+    define('APP_DB_SCHEMA', ($__dbn !== false && $__dbn !== '') ? $__dbn : 'facturacion_local');
+}
+
 /**
  * Varios controladores y custom_includes usan:
  *   $_SERVER['DOCUMENT_ROOT'] . '/facturacionv8/apis/...'

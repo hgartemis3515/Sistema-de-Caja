@@ -39,5 +39,6 @@ REM Sin comillas alrededor de la URL: evita error "sintaxis de etiqueta del volu
 start http://127.0.0.1:!WEB_PORT!/
 
 echo Listo. Ventana del servidor aparte; navegador en puerto !WEB_PORT!
+echo Si faltan tablas MySQL: ejecuta una vez "%~dp0importar-min-mysql.bat"
 echo Si la web muestra error de MySQL, revisa DB_HOST y DB_* en "%~dp0.env"
 endlocal
